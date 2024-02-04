@@ -329,21 +329,22 @@
           });
 
           document.getElementById("main-menu").innerHTML += `
-        <div id="unanswered-container">
-            <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-            <p>Unanswered Questions:</p>
-            <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
-                <thead>
-                    <tr style="background-color: #4caf50; color: white;">
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
-                    </tr>
-                </thead>
-                <tbody>${unansweredList.join("")}</tbody>
-            </table>
-        </div>
-    `;
+<div id="unanswered-container">
+    <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+    <p>Unanswered Questions:</p>
+    <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+        <thead>
+            <tr style="background-color: #4caf50; color: white;">
+                <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+            </tr>
+        </thead>
+        <tbody>${unansweredList.join("")}</tbody>
+    </table>
+</div>
+`;
+
         }
 
         unansweredQuestions = [];
@@ -359,17 +360,27 @@
     </script>
     <script>
       function copyToClipboard() {
-        const unansweredContent = document.getElementById(
-          "unanswered-container"
-        ).innerText;
-        const textarea = document.createElement("textarea");
-        textarea.value = unansweredContent;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        alert("Copied to clipboard!");
-      }
+    const unansweredTable = document.getElementById("unanswered-table");
+    const rows = unansweredTable.querySelectorAll("tbody tr");
+
+    // Create an array to store the rows as text
+    const rowsText = Array.from(rows).map(row => {
+        const cells = Array.from(row.cells).map(cell => cell.innerText);
+        return cells.join('\t'); // Separate cells with tabs
+    });
+
+    // Combine rows with line breaks
+    const textContent = rowsText.join('\n');
+
+    const textarea = document.createElement("textarea");
+    textarea.value = textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Copied to clipboard!");
+}
+
     </script>
   </body>
 </html>
