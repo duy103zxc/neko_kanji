@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanji Reading Quiz</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        text-align: center; /* Center align everything */
+      }
+
+      .quiz-container {
+        max-width: 80%; /* Adjust as needed */
+        margin: 50px auto; /* Center the quiz container horizontally */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Adjust text alignment within the quiz container */
+      }
+
+      /* Add this rule to center the main-menu div */
+      #main-menu {
+        margin: 50px auto;
+      }
+
+      /* Add this rule to center the quiz-container div */
+      #quiz-container {
+        margin: 50px auto;
+      }
+
+      /* Center the select and button within the main-menu div */
+      #main-menu select,
+      #main-menu button {
+        margin-top: 10px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      #answer-input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-menu" class="main-menu">
+      <h1>Welcome to the Kanji Reading Quiz</h1>
+      <label for="question-count">Number of Questions:</label>
+      <input type="number" id="question-count" min="1" value="10" />
+      <select id="jlpt-level">
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
+        <!-- Add other JLPT levels as needed -->
+      </select>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div class="quiz-container" id="quiz-container" style="display: none">
+      <h1 id="quiz-heading">Kanji Reading Quiz</h1>
+      <div id="question-container">
+        <!-- Questions will be dynamically inserted here -->
+      </div>
+      <input
+        type="text"
+        id="answer-input"
+        placeholder="Enter Reading"
+        onkeydown="if (event.key === 'Enter') checkAnswer()"
+      />
+      <p id="feedback"></p>
+    </div>
+    <script>
+      const quizData = {
+        N5: [        ],
+        N4: [
+          { kanji: "食べる", readings: ["たべる", "taberu"], meaning: "Eat" },
+          { kanji: "二", readings: ["に", "ni"], meaning: "Two" },
+        ],
+        // Add other JLPT levels as needed
+      };
+
+      let currentQuestion = 0;
+      let score = 0;
+      let incorrectAttempts = 0;
+      let selectedLevel;
+      let quizStartTime;
+      let incorrectCount = 0;
+      let totalQuestionsInput = document.getElementById("question-count");
+      let totalQuestions = parseInt(totalQuestionsInput.value);
+
+      function startQuiz() {
+        selectedLevel = document.getElementById("jlpt-level").value;
+        totalQuestions = parseInt(
+          document.getElementById("question-count").value
+        );
+        document.getElementById("main-menu").style.display = "none";
+        document.getElementById("quiz-container").style.display = "block";
+        document.getElementById("quiz-heading").textContent =
+          selectedLevel + " Kanji Reading Quiz";
+        loadQuestion();
+        quizStartTime = new Date().getTime();
+      }
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      // Shuffle the arrays in quizData
+      for (const level in quizData) {
+        if (quizData.hasOwnProperty(level)) {
+          shuffleArray(quizData[level]);
+        }
+      }
+
+      console.log(quizData);
+
+      function loadQuestion() {
+        const questionContainer = document.getElementById("question-container");
+        questionContainer.innerHTML = `<p>${quizData[selectedLevel][currentQuestion].kanji}</p>`;
+      }
+
+      function checkAnswer() {
+        const userAnswer = document
+          .getElementById("answer-input")
+          .value.toLowerCase();
+
+        if (currentQuestion < totalQuestions) {
+          const currentQuestionData = quizData[selectedLevel][currentQuestion];
+          const correctReadings = quizData[selectedLevel][
+            currentQuestion
+          ].readings.map((reading) => reading.toLowerCase());
+          const questionMeaning = currentQuestionData.meaning;
+
+          if (correctReadings.includes(userAnswer)) {
+            score++;
+            incorrectAttempts = 0;
+            document.getElementById("feedback").innerHTML = `
+        <span style="color: green;">Correct!</span>
+        <br />
+        Meaning: ${questionMeaning}
+      `;
+
+            // Move to the next question automatically
+            setTimeout(() => {
+              nextQuestion();
+            }, 2000); // Wait for 1 second before moving to the next question
+          } else {
+            incorrectAttempts++;
+            incorrectCount++;
+
+            if (incorrectAttempts === 3) {
+              incorrectAttempts = 0;
+              // Reveal the correct answers and move to the next question
+              document.getElementById("feedback").innerHTML = `
+          Incorrect. Correct answers: 
+          <span style="color: green;">${correctReadings.join(", ")}</span>
+          <br />
+          Meaning: ${questionMeaning}
+        `;
+              setTimeout(() => {
+                nextQuestion();
+              }, 2000); // Wait for 1 second before moving to the next question
+            } else {
+              document.getElementById(
+                "feedback"
+              ).innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
+            }
+          }
+        } else {
+          endQuiz();
+        }
+      }
+
+      function nextQuestion() {
+        document.getElementById("feedback").innerText = "";
+        document.getElementById("answer-input").value = "";
+
+        currentQuestion++;
+        if (currentQuestion < totalQuestions) {
+          loadQuestion();
+        } else {
+          endQuiz();
+        }
+      }
+
+      function resetQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        incorrectAttempts = 0;
+        document.getElementById("feedback").innerText = "";
+        document.getElementById("answer-input").value = "";
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("main-menu").style.display = "block";
+      }
+
+      function endQuiz() {
+        const quizEndTime = new Date().getTime();
+        const timeSpentInSeconds = Math.floor(
+          (quizEndTime - quizStartTime) / 1000
+        );
+
+        // Modify the main menu
+        document.getElementById("main-menu").style.display = "block";
+        document.getElementById("main-menu").innerHTML = `
+            <h1>頑張って</h1>
+            <p>Your Score: ${score} out of ${totalQuestions}</p>
+            <p>Incorrect Answers: ${incorrectCount}</p>
+            <p>Time Spent: ${timeSpentInSeconds} seconds</p>
+            <label for="question-count">Number of Questions:</label>
+            <input type="number" id="question-count" min="1" value="10">
+            <select id="jlpt-level">
+                <option value="N5">N5</option>
+                <option value="N4">N4</option>
+                <!-- Add other JLPT levels as needed -->
+            </select>
+            <button onclick="startQuiz()">Start New Quiz</button>
+        `;
+
+        resetQuiz();
+        shuffleArray(quizData[selectedLevel]); // Initiate shuffleArray
+      }
+
+      // Load the first question on page load
+      window.onload = function () {
+        document.getElementById("quiz-container").style.display = "none";
+      };
+    </script>
+  </body>
+</html>
