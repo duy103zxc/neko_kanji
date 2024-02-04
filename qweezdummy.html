@@ -28,7 +28,15 @@
 
       /* Add this rule to center the main-menu div */
       #main-menu {
+        max-width: 80%;
+        /* Adjust as needed */
         margin: 50px auto;
+        /* Center the quiz container horizontally */
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        /* Adjust text alignment within the quiz container */
       }
 
       /* Add this rule to center the quiz-container div */
@@ -57,29 +65,40 @@
       }
 
       #unanswered-container {
-        background-color: #fff; /* Set background color as needed */
-        border: 1px solid #ccc; /* Add border if desired */
+        background-color: #fff;
+        /* Set background color as needed */
+        border: 1px solid #ccc;
+        /* Add border if desired */
         padding: 10px;
-        margin-top: 20px; /* Adjust margin as needed */
-        text-align: left; /* Align text to the left */
+        margin-top: 20px;
+        /* Adjust margin as needed */
+        text-align: left;
+        /* Align text to the left */
       }
 
       #unanswered-container p {
-        font-weight: bold; /* Make the heading bold */
+        font-weight: bold;
+        /* Make the heading bold */
       }
 
       #unanswered-container ul {
-        list-style-type: none; /* Remove list bullet points */
-        padding: 0; /* Remove default padding */
+        list-style-type: none;
+        /* Remove list bullet points */
+        padding: 0;
+        /* Remove default padding */
       }
 
       #copy-button {
-        background-color: #4caf50; /* Set button background color */
-        color: white; /* Set button text color */
+        background-color: #4caf50;
+        /* Set button background color */
+        color: white;
+        /* Set button text color */
         border: none;
-        padding: 8px 12px; /* Adjust padding as needed */
+        padding: 8px 12px;
+        /* Adjust padding as needed */
         cursor: pointer;
-        float: right; /* Float the button to the right */
+        float: right;
+        /* Float the button to the right */
       }
     </style>
   </head>
@@ -177,7 +196,7 @@
 
       function loadQuestion() {
         const questionContainer = document.getElementById("question-container");
-        questionContainer.innerHTML = `<p>${quizData[selectedLevel][currentQuestion].kanji}</p>`;
+        questionContainer.innerHTML = `<p style="font-size: 24px;">${quizData[selectedLevel][currentQuestion].kanji}</p>`;
       }
 
       function checkAnswer() {
@@ -260,11 +279,26 @@
         const timeSpentInSeconds = Math.floor(
           (quizEndTime - quizStartTime) / 1000
         );
+        const accuracy = (score / totalQuestions) * 100;
+
+        let encouragementText = "頑張って"; // Default text
+
+        if (accuracy === 100) {
+          encouragementText = "You nailed every question. Great job!";
+        } else if (accuracy >= 75) {
+          encouragementText =
+            "Great job! You have a solid understanding of the material.";
+        } else if (accuracy >= 50) {
+          encouragementText =
+            "Good effort! Keep practicing to improve your knowledge.";
+        } else {
+          encouragementText = "Keep trying! Practice makes perfect.";
+        }
 
         // Modify the main menu
         document.getElementById("main-menu").style.display = "block";
         document.getElementById("main-menu").innerHTML = `
-            <h1>頑張って</h1>
+            <h1>${encouragementText}</h1>
             <p>Your Score: ${score} out of ${totalQuestions}</p>
             <p>Incorrect Answers: ${incorrectCount}</p>
             <p>Time Spent: ${timeSpentInSeconds} seconds</p>
@@ -281,20 +315,35 @@
 
         // Reveal unanswered questions, if any
         if (unansweredQuestions.length > 0) {
-          const unansweredList = unansweredQuestions.map((index) => {
+          const unansweredList = unansweredQuestions.map((index, rowIndex) => {
             const question = quizData[selectedLevel][index];
-            return `${question.kanji} - ${question.readings.join(", ")} (${
-              question.meaning
-            })`;
+            const rowColor = rowIndex % 2 === 0 ? "#f2f2f2" : "#ffffff"; // Alternating row colors
+
+            return `
+            <tr style="background-color: ${rowColor};">
+                <td>${question.kanji}</td>
+                <td>${question.readings.join(", ")}</td>
+                <td>${question.meaning}</td>
+            </tr>
+        `;
           });
 
           document.getElementById("main-menu").innerHTML += `
         <div id="unanswered-container">
-        <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-        <p>Unanswered Questions:</p>
-        <ul>${unansweredList.map((q) => `<li>${q}</li>`).join("")}</ul>
+            <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+            <p>Unanswered Questions:</p>
+            <table style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+                <thead>
+                    <tr style="background-color: #4caf50; color: white;">
+                        <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+                        <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+                        <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>${unansweredList.join("")}</tbody>
+            </table>
         </div>
-        `;
+    `;
         }
 
         unansweredQuestions = [];
