@@ -10,16 +10,20 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-        text-align: center; /* Center align everything */
+        text-align: center;
+        /* Center align everything */
       }
 
       .quiz-container {
-        max-width: 80%; /* Adjust as needed */
-        margin: 50px auto; /* Center the quiz container horizontally */
+        max-width: 80%;
+        /* Adjust as needed */
+        margin: 50px auto;
+        /* Center the quiz container horizontally */
         padding: 20px;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center; /* Adjust text alignment within the quiz container */
+        text-align: center;
+        /* Adjust text alignment within the quiz container */
       }
 
       /* Add this rule to center the main-menu div */
@@ -51,16 +55,43 @@
         padding: 10px;
         margin-bottom: 10px;
       }
+
+      #unanswered-container {
+        background-color: #fff; /* Set background color as needed */
+        border: 1px solid #ccc; /* Add border if desired */
+        padding: 10px;
+        margin-top: 20px; /* Adjust margin as needed */
+        text-align: left; /* Align text to the left */
+      }
+
+      #unanswered-container p {
+        font-weight: bold; /* Make the heading bold */
+      }
+
+      #unanswered-container ul {
+        list-style-type: none; /* Remove list bullet points */
+        padding: 0; /* Remove default padding */
+      }
+
+      #copy-button {
+        background-color: #4caf50; /* Set button background color */
+        color: white; /* Set button text color */
+        border: none;
+        padding: 8px 12px; /* Adjust padding as needed */
+        cursor: pointer;
+        float: right; /* Float the button to the right */
+      }
     </style>
   </head>
+
   <body>
     <div id="main-menu" class="main-menu">
       <h1>Welcome to the Kanji Reading Quiz</h1>
       <label for="question-count">Number of Questions:</label>
       <input type="number" id="question-count" min="1" value="10" />
       <select id="jlpt-level">
-        <option value="n5">N5</option>
-        <option value="n4">N4</option>
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
         <!-- Add other JLPT levels as needed -->
       </select>
       <button onclick="startQuiz()">Start Quiz</button>
@@ -81,8 +112,8 @@
     </div>
     <script>
       const quizData = {
-        n5: [],
-        n4: [],
+        N5: [],
+        N4: [],
         // Add other JLPT levels as needed
       };
 
@@ -94,7 +125,8 @@
       let incorrectCount = 0;
       let totalQuestionsInput = document.getElementById("question-count");
       let totalQuestions = parseInt(totalQuestionsInput.value);
-      
+      let unansweredQuestions = [];
+
       function fetchQuizData(level) {
         const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}kan.json`;
 
@@ -109,20 +141,21 @@
           );
       }
       function startQuiz() {
-    selectedLevel = document.getElementById("jlpt-level").value;
-    totalQuestions = parseInt(document.getElementById("question-count").value);
+        selectedLevel = document.getElementById("jlpt-level").value;
+        totalQuestions = parseInt(
+          document.getElementById("question-count").value
+        );
 
-    fetchQuizData(selectedLevel)
-      .then(data => {
-        quizData[selectedLevel] = data; // Assign fetched data to quizData
-        document.getElementById("main-menu").style.display = "none";
-        document.getElementById("quiz-container").style.display = "block";
-        document.getElementById("quiz-heading").textContent =
-          selectedLevel + " Kanji Reading Quiz";
-        loadQuestion();
-        quizStartTime = new Date().getTime();
-      });
-  }
+        fetchQuizData(selectedLevel).then((data) => {
+          quizData[selectedLevel] = data; // Assign fetched data to quizData
+          document.getElementById("main-menu").style.display = "none";
+          document.getElementById("quiz-container").style.display = "block";
+          document.getElementById("quiz-heading").textContent =
+            selectedLevel + " Kanji Reading Quiz";
+          loadQuestion();
+          quizStartTime = new Date().getTime();
+        });
+      }
 
       function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -176,6 +209,7 @@
 
             if (incorrectAttempts === 3) {
               incorrectAttempts = 0;
+              unansweredQuestions.push(currentQuestion);
               // Reveal the correct answers and move to the next question
               document.getElementById("feedback").innerHTML = `
           Incorrect. Correct answers: 
@@ -235,13 +269,33 @@
             <label for="question-count">Number of Questions:</label>
             <input type="number" id="question-count" min="1" value="10">
             <select id="jlpt-level">
-                <option value="n5">N5</option>
-                <option value="n4">N4</option>
+                <option value="N5">N5</option>
+                <option value="N4">N4</option>
                 <!-- Add other JLPT levels as needed -->
             </select>
             <button onclick="startQuiz()">Start New Quiz</button>
         `;
 
+        // Reveal unanswered questions, if any
+        if (unansweredQuestions.length > 0) {
+          const unansweredList = unansweredQuestions.map((index) => {
+            const question = quizData[selectedLevel][index];
+            return `${question.kanji} - ${question.readings.join(", ")} (${
+              question.meaning
+            })`;
+          });
+
+          document.getElementById("main-menu").innerHTML += `
+        <div id="unanswered-container">
+        <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+        <p>Unanswered Questions:</p>
+        <ul>${unansweredList.map((q) => `<li>${q}</li>`).join("")}</ul>
+        </div>
+        `;
+        }
+
+        unansweredQuestions = [];
+        incorrectCount = 0;
         resetQuiz();
         shuffleArray(quizData[selectedLevel]); // Initiate shuffleArray
       }
@@ -250,6 +304,20 @@
       window.onload = function () {
         document.getElementById("quiz-container").style.display = "none";
       };
+    </script>
+    <script>
+      function copyToClipboard() {
+        const unansweredContent = document.getElementById(
+          "unanswered-container"
+        ).innerText;
+        const textarea = document.createElement("textarea");
+        textarea.value = unansweredContent;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("Copied to clipboard!");
+      }
     </script>
   </body>
 </html>

@@ -663,7 +663,7 @@
     "readings": ["がっこう", "gakkou"],
     "meaning": "a school"
   },
-  { "kanji": "カップ", "readings": ["カップ", "カップ"], "meaning": "cup" },
+  { "kanji": "カップ", "readings": ["カップ", "kappu"], "meaning": "cup" },
   {
     "kanji": "家庭",
     "readings": ["かてい", "katei"],
