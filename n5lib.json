@@ -1,4 +1,4 @@
-{ kanji: "ああ", readings: [
+[{ kanji: "ああ", readings: [
     "ああ",
     "aa"
   ], meaning: "Ah!, Oh!"
@@ -5222,4 +5222,4 @@
     "warui"
   ],
       meaning: "bad, sinful; inferior",
-},
+},]
