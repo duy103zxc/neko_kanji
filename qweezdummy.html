@@ -60,7 +60,7 @@
       <input type="number" id="question-count" min="1" value="10" />
       <select id="jlpt-level">
         <option value="n5">N5</option>
-        <option value="N4">N4</option>
+        <option value="n4">N4</option>
         <!-- Add other JLPT levels as needed -->
       </select>
       <button onclick="startQuiz()">Start Quiz</button>
@@ -82,10 +82,7 @@
     <script>
       const quizData = {
         n5: [],
-        N4: [
-          { kanji: "食べる", readings: ["たべる", "taberu"], meaning: "Eat" },
-          { kanji: "二", readings: ["に", "ni"], meaning: "Two" },
-        ],
+        n4: [],
         // Add other JLPT levels as needed
       };
 
@@ -239,7 +236,7 @@
             <input type="number" id="question-count" min="1" value="10">
             <select id="jlpt-level">
                 <option value="n5">N5</option>
-                <option value="N4">N4</option>
+                <option value="n4">N4</option>
                 <!-- Add other JLPT levels as needed -->
             </select>
             <button onclick="startQuiz()">Start New Quiz</button>
