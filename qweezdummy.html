@@ -59,7 +59,7 @@
       <label for="question-count">Number of Questions:</label>
       <input type="number" id="question-count" min="1" value="10" />
       <select id="jlpt-level">
-        <option value="N5">N5</option>
+        <option value="n5">N5</option>
         <option value="N4">N4</option>
         <!-- Add other JLPT levels as needed -->
       </select>
@@ -97,8 +97,9 @@
       let incorrectCount = 0;
       let totalQuestionsInput = document.getElementById("question-count");
       let totalQuestions = parseInt(totalQuestionsInput.value);
+      
       function fetchQuizData(level) {
-        const jsonUrl = `https://raw.githubusercontent.com/blogpost/blob/main/${level}lib.json`;
+        const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}lib.json`;
 
         return fetch(jsonUrl)
           .then((response) => response.json())
@@ -237,7 +238,7 @@
             <label for="question-count">Number of Questions:</label>
             <input type="number" id="question-count" min="1" value="10">
             <select id="jlpt-level">
-                <option value="N5">N5</option>
+                <option value="n5">N5</option>
                 <option value="N4">N4</option>
                 <!-- Add other JLPT levels as needed -->
             </select>
