@@ -96,7 +96,7 @@
       let totalQuestions = parseInt(totalQuestionsInput.value);
       
       function fetchQuizData(level) {
-        const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}lib.json`;
+        const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}kan.json`;
 
         return fetch(jsonUrl)
           .then((response) => response.json())
