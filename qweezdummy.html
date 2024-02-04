@@ -81,7 +81,7 @@
     </div>
     <script>
       const quizData = {
-        N5: [        ],
+        N5: [],
         N4: [
           { kanji: "食べる", readings: ["たべる", "taberu"], meaning: "Eat" },
           { kanji: "二", readings: ["に", "ni"], meaning: "Two" },
@@ -97,19 +97,34 @@
       let incorrectCount = 0;
       let totalQuestionsInput = document.getElementById("question-count");
       let totalQuestions = parseInt(totalQuestionsInput.value);
+      function fetchQuizData(level) {
+        const jsonUrl = `https://raw.githubusercontent.com/blogpost/blob/main/${level}lib.json`;
 
+        return fetch(jsonUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            shuffleArray(data); // Shuffle the array
+            return data;
+          })
+          .catch((error) =>
+            console.error(`Error fetching ${level} JSON:`, error)
+          );
+      }
       function startQuiz() {
-        selectedLevel = document.getElementById("jlpt-level").value;
-        totalQuestions = parseInt(
-          document.getElementById("question-count").value
-        );
+    selectedLevel = document.getElementById("jlpt-level").value;
+    totalQuestions = parseInt(document.getElementById("question-count").value);
+
+    fetchQuizData(selectedLevel)
+      .then(data => {
+        quizData[selectedLevel] = data; // Assign fetched data to quizData
         document.getElementById("main-menu").style.display = "none";
         document.getElementById("quiz-container").style.display = "block";
         document.getElementById("quiz-heading").textContent =
           selectedLevel + " Kanji Reading Quiz";
         loadQuestion();
         quizStartTime = new Date().getTime();
-      }
+      });
+  }
 
       function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
