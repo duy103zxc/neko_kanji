@@ -245,6 +245,7 @@
         timeLimit = parseInt(document.getElementById("time-limit").value);
         document.getElementById("question-count").disabled = true;
         document.getElementById("time-attack-options").style.display = "block";
+        quizStartTime = new Date().getTime(); // Record the quiz start time
         startTimer();
       }
 
@@ -260,9 +261,14 @@
     }
 
     function startTimer() {
-      timerId = setTimeout(() => {
-        endQuiz();
-      }, timeLimit * 1000);
+      timerId = setInterval(() => {
+        const currentTime = new Date().getTime();
+        const elapsedSeconds = Math.floor((currentTime - quizStartTime) / 1000);
+
+        if (elapsedSeconds >= timeLimit) {
+          endQuiz(); // End the quiz when the time limit is reached
+        }
+      }, 1000);
     }
 
     function resetTimer() {
@@ -401,6 +407,7 @@
       const accuracy = (score / totalQuestions) * 100;
 
       let encouragementText = "頑張って"; // Default text
+      clearInterval(timerId);
 
       if (accuracy === 100) {
         encouragementText = "You nailed every question. Great job!";
@@ -530,7 +537,7 @@
       document.body.removeChild(textarea);
       alert("Copied to clipboard!");
     }
-    
+
     function toggleTimeAttackOptions() {
       const timeAttackOptions = document.getElementById("time-attack-options");
       const questionCountInput = document.getElementById("question-count");
