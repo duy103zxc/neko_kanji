@@ -237,16 +237,16 @@
     }
     function startQuiz() {
       selectedLevel = document.getElementById("jlpt-level").value;
-      totalQuestions = parseInt(document.getElementById("question-count").value);
       includeHints = document.getElementById("hint-checkbox").checked;
+      isTimeAttackMode = document.getElementById("time-attack-checkbox").checked;
 
-      if (document.getElementById("time-attack-checkbox").checked) {
-        isTimeAttackMode = true;
+      if (isTimeAttackMode) {
         timeLimit = parseInt(document.getElementById("time-limit").value);
-        document.getElementById("question-count").disabled = true;
         document.getElementById("time-attack-options").style.display = "block";
         quizStartTime = new Date().getTime(); // Record the quiz start time
         startTimer();
+      } else {
+        totalQuestions = parseInt(document.getElementById("question-count").value);
       }
 
       fetchQuizData(selectedLevel).then((data) => {
@@ -255,10 +255,16 @@
         document.getElementById("quiz-container").style.display = "block";
         document.getElementById("quiz-heading").textContent =
           selectedLevel + " Kanji Reading Quiz";
-        loadQuestion();
-        quizStartTime = new Date().getTime();
+        if (isTimeAttackMode) {
+          totalQuestions = quizData[selectedLevel].length;
+          loadQuestion(); // Load the first question immediately in time attack mode
+        } else {
+          loadQuestion(); // Load the first question when starting a regular quiz
+          quizStartTime = new Date().getTime(); // Record the quiz start time
+        }
       });
     }
+
 
     function startTimer() {
       timerId = setInterval(() => {
