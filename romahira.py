@@ -38,8 +38,8 @@ def write_json_to_file(data_list, output_file_path):
         jsonfile.write("]\n")
 
 # Example usage:
-csv_file_path = r'C:\Users\ACER\Downloads\htm\n4.csv'
-output_file_path = 'n4vo.json'
+csv_file_path = r'C:\Users\ACER\Downloads\blogpost\n3.csv'
+output_file_path = 'N3kan.json'
 
 converted_data = convert_csv_to_json(csv_file_path)
 write_json_to_file(converted_data, output_file_path)
