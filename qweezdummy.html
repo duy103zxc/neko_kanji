@@ -3,54 +3,43 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="description"
-    content="Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji." />
+  <meta name="keywords" content="Kanji, Japanese, Quiz, Reading, Language, Learning" />
+  <meta name="author" content="Osha" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kanji Reading Quiz</title>
   <style>
+    /* Reset and Global Styles */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       text-align: center;
-      /* Center align everything */
     }
 
+    /* Common Styles for Containers */
     .quiz-container,
     #main-menu,
     #quiz-container button,
     #unanswered-container {
       border-radius: 10px;
-      /* Add rounded corners */
     }
 
     h1 {
       font-size: 24px;
     }
 
-    .quiz-container {
-      max-width: 80%;
-      /* Adjust as needed */
-      margin: 50px auto;
-      /* Center the quiz container horizontally */
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      /* Adjust text alignment within the quiz container */
-    }
-
+    .quiz-container,
     #main-menu {
       max-width: 80%;
-      /* Adjust as needed */
       margin: 50px auto;
-      /* Center the quiz container horizontally */
       padding: 20px;
       background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
-      /* Adjust text alignment within the quiz container */
     }
 
     button {
@@ -61,7 +50,6 @@
       cursor: pointer;
     }
 
-    /* Add this rule to center the select and button within the main-menu div */
     #main-menu select,
     #main-menu button {
       margin-top: 10px;
@@ -75,47 +63,22 @@
 
     #unanswered-container {
       background-color: #fff;
-      /* Set background color as needed */
       border: 1px solid #ccc;
-      /* Add border if desired */
       padding: 10px;
       margin-top: 20px;
-      /* Adjust margin as needed */
       text-align: left;
-      /* Align text to the left */
     }
 
     #copy-button {
       background-color: #4caf50;
-      /* Set button background color */
       color: white;
-      /* Set button text color */
       border: none;
       padding: 8px 12px;
-      /* Adjust padding as needed */
       cursor: pointer;
       float: right;
-      /* Float the button to the right */
     }
 
-    .post-header,
-    .post-header a,
-    .post-header button,
-    .post-footer,
-    .sidebar-container,
-    .post-sidebar,
-    #footer,
-    .centered-top-container.sticky,
-    .post-title,
-    .post-body-container:before,
-    .centered-top-container,
-    .centered-top-placeholder,
-    .centered-top {
-      display: none;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* Quiz Results Table */
     #quiz-results {
       width: 50%;
       margin: 20px auto;
@@ -125,57 +88,39 @@
     #quiz-results th,
     #quiz-results td {
       border: 1px solid #dddddd;
-      /* Add borders to cells for separation */
       padding: 8px;
-      /* Add padding to cells for spacing */
       text-align: left;
-      /* Align text to the left within cells */
     }
 
     #quiz-results th {
       background-color: #4caf50;
-      /* Set header background color */
       color: white;
-      /* Set header text color */
     }
 
-    /* The Modal (background) */
+    /* Modal Styles */
     .modal {
       display: none;
-      /* Hidden by default */
       position: fixed;
-      /* Stay in place */
       z-index: 1;
-      /* Sit on top */
       left: 0;
       top: 0;
       width: 100%;
-      /* Full width */
       height: 100%;
-      /* Full height */
       overflow: auto;
-      /* Enable scroll if needed */
       background-color: rgb(0, 0, 0);
-      /* Fallback color */
       background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
     }
 
-    /* Modal Content/Box */
     .modal-content {
       background-color: #fefefe;
       margin: 15% auto;
-      /* 15% from the top and centered */
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
-      /* Could be more or less, depending on screen size */
       text-align: left;
-      /* Align content to the left */
       border-radius: 10px;
     }
 
-    /* The Close Button */
     .close {
       color: #aaa;
       float: right;
@@ -190,10 +135,10 @@
       cursor: pointer;
     }
 
+    /* Responsive Design */
     @media (max-width: 600px) {
       #quiz-results {
         width: 90%;
-        /* Adjust the width for smaller screens */
       }
     }
 
@@ -202,7 +147,6 @@
       #quiz-results th,
       #quiz-results td {
         padding: 6px;
-        /* Adjust padding for smaller screens */
       }
     }
   </style>
@@ -268,10 +212,7 @@
         Discord: <a href="https://discordapp.com/users/424526699611291650" target="_blank">osha420</a>
       </p>
     </div>
-
   </div>
-
-
   <div class="quiz-container" id="quiz-container" style="display: none">
     <h1 id="quiz-heading">Kanji Reading Quiz</h1>
     <div id="question-container">
@@ -283,6 +224,7 @@
     <p id="hint"></p>
   </div>
   <script>
+    // Quiz Data
     const quizData = {
       N5: [],
       N4: [],
@@ -290,6 +232,7 @@
       // Add other JLPT levels as needed
     };
 
+    // Quiz Variables
     let currentQuestion = 0;
     let score = 0;
     let incorrectAttempts = 0;
@@ -304,20 +247,25 @@
     let timeLimit = 0;
     let timerId;
 
+    // Quiz Initialization
+    window.onload = function () {
+      document.getElementById("quiz-container").style.display = "none";
+    };
 
+    // Fetch Quiz Data
     function fetchQuizData(level) {
       const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}kan.json`;
 
       return fetch(jsonUrl)
         .then((response) => response.json())
         .then((data) => {
-          shuffleArray(data); // Shuffle the array
+          shuffleArray(data);
           return data;
         })
-        .catch((error) =>
-          console.error(`Error fetching ${level} JSON:`, error)
-        );
+        .catch((error) => console.error(`Error fetching ${level} JSON:`, error));
     }
+
+    // Start Quiz
     function startQuiz() {
       selectedLevel = document.getElementById("jlpt-level").value;
       includeHints = document.getElementById("hint-checkbox").checked;
@@ -326,7 +274,7 @@
       if (isTimeAttackMode) {
         timeLimit = parseInt(document.getElementById("time-limit").value);
         document.getElementById("time-attack-options").style.display = "block";
-        quizStartTime = new Date().getTime(); // Record the quiz start time
+        quizStartTime = new Date().getTime();
         startTimer();
       } else {
         totalQuestions = parseInt(document.getElementById("question-count").value);
@@ -338,24 +286,25 @@
         document.getElementById("quiz-container").style.display = "block";
         document.getElementById("quiz-heading").textContent =
           selectedLevel + " Kanji Reading Quiz";
+
         if (isTimeAttackMode) {
           totalQuestions = quizData[selectedLevel].length;
-          loadQuestion(); // Load the first question immediately in time attack mode
+          loadQuestion();
         } else {
-          loadQuestion(); // Load the first question when starting a regular quiz
-          quizStartTime = new Date().getTime(); // Record the quiz start time
+          loadQuestion();
+          quizStartTime = new Date().getTime();
         }
       });
     }
 
-
+    // Timer Functions
     function startTimer() {
       timerId = setInterval(() => {
         const currentTime = new Date().getTime();
         const elapsedSeconds = Math.floor((currentTime - quizStartTime) / 1000);
 
         if (elapsedSeconds >= timeLimit) {
-          endQuiz(); // End the quiz when the time limit is reached
+          endQuiz();
         }
       }, 1000);
     }
@@ -364,7 +313,7 @@
       clearTimeout(timerId);
     }
 
-
+    // Shuffle Array
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -372,22 +321,15 @@
       }
     }
 
-    // Shuffle the arrays in quizData
-    for (const level in quizData) {
-      if (quizData.hasOwnProperty(level)) {
-        shuffleArray(quizData[level]);
-      }
-    }
-
+    // Load Question
     function loadQuestion() {
       const questionContainer = document.getElementById("question-container");
       questionContainer.innerHTML = `<p style="font-size: 24px;">${quizData[selectedLevel][currentQuestion].kanji}</p>`;
     }
 
+    // Check Answer
     function checkAnswer() {
-      const userAnswer = document
-        .getElementById("answer-input")
-        .value.toLowerCase();
+      const userAnswer = document.getElementById("answer-input").value.toLowerCase();
 
       if (isTransitioning) {
         return;
@@ -395,26 +337,23 @@
 
       if (currentQuestion < totalQuestions) {
         const currentQuestionData = quizData[selectedLevel][currentQuestion];
-        const correctReadings = quizData[selectedLevel][
-          currentQuestion
-        ].readings.map((reading) => reading.toLowerCase());
+        const correctReadings = quizData[selectedLevel][currentQuestion].readings.map((reading) => reading.toLowerCase());
         const questionMeaning = currentQuestionData.meaning;
 
         if (correctReadings.includes(userAnswer)) {
           score++;
           incorrectAttempts = 0;
           document.getElementById("feedback").innerHTML = `
-          <span style="color: green;">Correct!</span>
-          <br />
-          Meaning: ${questionMeaning}`;
+        <span style="color: green;">Correct!</span>
+        <br />
+        Meaning: ${questionMeaning}`;
           document.getElementById("hint").innerHTML = ``;
           disableInput();
 
-          // Move to the next question automatically
           setTimeout(() => {
             enableInput();
             nextQuestion();
-          }, 1000); // Wait for 1 second before moving to the next question
+          }, 1000);
         } else {
           incorrectAttempts++;
           incorrectCount++;
@@ -422,24 +361,22 @@
           if (incorrectAttempts === 3) {
             incorrectAttempts = 0;
             unansweredQuestions.push(currentQuestion);
-            // Reveal the correct answers and move to the next question
+
             document.getElementById("feedback").innerHTML = `
-            Incorrect. Correct answers: 
-            <span style="color: green;">${correctReadings.join(", ")}</span>
-            <br />
-            Meaning: ${questionMeaning}
-          `;
+          Incorrect. Correct answers: 
+          <span style="color: green;">${correctReadings.join(", ")}</span>
+          <br />
+          Meaning: ${questionMeaning}
+        `;
             document.getElementById("hint").innerHTML = ` `;
             disableInput();
+
             setTimeout(() => {
               enableInput();
               nextQuestion();
-            }, 1000); // Wait for 1 second before moving to the next question
+            }, 1000);
           } else {
-            document.getElementById(
-              "feedback"
-            ).innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
-            document.getElementById("hint").innerHTML = `Hint : ${questionMeaning}`;
+            document.getElementById("feedback").innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
             document.getElementById("hint").innerHTML = includeHints
               ? `Hint : ${questionMeaning}`
               : '';
@@ -450,6 +387,7 @@
       }
     }
 
+    // Input Functions
     function disableInput() {
       isTransitioning = true;
       document.getElementById("answer-input").disabled = true;
@@ -459,16 +397,16 @@
       isTransitioning = false;
       const answerInput = document.getElementById("answer-input");
       answerInput.disabled = false;
-      answerInput.focus(); // Focus on the input field
+      answerInput.focus();
     }
 
-
-
+    // Next Question
     function nextQuestion() {
       document.getElementById("feedback").innerText = "";
       document.getElementById("answer-input").value = "";
 
       currentQuestion++;
+
       if (currentQuestion < totalQuestions) {
         loadQuestion();
       } else {
@@ -476,6 +414,7 @@
       }
     }
 
+    // Reset Quiz
     function resetQuiz() {
       currentQuestion = 0;
       score = 0;
@@ -486,135 +425,122 @@
       document.getElementById("main-menu").style.display = "block";
     }
 
+    // End Quiz
     function endQuiz() {
       const quizEndTime = new Date().getTime();
-      const timeSpentInSeconds = Math.floor(
-        (quizEndTime - quizStartTime) / 1000
-      );
+      const timeSpentInSeconds = Math.floor((quizEndTime - quizStartTime) / 1000);
       const accuracy = (score / totalQuestions) * 100;
 
-      let encouragementText = "頑張って"; // Default text
+      let encouragementText = "頑張って";
       clearInterval(timerId);
 
       if (accuracy === 100) {
         encouragementText = "You nailed every question. Great job!";
       } else if (accuracy >= 75) {
-        encouragementText =
-          "Great job! You have a solid understanding of the material.";
+        encouragementText = "Great job! You have a solid understanding of the material.";
       } else if (accuracy >= 50) {
-        encouragementText =
-          "Good effort! Keep practicing to improve your knowledge.";
+        encouragementText = "Good effort! Keep practicing to improve your knowledge.";
       } else {
         encouragementText = "Keep trying! Practice makes perfect.";
       }
 
-      // Modify the main menu
       document.getElementById("main-menu").style.display = "block";
       document.getElementById("main-menu").innerHTML = `
-            <h1>${encouragementText}</h1>
-            <p>Quiz Results</p>
-            <table id="quiz-results">
-              <tr>
-                <td>Your Score</td>
-                <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
-              </tr>
-              <tr>
-                <td>Incorrect Attempts</td>
-                <td>${incorrectCount}</td>
-              </tr>
-              <tr>
-                <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
-                <td>${timeSpentInSeconds} seconds</td>
-              </tr>
-            </table>
-            <label for="question-count">Number of Questions:</label>
-            <input type="number" id="question-count" min="1" value="10" />
-            <select id="jlpt-level">
-              <option value="N5">N5</option>
-              <option value="N4">N4</option>
-              <option value="N1">N1</option>
-              <!-- Add other JLPT levels as needed -->
-            </select>
-            <div>
-              <input type="checkbox" id="hint-checkbox" />
-              <label for="hint-checkbox">Include Hints</label>
-              <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
-              <label for="time-attack-checkbox">Time Attack Mode</label>
-            </div>
-            <div>
-              <div id="time-attack-options" style="display: none;">
-                <label for="time-limit">Time Limit:</label>
-                <select id="time-limit">
-                  <option value="30">30 seconds</option>
-                  <option value="60">1 minute</option>
-                  <option value="120">2 minutes</option>
-                  <option value="300">5 minutes</option>
-                </select>
-              </div>
-            </div>
-            <a href="#" onclick="openModal()">Help</a>
-            <div class="input-group">
-              <button onclick="startQuiz()">Start Quiz</button>
-            </div>
+    <h1>${encouragementText}</h1>
+    <p>Quiz Results</p>
+    <table id="quiz-results">
+      <tr>
+        <td>Your Score</td>
+        <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
+      </tr>
+      <tr>
+        <td>Incorrect Attempts</td>
+        <td>${incorrectCount}</td>
+      </tr>
+      <tr>
+        <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
+        <td>${timeSpentInSeconds} seconds</td>
+      </tr>
+    </table>
+    <label for="question-count">Number of Questions:</label>
+    <input type="number" id="question-count" min="1" value="10" />
+    <select id="jlpt-level">
+      <option value="N5">N5</option>
+      <option value="N4">N4</option>
+      <option value="N1">N1</option>
+      <!-- Add other JLPT levels as needed -->
+    </select>
+    <div>
+      <input type="checkbox" id="hint-checkbox" />
+      <label for="hint-checkbox">Include Hints</label>
+      <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
+      <label for="time-attack-checkbox">Time Attack Mode</label>
+    </div>
+    <div>
+      <div id="time-attack-options" style="display: none;">
+        <label for="time-limit">Time Limit:</label>
+        <select id="time-limit">
+          <option value="30">30 seconds</option>
+          <option value="60">1 minute</option>
+          <option value="120">2 minutes</option>
+          <option value="300">5 minutes</option>
+        </select>
+      </div>
+    </div>
+    <a href="#" onclick="openModal()">Help</a>
+    <div class="input-group">
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+  `;
 
-        `;
-
-      // Reveal unanswered questions, if any
       if (unansweredQuestions.length > 0) {
         const unansweredList = unansweredQuestions.map((index, rowIndex) => {
           const question = quizData[selectedLevel][index];
-          const rowColor = rowIndex % 2 === 0 ? "#f2f2f2" : "#ffffff"; // Alternating row colors
+          const rowColor = rowIndex % 2 === 0 ? "#f2f2f2" : "#ffffff";
 
           return `
-            <tr style="background-color: ${rowColor};">
-                <td>${question.kanji}</td>
-                <td>${question.readings.join(", ")}</td>
-                <td>${question.meaning}</td>
-            </tr>
-        `;
+        <tr style="background-color: ${rowColor};">
+          <td>${question.kanji}</td>
+          <td>${question.readings.join(", ")}</td>
+          <td>${question.meaning}</td>
+        </tr>
+      `;
         });
 
         document.getElementById("main-menu").innerHTML += `
-        <div id="unanswered-container">
-            <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-            <p>Unanswered Questions:</p>
-            <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto;">
-                <thead>
-                    <tr style="background-color: #4caf50; color: white;">
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
-                    </tr>
-                </thead>
-                <tbody>${unansweredList.join("")}</tbody>
-            </table>
-        </div>
-      `;
+      <div id="unanswered-container">
+        <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+        <p>Unanswered Questions:</p>
+        <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto;">
+          <thead>
+            <tr style="background-color: #4caf50; color: white;">
+              <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>${unansweredList.join("")}</tbody>
+        </table>
+      </div>
+    `;
       }
 
       unansweredQuestions = [];
       incorrectCount = 0;
       resetQuiz();
-      shuffleArray(quizData[selectedLevel]); // Initiate shuffleArray
+      shuffleArray(quizData[selectedLevel]);
     }
 
-    // Load the first question on page load
-    window.onload = function () {
-      document.getElementById("quiz-container").style.display = "none";
-    };
-  </script>
-  <script>
+    // Copy to Clipboard
     function copyToClipboard() {
       const unansweredTable = document.getElementById("unanswered-table");
       const rows = unansweredTable.querySelectorAll("tbody tr");
 
-      // Create an array to store the rows as text
       const rowsText = Array.from(rows).map((row) => {
         const cells = Array.from(row.cells).map((cell) => cell.innerText);
-        return cells.join("\t"); // Separate cells with tabs
+        return cells.join("\t");
       });
 
-      // Combine rows with line breaks
       const textContent = rowsText.join("\n");
 
       const textarea = document.createElement("textarea");
@@ -626,6 +552,7 @@
       alert("Copied to clipboard!");
     }
 
+    // Toggle Time Attack Options
     function toggleTimeAttackOptions() {
       const timeAttackOptions = document.getElementById("time-attack-options");
       const questionCountInput = document.getElementById("question-count");
@@ -639,24 +566,23 @@
       }
     }
 
+    // Modal Functions
     var modal = document.getElementById("myModal");
 
-    // When the user clicks on the button, open the modal
     function openModal() {
       modal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
     function closeModal() {
       modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     };
+
   </script>
 </body>
 
