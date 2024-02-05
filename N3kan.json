@@ -100,16 +100,6 @@
     "meaning": "happiness, blessing"
   },
   {
-    "kanji": "ジーンズ",
-    "readings": ["ジーンズ", "ジーンズ"],
-    "meaning": "jeans"
-  },
-  {
-    "kanji": "ジェット機",
-    "readings": ["ジェットき", "ジェットki"],
-    "meaning": "jet plane"
-  },
-  {
     "kanji": "四角",
     "readings": ["しかく", "shikaku"],
     "meaning": "square"
@@ -118,11 +108,6 @@
     "kanji": "直に",
     "readings": ["じかに", "jikani"],
     "meaning": "immediately, readily, directly"
-  },
-  {
-    "kanji": "しかも",
-    "readings": ["しかも", "shikamo"],
-    "meaning": "moreover, furthermore, besides, plus"
   },
   {
     "kanji": "四季",
@@ -148,11 +133,6 @@
     "kanji": "至急",
     "readings": ["しきゅう", "shikyuu"],
     "meaning": "urgent, pressing"
-  },
-  {
-    "kanji": "しきりに",
-    "readings": ["しきりに", "shikirini"],
-    "meaning": "frequently, repeatedly, eagerly"
   },
   {
     "kanji": "刺激",
@@ -235,11 +215,6 @@
     "meaning": "to abide (by the rules), to obey"
   },
   {
-    "kanji": "したがって",
-    "readings": ["したがって", "shitagatte"],
-    "meaning": "therefore, consequently"
-  },
-  {
     "kanji": "親しい",
     "readings": ["したしい", "shitashii"],
     "meaning": "intimate, close (e.g., friend)"
@@ -288,11 +263,6 @@
     "kanji": "湿度",
     "readings": ["しつど", "shitsudo"],
     "meaning": "humidity"
-  },
-  {
-    "kanji": "じっと",
-    "readings": ["じっと", "jitto"],
-    "meaning": "patiently, quietly"
   },
   {
     "kanji": "実に",
@@ -350,11 +320,6 @@
     "meaning": "play, drama"
   },
   {
-    "kanji": "しばしば",
-    "readings": ["しばしば", "shibashiba"],
-    "meaning": "often, again and again, frequently"
-  },
-  {
     "kanji": "芝生",
     "readings": ["しばふ", "shibafu"],
     "meaning": "lawn"
@@ -385,11 +350,6 @@
     "meaning": "sisters"
   },
   {
-    "kanji": "しまった (かん)",
-    "readings": ["しまった (かん)", "shimatta (kan)"],
-    "meaning": "Damn it!"
-  },
-  {
     "kanji": "自慢",
     "readings": ["じまん", "jiman"],
     "meaning": "pride, boast"
@@ -416,7 +376,7 @@
   },
   {
     "kanji": "下",
-    "readings": ["しも", "shimo"],
+    "readings": ["しも", "shimo", "した", "shita"],
     "meaning": "under, below, beneath"
   },
   {
@@ -428,11 +388,6 @@
     "kanji": "借金",
     "readings": ["しゃっきん", "shakkin"],
     "meaning": "debt, loan, liabilities"
-  },
-  {
-    "kanji": "しゃべる",
-    "readings": ["しゃべる", "shaberu"],
-    "meaning": "to talk, to chat, to chatter (same as 話す (はなす))"
   },
   {
     "kanji": "週",
@@ -473,11 +428,6 @@
     "kanji": "就職",
     "readings": ["しゅうしょく", "shuushoku"],
     "meaning": "finding employment"
-  },
-  {
-    "kanji": "ジュース",
-    "readings": ["ジュース", "ジュース"],
-    "meaning": "juice, soft drink; deuce"
   },
   {
     "kanji": "修正",
@@ -1065,11 +1015,6 @@
     "meaning": "recommendation"
   },
   {
-    "kanji": "スイッチ",
-    "readings": ["スイッチ", "スイッチ"],
-    "meaning": "switch"
-  },
-  {
     "kanji": "睡眠",
     "readings": ["すいみん", "suimin"],
     "meaning": "sleep"
@@ -1085,11 +1030,6 @@
     "meaning": "numeral, figure"
   },
   {
-    "kanji": "スープ",
-    "readings": ["スープ", "スープ"],
-    "meaning": "(Western) soup"
-  },
-  {
     "kanji": "末",
     "readings": ["すえ", "sue"],
     "meaning": "the end of, powder"
@@ -1100,34 +1040,14 @@
     "meaning": "figure, shape, appearance"
   },
   {
-    "kanji": "スキー",
-    "readings": ["スキー", "スキー"],
-    "meaning": "ski"
-  },
-  {
     "kanji": "救う",
     "readings": ["すくう", "sukuu"],
     "meaning": "to rescue from, to help out of"
   },
   {
-    "kanji": "すくなくとも",
-    "readings": ["すくなくとも", "sukunakutomo"],
-    "meaning": "at least"
-  },
-  {
     "kanji": "優れる",
     "readings": ["すぐれる", "sugureru"],
     "meaning": "to surpass, to outstrip, to excel"
-  },
-  {
-    "kanji": "スケート",
-    "readings": ["スケート", "スケート"],
-    "meaning": "skate(s), skating"
-  },
-  {
-    "kanji": "スケジュール",
-    "readings": ["スケジュール", "スケジュール"],
-    "meaning": "schedule"
   },
   {
     "kanji": "少しも",
@@ -1155,54 +1075,14 @@
     "meaning": "to urge (someone) to do (something), to recommend"
   },
   {
-    "kanji": "スター",
-    "readings": ["スター", "スター"],
-    "meaning": "star"
-  },
-  {
-    "kanji": "スタイル",
-    "readings": ["スタイル", "スタイル"],
-    "meaning": "style"
-  },
-  {
-    "kanji": "スタンド",
-    "readings": ["スタンド", "スタンド"],
-    "meaning": "stand"
-  },
-  {
     "kanji": "頭痛",
     "readings": ["ずつう", "zutsuu"],
     "meaning": "headache"
   },
   {
-    "kanji": "ずっと",
-    "readings": ["ずっと", "zutto"],
-    "meaning": "for a long time; all the time; consecutively"
-  },
-  {
-    "kanji": "すっぱい",
-    "readings": ["すっぱい", "suppai"],
-    "meaning": "sour, acid"
-  },
-  {
-    "kanji": "すてき",
-    "readings": ["すてき", "suteki"],
-    "meaning": "lovely, great"
-  },
-  {
     "kanji": "既に",
     "readings": ["すでに", "sudeni"],
     "meaning": "already (same as もう)"
-  },
-  {
-    "kanji": "すなわち",
-    "readings": ["すなわち", "sunawachi"],
-    "meaning": "that is, namely, e.g."
-  },
-  {
-    "kanji": "スピーチ",
-    "readings": ["スピーチ", "スピーチ"],
-    "meaning": "speech"
   },
   {
     "kanji": "全て",
@@ -1223,11 +1103,6 @@
     "kanji": "墨",
     "readings": ["すみ", "sumi"],
     "meaning": "ink"
-  },
-  {
-    "kanji": "すみません (かん)",
-    "readings": ["すみません (かん)", "sumimasen (kan)"],
-    "meaning": "sorry, excuse me"
   },
   {
     "kanji": "澄む",
@@ -1258,11 +1133,6 @@
     "kanji": "すれ違う",
     "readings": ["すれちがう", "surechigau"],
     "meaning": "to pass by one another"
-  },
-  {
-    "kanji": "ずれる",
-    "readings": ["ずれる", "zureru"],
-    "meaning": "move, off the point"
   },
   {
     "kanji": "正",
@@ -1470,11 +1340,6 @@
     "meaning": "definitely, without fail, absoluteness"
   },
   {
-    "kanji": "セット",
-    "readings": ["セット", "セット"],
-    "meaning": "set"
-  },
-  {
     "kanji": "愛",
     "readings": ["あい", "ai"],
     "meaning": "love"
@@ -1495,11 +1360,6 @@
     "meaning": "sign, signal"
   },
   {
-    "kanji": "アイスクリーム",
-    "readings": ["アイスクリーム", "アイスクリーム"],
-    "meaning": "ice cream"
-  },
-  {
     "kanji": "愛する",
     "readings": ["あいする", "aisuru"],
     "meaning": "to love"
@@ -1510,19 +1370,9 @@
     "meaning": "partner; addressee; the person you are talking to"
   },
   {
-    "kanji": "あいにく",
-    "readings": ["あいにく", "ainiku"],
-    "meaning": "unfortunately"
-  },
-  {
     "kanji": "遭う",
     "readings": ["あう", "au"],
     "meaning": "to meet, to encounter (undesirable nuance)"
-  },
-  {
-    "kanji": "アウト",
-    "readings": ["アウト", "アウト"],
-    "meaning": "out"
   },
   {
     "kanji": "明かり",
@@ -1635,11 +1485,6 @@
     "meaning": "to be hit, to be successful"
   },
   {
-    "kanji": "あちこち",
-    "readings": ["あちこち", "achikochi"],
-    "meaning": "here and there"
-  },
-  {
     "kanji": "扱う",
     "readings": ["あつかう", "atsukau"],
     "meaning": "to treat, to handle, to deal with"
@@ -1698,11 +1543,6 @@
     "kanji": "新た",
     "readings": ["あらた", "arata"],
     "meaning": "new, fresh"
-  },
-  {
-    "kanji": "あらゆる",
-    "readings": ["あらゆる", "arayuru"],
-    "meaning": "all, every"
   },
   {
     "kanji": "表す",
@@ -5106,7 +4946,7 @@
   },
   {
     "kanji": "明後日",
-    "readings": ["みょうごにち", "myougonichi"],
+    "readings": ["みょうごにち", "myougonichi", "あさって", "asatte"],
     "meaning": "day after tomorrow"
   },
   {
@@ -10678,16 +10518,6 @@
     "kanji": "弱める",
     "readings": ["よわめる", "yowameru"],
     "meaning": "to weaken"
-  },
-  {
-    "kanji": "ラベル",
-    "readings": ["ラベル", "ラベル"],
-    "meaning": "label"
-  },
-  {
-    "kanji": "ルール",
-    "readings": ["ルール", "ルール"],
-    "meaning": "rule"
   },
   {
     "kanji": "枠",
