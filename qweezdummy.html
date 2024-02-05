@@ -538,10 +538,10 @@
             <div>
               <input type="checkbox" id="hint-checkbox" />
               <label for="hint-checkbox">Include Hints</label>
-            </div>
-            <div>
               <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
               <label for="time-attack-checkbox">Time Attack Mode</label>
+            </div>
+            <div>
               <div id="time-attack-options" style="display: none;">
                 <label for="time-limit">Time Limit:</label>
                 <select id="time-limit">
@@ -552,6 +552,7 @@
                 </select>
               </div>
             </div>
+            <a href="#" onclick="openModal()">Help</a>
             <div class="input-group">
               <button onclick="startQuiz()">Start Quiz</button>
             </div>
