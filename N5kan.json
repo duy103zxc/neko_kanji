@@ -1906,7 +1906,9 @@
     "kanji": "四",
     "readings": [
       "し",
-      "shi"
+      "shi",
+      "yon",
+      "よん"
     ],
     "meaning": "four"
   },
@@ -2999,14 +3001,6 @@
     "meaning": "to lose something"
   },
   {
-    "kanji": "なぜ",
-    "readings": [
-      "なぜ",
-      "naze"
-    ],
-    "meaning": "why (same as どうして)"
-  },
-  {
     "kanji": "夏",
     "readings": [
       "なつ",
@@ -3249,7 +3243,7 @@
   {
     "kanji": "入る",
     "readings": [
-      "はいる",
+      "はいる", "いる", "iru",
       "hairu"
     ],
     "meaning": "to enter, to contain, to hold"
