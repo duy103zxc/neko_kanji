@@ -791,7 +791,7 @@
     "readings": ["きのう", "kinou"],
     "meaning": "yesterday"
   },
-  { "kanji": "九", "readings": ["きゅう", "kyuu"], "meaning": "nine" },
+  { "kanji": "九", "readings": ["きゅう", "kyuu", "ku", "く"], "meaning": "nine" },
   {
     "kanji": "牛肉",
     "readings": ["ぎゅうにく", "gyuuniku"],
@@ -2738,7 +2738,7 @@
   },
   {
     "kanji": "昨夜",
-    "readings": ["ゆうべ", "yuube"],
+    "readings": ["ゆうべ", "yuube", "sakuya", "さくや"],
     "meaning": "last night"
   },
   {
