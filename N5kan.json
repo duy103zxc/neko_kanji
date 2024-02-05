@@ -2326,7 +2326,9 @@
     "kanji": "外",
     "readings": [
       "そと",
-      "soto"
+      "soto",
+      "ほか",
+      "hoka"
     ],
     "meaning": "outside, exterior"
   },
@@ -3776,14 +3778,6 @@
       "boushi"
     ],
     "meaning": "hat; cap"
-  },
-  {
-    "kanji": "外",
-    "readings": [
-      "ほか",
-      "hoka"
-    ],
-    "meaning": "other, the rest"
   },
   {
     "kanji": "欲しい",
