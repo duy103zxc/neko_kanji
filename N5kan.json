@@ -1905,14 +1905,6 @@
     "meaning": "four"
   },
   {
-    "kanji": "～時",
-    "readings": [
-      "じ",
-      "ji"
-    ],
-    "meaning": "~ o'clock (time)"
-  },
-  {
     "kanji": "塩",
     "readings": [
       "しお",
@@ -2844,9 +2836,11 @@
     "kanji": "～時",
     "readings": [
       "とき",
-      "toki"
+      "toki",
+      "じ",
+      "ji"
     ],
-    "meaning": "at the time of ~"
+    "meaning": "(とき)at the time of ~; (じ) ~ o'clock (time)"
   },
   {
     "kanji": "時々",
