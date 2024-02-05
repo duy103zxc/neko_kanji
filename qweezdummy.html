@@ -101,6 +101,12 @@
       float: right;
       /* Float the button to the right */
     }
+
+    .post-header, .post-header a, .post-header button, .post-footer, .sidebar-container, .post-sidebar, #footer, .centered-top-container.sticky, .post-title, .post-body-container:before, .centered-top-container, .centered-top-placeholder, .centered-top {
+      		display : none;
+          	margin : 0;
+          padding : 0;
+      	}
   </style>
 </head>
 
@@ -126,6 +132,7 @@
     <input type="text" id="answer-input" placeholder="Enter Reading"
       onkeydown="if (event.key === 'Enter') checkAnswer()" />
     <p id="feedback"></p>
+    <p id="hint"></p>
   </div>
   <script>
     const quizData = {
@@ -212,10 +219,10 @@
           score++;
           incorrectAttempts = 0;
           document.getElementById("feedback").innerHTML = `
-        <span style="color: green;">Correct!</span>
-        <br />
-        Meaning: ${questionMeaning}
-      `;
+          <span style="color: green;">Correct!</span>
+          <br />
+          Meaning: ${questionMeaning}`;
+          document.getElementById("hint").innerHTML = ``;
 
           // Move to the next question automatically
           setTimeout(() => {
@@ -230,11 +237,12 @@
             unansweredQuestions.push(currentQuestion);
             // Reveal the correct answers and move to the next question
             document.getElementById("feedback").innerHTML = `
-          Incorrect. Correct answers: 
-          <span style="color: green;">${correctReadings.join(", ")}</span>
-          <br />
-          Meaning: ${questionMeaning}
-        `;
+            Incorrect. Correct answers: 
+            <span style="color: green;">${correctReadings.join(", ")}</span>
+            <br />
+            Meaning: ${questionMeaning}
+          `;
+          document.getElementById("hint").innerHTML = ` `;
             setTimeout(() => {
               nextQuestion();
             }, 2000); // Wait for 1 second before moving to the next question
@@ -242,6 +250,7 @@
             document.getElementById(
               "feedback"
             ).innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
+            document.getElementById("hint").innerHTML = `Hint : ${questionMeaning}`;
           }
         }
       } else {
