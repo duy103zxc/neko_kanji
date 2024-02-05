@@ -169,6 +169,19 @@
     <div>
       <input type="checkbox" id="hint-checkbox" />
       <label for="hint-checkbox">Include Hints</label>
+      <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
+      <label for="time-attack-checkbox">Time Attack Mode</label>
+    </div>
+    <div>
+      <div id="time-attack-options" style="display: none;">
+        <label for="time-limit">Time Limit:</label>
+        <select id="time-limit">
+          <option value="30">30 seconds</option>
+          <option value="60">1 minute</option>
+          <option value="120">2 minutes</option>
+          <option value="300">5 minutes</option>
+        </select>
+      </div>
     </div>
     <div class="input-group">
       <button onclick="startQuiz()">Start Quiz</button>
@@ -204,6 +217,9 @@
     let totalQuestions = parseInt(totalQuestionsInput.value);
     let unansweredQuestions = [];
     let isTransitioning = false;
+    let isTimeAttackMode = false;
+    let timeLimit = 0;
+    let timerId;
 
 
     function fetchQuizData(level) {
@@ -224,6 +240,14 @@
       totalQuestions = parseInt(document.getElementById("question-count").value);
       includeHints = document.getElementById("hint-checkbox").checked;
 
+      if (document.getElementById("time-attack-checkbox").checked) {
+        isTimeAttackMode = true;
+        timeLimit = parseInt(document.getElementById("time-limit").value);
+        document.getElementById("question-count").disabled = true;
+        document.getElementById("time-attack-options").style.display = "block";
+        startTimer();
+      }
+
       fetchQuizData(selectedLevel).then((data) => {
         quizData[selectedLevel] = data;
         document.getElementById("main-menu").style.display = "none";
@@ -233,6 +257,16 @@
         loadQuestion();
         quizStartTime = new Date().getTime();
       });
+    }
+
+    function startTimer() {
+      timerId = setTimeout(() => {
+        endQuiz();
+      }, timeLimit * 1000);
+    }
+
+    function resetTimer() {
+      clearTimeout(timerId);
     }
 
 
@@ -385,17 +419,17 @@
       document.getElementById("main-menu").innerHTML = `
             <h1>${encouragementText}</h1>
             <p>Quiz Results</p>
-            <table id="quiz-results"">
+            <table id="quiz-results">
               <tr>
-                <td>Your Score:</td>
-                <td>${score} out of ${totalQuestions}</td>
+                <td>Your Score</td>
+                <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
               </tr>
               <tr>
-                <td>Incorrect Attempts:</td>
+                <td>Incorrect Attempts</td>
                 <td>${incorrectCount}</td>
               </tr>
               <tr>
-                <td>Time Spent:</td>
+                <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
                 <td>${timeSpentInSeconds} seconds</td>
               </tr>
             </table>
@@ -410,6 +444,19 @@
             <div>
               <input type="checkbox" id="hint-checkbox" />
               <label for="hint-checkbox">Include Hints</label>
+            </div>
+            <div>
+              <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
+              <label for="time-attack-checkbox">Time Attack Mode</label>
+              <div id="time-attack-options" style="display: none;">
+                <label for="time-limit">Time Limit:</label>
+                <select id="time-limit">
+                  <option value="30">30 seconds</option>
+                  <option value="60">1 minute</option>
+                  <option value="120">2 minutes</option>
+                  <option value="300">5 minutes</option>
+                </select>
+              </div>
             </div>
             <div class="input-group">
               <button onclick="startQuiz()">Start Quiz</button>
@@ -482,6 +529,19 @@
       document.execCommand("copy");
       document.body.removeChild(textarea);
       alert("Copied to clipboard!");
+    }
+    
+    function toggleTimeAttackOptions() {
+      const timeAttackOptions = document.getElementById("time-attack-options");
+      const questionCountInput = document.getElementById("question-count");
+
+      if (document.getElementById("time-attack-checkbox").checked) {
+        timeAttackOptions.style.display = "block";
+        questionCountInput.disabled = true;
+      } else {
+        timeAttackOptions.style.display = "none";
+        questionCountInput.disabled = false;
+      }
     }
   </script>
 </body>

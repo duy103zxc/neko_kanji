@@ -2870,7 +2870,8 @@
     "kanji": "年",
     "readings": [
       "とし",
-      "toshi"
+      "toshi",
+      "nen"
     ],
     "meaning": "year, age"
   },
@@ -2958,7 +2959,11 @@
     "kanji": "中",
     "readings": [
       "なか",
-      "naka"
+      "naka",
+      "chuu",
+      "うち",
+      "uchi",
+      "ちゅう"
     ],
     "meaning": "inside, middle, among"
   },
