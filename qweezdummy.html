@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="description"
+    content="Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanji Reading Quiz</title>
   <style>
@@ -137,6 +139,57 @@
       /* Set header text color */
     }
 
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+      text-align: left;
+      /* Align content to the left */
+      border-radius: 10px;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     @media (max-width: 600px) {
       #quiz-results {
         width: 90%;
@@ -183,9 +236,32 @@
         </select>
       </div>
     </div>
+    <a href="#" onclick="openModal()">Help</a>
     <div class="input-group">
       <button onclick="startQuiz()">Start Quiz</button>
     </div>
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings.
+        This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.</p>
+      <h3>How to Play:</h3>
+      <ul>
+        <li>Choose between Regular Mode or Time Attack Mode.</li>
+        <li>In Regular Mode, set the desired number of questions for a customized experience.</li>
+        <li>In Time Attack Mode, challenge yourself with a set time limit of your choice.</li>
+        <li>Enable the hint option for additional assistance.</li>
+        <li>Write the Kanji reading in either hiragana or romaji.</li>
+        <li>Press Enter to submit your answer.</li>
+        <li>You have three chances per question to get it right.</li>
+        <li>Have fun!</li>
+      </ul>
+    </div>
+
   </div>
 
 
@@ -295,8 +371,6 @@
         shuffleArray(quizData[level]);
       }
     }
-
-    console.log(quizData);
 
     function loadQuestion() {
       const questionContainer = document.getElementById("question-container");
@@ -556,6 +630,25 @@
         questionCountInput.disabled = false;
       }
     }
+
+    var modal = document.getElementById("myModal");
+
+    // When the user clicks on the button, open the modal
+    function openModal() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   </script>
 </body>
 
