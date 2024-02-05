@@ -4500,17 +4500,11 @@
     "kanji": "私",
     "readings": [
       "わたし",
-      "watashi"
-    ],
-    "meaning": "I, myself"
-  },
-  {
-    "kanji": "私",
-    "readings": [
+      "watashi",
       "わたくし",
       "watakushi"
     ],
-    "meaning": "I (formal), myself, private affairs"
+    "meaning": "I, myself"
   },
   {
     "kanji": "渡す",
