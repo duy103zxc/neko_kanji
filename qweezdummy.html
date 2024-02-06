@@ -14,22 +14,25 @@
   <style>
     /* Reset and Global Styles */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Tahoma', 'Verdana', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #eceff1;
+      /* Light blue-gray background */
       text-align: center;
     }
 
     /* Common Styles for Containers */
     .quiz-container,
     #main-menu,
-    #quiz-container button{
-      border-radius: 10px;
+    #quiz-container button {
+      border-radius: 8px;
     }
 
     h1 {
       font-size: 24px;
+      color: #1877f2;
+      /* Facebook blue */
     }
 
     .quiz-container,
@@ -37,13 +40,15 @@
       max-width: 80%;
       margin: 50px auto;
       padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      /* White background */
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       text-align: center;
     }
 
     button {
-      background-color: #4caf50;
+      background-color: #1877f2;
+      /* Facebook blue */
       color: white;
       padding: 10px;
       border: none;
@@ -55,6 +60,16 @@
       margin-top: 10px;
     }
 
+
+
+    .label-hint,
+    .help,
+    .input-group,
+    .timeattack,
+    .numberlabel {
+      margin: 5px;
+    }
+
     #answer-input {
       width: 80%;
       padding: 10px;
@@ -62,16 +77,18 @@
     }
 
     #unanswered-container {
-      background-color: #fff;
+      background-color: #ffffff;
+      /* White background */
       border: 1px solid #ccc;
       padding: 10px;
       margin-top: 20px;
       text-align: left;
-      border-radius: 0px 0px 10px 10px;
+      border-radius: 8px;
     }
 
     #copy-button {
-      background-color: #4caf50;
+      background-color: #1877f2;
+      /* Facebook blue */
       color: white;
       border: none;
       padding: 8px 12px;
@@ -94,7 +111,8 @@
     }
 
     #quiz-results th {
-      background-color: #4caf50;
+      background-color: #1877f2;
+      /* Facebook blue */
       color: white;
     }
 
@@ -113,14 +131,15 @@
     }
 
     .modal-content {
-      background-color: #fefefe;
+      background-color: #ffffff;
+      /* White background */
       margin: 15% auto;
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
       text-align: left;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
 
     .close {
@@ -137,6 +156,30 @@
       cursor: pointer;
     }
 
+    /* Add this to your existing CSS styles */
+    #progress-bar-container {
+      display: block;
+      width: 100%;
+      background-color: #e0e0e0;
+      /* Light gray background for the progress bar container */
+      height: 5px;
+      /* Set the height of the progress bar container */
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+
+    #progress-bar {
+      height: 100%;
+      background-color: #1877f2;
+      /* Green color for the progress bar */
+      width: 0;
+      /* Initial width, will be dynamically updated */
+      border-radius: 10px;
+    }
+
+
+
     /* Responsive Design */
     @media (max-width: 600px) {
       #quiz-results {
@@ -151,6 +194,7 @@
         padding: 6px;
       }
     }
+
 
     /* This is necessary to remove blogger templates */
     .post-header,
@@ -170,6 +214,212 @@
       margin: 0;
       padding: 0;
     }
+
+    .label-hint {
+      display: flex;
+      justify-content: center;
+      /* Center items horizontally */
+      /* Use flexbox to arrange items */
+    }
+
+    .checkbox-wrapper-4 * {
+      box-sizing: border-box;
+      flex: 1;
+      /* Distribute the available space equally among the checkbox wrappers */
+      display: flex;
+      /* Use flexbox for nested items */
+      align-items: center;
+      /* Align items vertically in the center */
+      margin-right: 10px;
+      /* Adjust the margin between checkbox wrappers */
+    }
+
+    .checkbox-wrapper-4 .cbx {
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .checkbox-wrapper-4 .cbx:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    .checkbox-wrapper-4 .cbx:hover {
+      background: rgba(0, 119, 255, 0.06);
+    }
+
+    .checkbox-wrapper-4 .cbx span {
+      float: left;
+      vertical-align: middle;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-4 .cbx span:first-child {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      transform: scale(1);
+      border: 1px solid #cccfdb;
+      transition: all 0.2s ease;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .checkbox-wrapper-4 .cbx span:first-child svg {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 16px;
+      stroke-dashoffset: 16px;
+      transition: all 0.3s ease;
+      transition-delay: 0.1s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-4 .cbx span:last-child {
+      padding-left: 8px;
+      line-height: 18px;
+    }
+
+    .checkbox-wrapper-4 .cbx:hover span:first-child {
+      border-color: #07f;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
+      background: #07f;
+      border-color: #07f;
+      animation: wave-4 0.4s ease;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
+      stroke-dashoffset: 0;
+    }
+
+    .checkbox-wrapper-4 .inline-svg {
+      position: absolute;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @media screen and (max-width: 640px) {
+      .checkbox-wrapper-4 .cbx {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .label-hint {
+        display: inline-block;
+        text-align: center;
+        /* Center items horizontally */
+        /* Use flexbox to arrange items */
+      }
+    }
+
+    @-moz-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @-webkit-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @-o-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    .button-19 {
+      appearance: button;
+      background-color: #1877f2;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: din-round, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 20px;
+      margin: 0;
+      outline: none;
+      overflow: visible;
+      padding: 13px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+
+    }
+
+    .button-19:after {
+      background-clip: padding-box;
+      background-color: #00aeef;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      bottom: -4px;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .button-19:main,
+    .button-19:focus {
+      user-select: auto;
+    }
+
+    .button-19:hover:not(:disabled) {
+      filter: brightness(1.1);
+      -webkit-filter: brightness(1.1);
+    }
+
+    .button-19:disabled {
+      cursor: auto;
+    }
+
+    .button-19:active {
+      border-width: 4px 0 0;
+      background: none;
+    }
   </style>
 </head>
 
@@ -177,21 +427,51 @@
   <div id="main-menu" class="main-menu">
     <h1>Welcome to the Kanji Reading Quiz</h1>
     <label for="question-count">Number of Questions:</label>
-    <input type="number" id="question-count" min="1" value="10" />
-    <select id="jlpt-level">
-      <option value="N5">N5</option>
-      <option value="N4">N4</option>
-      <option value="N3">N3</option>
-      <option value="N1">N1</option>
-      <!-- Add other JLPT levels as needed -->
-    </select>
-    <div>
-      <input type="checkbox" id="hint-checkbox" />
-      <label for="hint-checkbox">Include Hints</label>
-      <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
-      <label for="time-attack-checkbox">Time Attack Mode</label>
+    <div class="numberlabel">
+      <input type="number" id="question-count" min="1" value="10" />
+      <select id="jlpt-level">
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
+        <option value="N3">N3</option>
+        <option value="N1">N1</option>
+        <!-- Add other JLPT levels as needed -->
+      </select>
     </div>
-    <div>
+    <div class="label-hint">
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="hint-checkbox" type="checkbox" />
+        <label class="cbx" for="hint-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Include Hints</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="time-attack-checkbox" type="checkbox" onchange="toggleTimeAttackOptions()" />
+        <label class="cbx" for="time-attack-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Time Attack Mode</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="timeattack">
       <div id="time-attack-options" style="display: none;">
         <label for="time-limit">Time Limit:</label>
         <select id="time-limit">
@@ -202,9 +482,11 @@
         </select>
       </div>
     </div>
-    <a href="#" onclick="openModal()">Help</a>
+    <div class="help">
+      <a href="#" onclick="openModal()" style="color: #1877f2; cursor: pointer;">Help</a>
+    </div>
     <div class="input-group">
-      <button onclick="startQuiz()">Start Quiz</button>
+      <button class="button-19" onclick="startQuiz()">Start Quiz</button>
     </div>
   </div>
 
@@ -245,6 +527,9 @@
       onkeydown="if (event.key === 'Enter') checkAnswer()" />
     <p id="feedback"></p>
     <p id="hint"></p>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
   </div>
   <script>
     // Quiz Data
@@ -297,11 +582,13 @@
       isTimeAttackMode = document.getElementById("time-attack-checkbox").checked;
 
       if (isTimeAttackMode) {
+        document.getElementById("progress-bar-container").style.display = "none";
         timeLimit = parseInt(document.getElementById("time-limit").value);
         document.getElementById("time-attack-options").style.display = "block";
         quizStartTime = new Date().getTime();
         startTimer();
       } else {
+        document.getElementById("progress-bar-container").style.display = "block";
         totalQuestions = parseInt(document.getElementById("question-count").value);
       }
 
@@ -321,6 +608,15 @@
         }
       });
     }
+
+    // Proggress Bar
+    function updateProgressBar() {
+      const progressBar = document.getElementById("progress-bar");
+      const progressPercentage = ((currentQuestion + 1) / totalQuestions) * 100;
+      progressBar.style.width = `${progressPercentage}%`;
+      console.log(progressPercentage)
+    }
+
 
     // Timer Functions
     function startTimer() {
@@ -368,7 +664,6 @@
         const currentQuestionData = quizData[selectedLevel][currentQuestion];
         const correctReadings = quizData[selectedLevel][currentQuestion].readings.map((reading) => reading.toLowerCase());
         const questionMeaning = currentQuestionData.meaning;
-
         if (correctReadings.includes(userAnswer)) {
           score++;
           incorrectAttempts = 0;
@@ -383,6 +678,7 @@
             enableInput();
             nextQuestion();
           }, 1000);
+          updateProgressBar()
         } else {
           incorrectAttempts++;
           incorrectCount++;
@@ -404,6 +700,7 @@
               enableInput();
               nextQuestion();
             }, 1000);
+            updateProgressBar()
           } else {
             document.getElementById("feedback").innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
             document.getElementById("hint").innerHTML = includeHints
@@ -459,9 +756,8 @@
       const quizEndTime = new Date().getTime();
       const timeSpentInSeconds = Math.floor((quizEndTime - quizStartTime) / 1000);
       const accuracy = (score / totalQuestions) * 100;
-
       let encouragementText = "頑張って";
-      clearInterval(timerId);
+      clearInterval(timerId)
 
       if (accuracy === 100) {
         encouragementText = "You nailed every question. Great job!";
@@ -475,56 +771,88 @@
 
       document.getElementById("main-menu").style.display = "block";
       document.getElementById("main-menu").innerHTML = `
-    <h1>${encouragementText}</h1>
-    <p>Quiz Results</p>
-    <table id="quiz-results">
-      <tr>
-        <td>Level Taken</td>
-        <td>${selectedLevel}</td>
-      </tr>
-      <tr>
-        <td>Your Score</td>
-        <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
-      </tr>
-      <tr>
-        <td>Incorrect Attempts</td>
-        <td>${incorrectCount}</td>
-      </tr>
-      <tr>
-        <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
-        <td>${timeSpentInSeconds} seconds</td>
-      </tr>
-    </table>
-    <label for="question-count">Number of Questions:</label>
-    <input type="number" id="question-count" min="1" value="10" />
-    <select id="jlpt-level">
-      <option value="N5">N5</option>
-      <option value="N4">N4</option>
-      <option value="N3">N3</option>
-      <option value="N1">N1</option>
-      <!-- Add other JLPT levels as needed -->
-    </select>
-    <div>
-      <input type="checkbox" id="hint-checkbox" />
-      <label for="hint-checkbox">Include Hints</label>
-      <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
-      <label for="time-attack-checkbox">Time Attack Mode</label>
-    </div>
-    <div>
-      <div id="time-attack-options" style="display: none;">
-        <label for="time-limit">Time Limit:</label>
-        <select id="time-limit">
-          <option value="30">30 seconds</option>
-          <option value="60">1 minute</option>
-          <option value="120">2 minutes</option>
-          <option value="300">5 minutes</option>
+      <h1>${encouragementText}</h1>
+      <p>Quiz Results</p>
+      <table id="quiz-results">
+        <tr>
+          <td>Level Taken</td>
+          <td>${selectedLevel}</td>
+        </tr>
+        <tr>
+          <td>Your Score</td>
+          <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
+        </tr>
+        <tr>
+          <td>Incorrect Attempts</td>
+          <td>${incorrectCount}</td>
+        </tr>
+        <tr>
+          <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
+          <td>${timeSpentInSeconds} seconds</td>
+        </tr>
+      </table>
+      <label for="question-count">Number of Questions:</label>
+      <div class="numberlabel">
+        <input type="number" id="question-count" min="1" value="10" />
+        <select id="jlpt-level">
+          <option value="N5">N5</option>
+          <option value="N4">N4</option>
+          <option value="N3">N3</option>
+          <option value="N1">N1</option>
+          <!-- Add other JLPT levels as needed -->
         </select>
       </div>
-    </div>
-    <a href="#" onclick="openModal()">Help</a>
-    <div class="input-group">
-      <button onclick="startQuiz()">Start Quiz</button>
-    </div>
+      <div class="label-hint">
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="hint-checkbox" type="checkbox" />
+          <label class="cbx" for="hint-checkbox">
+            <span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use>
+              </svg>
+            </span>
+            <span>Include Hints</span>
+          </label>
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="time-attack-checkbox" type="checkbox" onchange="toggleTimeAttackOptions()" />
+          <label class="cbx" for="time-attack-checkbox">
+            <span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use>
+              </svg>
+            </span>
+            <span>Time Attack Mode</span>
+          </label>
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+      <div class="timeattack">
+        <div id="time-attack-options" style="display: none;">
+          <label for="time-limit">Time Limit:</label>
+          <select id="time-limit">
+            <option value="30">30 seconds</option>
+            <option value="60">1 minute</option>
+            <option value="120">2 minutes</option>
+            <option value="300">5 minutes</option>
+          </select>
+        </div>
+      </div>
+      <div class="help">
+        <a href="#" onclick="openModal()" style="color: #1877f2; cursor: pointer;">Help</a>
+      </div>
+      <div class="input-group">
+        <button class="button-19" onclick="startQuiz()">Start Quiz</button>
+      </div>
   `;
 
       if (unansweredQuestions.length > 0) {
@@ -542,20 +870,20 @@
         });
 
         document.getElementById("main-menu").innerHTML += `
-      <div id="unanswered-container">
-        <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-        <p>Unanswered Questions:</p>
-        <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto;">
-          <thead>
-            <tr style="background-color: #4caf50; color: white;">
-              <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
-              <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
-              <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
-            </tr>
-          </thead>
-          <tbody>${unansweredList.join("")}</tbody>
-        </table>
-      </div>
+        <div id="unanswered-container">
+          <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+          <p>Unanswered Questions:</p>
+          <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
+            <thead>
+              <tr style="background-color: #1877f2; color: white;">
+                <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>${unansweredList.join("")}</tbody>
+          </table>
+        </div>
     `;
       }
 
