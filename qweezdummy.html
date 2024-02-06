@@ -38,7 +38,7 @@
       -webkit-background-clip: text;
       -moz-background-clip: text;
       background-clip: text;
-      text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+      text-shadow: rgba(245, 245, 245, 0.5) 3px 5px 1px;
     }
 
     .quiz-container,
@@ -87,16 +87,6 @@
       box-shadow: inset rgba(50, 50, 93, 0.25) -4px -4px 4px -5px, inset rgba(0, 0, 0, 0.3) 4px 5px 5px -4px;
     }
 
-
-    #copy-button {
-      background-color: #1877f2;
-      /* Facebook blue */
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-      float: right;
-    }
 
     /* Quiz Results Table */
     #quiz-results {
@@ -524,10 +514,10 @@
     <div id="question-container">
       <!-- Questions will be dynamically inserted here -->
     </div>
+    <p id="hint"></p>
+    <p id="feedback"></p>
     <input type="text" id="answer-input" placeholder="Enter Reading"
       onkeydown="if (event.key === 'Enter') checkAnswer()" />
-    <p id="feedback"></p>
-    <p id="hint"></p>
     <div id="progress-bar-container">
       <div id="progress-bar"></div>
     </div>
@@ -618,6 +608,12 @@
       console.log(progressPercentage)
     }
 
+    function resetProgressBar() {
+      const progressBar = document.getElementById("progress-bar");
+      progressBar.style.width = "0%";
+    }
+
+
 
     // Timer Functions
     function startTimer() {
@@ -689,7 +685,7 @@
             unansweredQuestions.push(currentQuestion);
 
             document.getElementById("feedback").innerHTML = `
-          Incorrect. Correct answers: 
+          <span style="color: red;">Incorrect!</span> Correct answers: 
           <span style="color: green;">${correctReadings.join(", ")}</span>
           <br />
           Meaning: ${questionMeaning}
@@ -703,7 +699,7 @@
             }, 1000);
             updateProgressBar()
           } else {
-            document.getElementById("feedback").innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
+            document.getElementById("feedback").innerHTML = `<span style="color: red;">Incorrect!</span> Attempt ${incorrectAttempts}/3`;
             document.getElementById("hint").innerHTML = includeHints
               ? `Hint : ${questionMeaning}`
               : '';
@@ -759,6 +755,7 @@
       const accuracy = (score / totalQuestions) * 100;
       let encouragementText = "頑張って";
       clearInterval(timerId)
+      resetProgressBar()
 
       if (accuracy === 100) {
         encouragementText = "You nailed every question. Great job!";
@@ -877,7 +874,7 @@
         </div>
         <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
           <thead>
-            <tr style="background-color: #1877f2; color: white;">
+            <tr style="background-color: #00BFFF; color: white;">
               <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
               <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
               <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
