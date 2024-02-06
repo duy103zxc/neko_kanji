@@ -81,7 +81,7 @@
   },
   {
     "kanji": "故～",
-    "readings": ["こ～", "ko～"],
+    "readings": ["こ", "ko"],
     "meaning": "deceased, late"
   },
   {
@@ -99,7 +99,7 @@
     "readings": ["こう", "kou"],
     "meaning": "1st in rank; shell"
   },
-  { "kanji": "～光", "readings": ["～こう", "～kou"], "meaning": "light" },
+  { "kanji": "～光", "readings": ["こう", "kou"], "meaning": "light" },
   {
     "kanji": "好意",
     "readings": ["こうい", "koui"],
@@ -340,11 +340,6 @@
     "meaning": "guard, convoy, escort"
   },
   {
-    "kanji": "コーナー",
-    "readings": ["コーナー", "コーナー"],
-    "meaning": "corner"
-  },
-  {
     "kanji": "小柄",
     "readings": ["こがら", "kogara"],
     "meaning": "small, diminutive"
@@ -455,22 +450,8 @@
     "meaning": "pleasant, agreeable"
   },
   { "kanji": "誤差", "readings": ["ごさ", "gosa"], "meaning": "error" },
-  {
-    "kanji": "ございます (かん)",
-    "readings": ["ございます (かん)", "gozaimasu (kan)"],
-    "meaning": "to be (polite, to exist)"
-  },
   { "kanji": "孤児", "readings": ["こじ", "koji"], "meaning": "orphan" },
-  {
-    "kanji": "こじれる",
-    "readings": ["こじれる", "kojireru"],
-    "meaning": "to get complicated, to grow worse"
-  },
-  {
-    "kanji": "こす (みずを～)",
-    "readings": ["こす (みずを～)", "kosu (mizuwo～)"],
-    "meaning": "to strain, to filter"
-  },
+
   { "kanji": "梢", "readings": ["こずえ", "kozue"], "meaning": "treetop" },
   {
     "kanji": "個性",
@@ -488,24 +469,9 @@
     "meaning": "ancient times"
   },
   {
-    "kanji": "こたつ",
-    "readings": ["こたつ", "kotatsu"],
-    "meaning": "table with heater, (originally) charcoal brazier in a floor well"
-  },
-  {
-    "kanji": "こだわる",
-    "readings": ["こだわる", "kodawaru"],
-    "meaning": "to fuss over, to be particular about"
-  },
-  {
     "kanji": "誇張",
     "readings": ["こちょう", "kochou"],
     "meaning": "exaggeration"
-  },
-  {
-    "kanji": "こつ (をつかむ)",
-    "readings": ["こつ (をつかむ)", "kotsu (wotsukamu)"],
-    "meaning": "secret, trick, hang"
   },
   {
     "kanji": "滑稽",
@@ -538,11 +504,6 @@
     "meaning": "isolation, loneliness, solitude"
   },
   {
-    "kanji": "ことごとく",
-    "readings": ["ことごとく", "kotogotoku"],
-    "meaning": "altogether, entirely"
-  },
-  {
     "kanji": "言付け",
     "readings": ["ことづけ", "kotozuke"],
     "meaning": "to leave a message"
@@ -569,29 +530,14 @@
     "meaning": "particular case"
   },
   {
-    "kanji": "ごまかす",
-    "readings": ["ごまかす", "gomakasu"],
-    "meaning": "to deceive, to falsify, to misrepresent"
-  },
-  {
     "kanji": "細やか",
     "readings": ["こまやか", "komayaka"],
     "meaning": "meager, modest"
   },
   {
-    "kanji": "コマーシャル",
-    "readings": ["コマーシャル", "コマーシャル"],
-    "meaning": "a commercial"
-  },
-  {
     "kanji": "込める",
     "readings": ["こめる", "komeru"],
     "meaning": "to include, to put into"
-  },
-  {
-    "kanji": "コメント",
-    "readings": ["コメント", "コメント"],
-    "meaning": "comment"
   },
   {
     "kanji": "籠もる",
@@ -612,11 +558,6 @@
     "kanji": "凝らす",
     "readings": ["こらす", "korasu"],
     "meaning": "to concentrate, to devote, to peer into"
-  },
-  {
-    "kanji": "ごらんなさい (かん)",
-    "readings": ["ごらんなさい (かん)", "gorannasai (kan)"],
-    "meaning": "look, (please) try to do"
   },
   {
     "kanji": "孤立",
@@ -649,11 +590,6 @@
     "meaning": "mixed race, mixed parentage"
   },
   {
-    "kanji": "コンタクト (レンズ)",
-    "readings": ["コンタクト (レンズ)", "コンタクト (レンズ)"],
-    "meaning": "contact; contact lens"
-  },
-  {
     "kanji": "昆虫",
     "readings": ["こんちゅう", "konchuu"],
     "meaning": "insect, bug"
@@ -667,21 +603,6 @@
     "kanji": "混同",
     "readings": ["こんどう", "kondou"],
     "meaning": "confusion, mixing, merger"
-  },
-  {
-    "kanji": "コントラスト",
-    "readings": ["コントラスト", "コントラスト"],
-    "meaning": "contrast"
-  },
-  {
-    "kanji": "コントロール",
-    "readings": ["コントロール", "コントロール"],
-    "meaning": "control"
-  },
-  {
-    "kanji": "コンパス",
-    "readings": ["コンパス", "コンパス"],
-    "meaning": "compass"
   },
   {
     "kanji": "根本",
@@ -719,11 +640,6 @@
     "meaning": "mining"
   },
   {
-    "kanji": "サイクル",
-    "readings": ["サイクル", "サイクル"],
-    "meaning": "cycle"
-  },
-  {
     "kanji": "採決",
     "readings": ["さいけつ", "saiketsu"],
     "meaning": "vote, roll call"
@@ -753,7 +669,6 @@
     "readings": ["さいさん", "saisan"],
     "meaning": "profit"
   },
-  { "kanji": "サイズ", "readings": ["サイズ", "サイズ"], "meaning": "size" },
   {
     "kanji": "再生",
     "readings": ["さいせい", "saisei"],
@@ -796,11 +711,6 @@
     "meaning": "to interrupt, to intercept, to obstruct"
   },
   {
-    "kanji": "さえずる",
-    "readings": ["さえずる", "saezuru"],
-    "meaning": "to sing, to chirp, to twitter"
-  },
-  {
     "kanji": "冴える",
     "readings": ["さえる", "saeru"],
     "meaning": "to be clear, to be bright, to be skillful"
@@ -829,11 +739,6 @@
     "kanji": "逆立ち",
     "readings": ["さかだち", "sakadachi"],
     "meaning": "handstand, headstand"
-  },
-  {
-    "kanji": "さきに (いぜん)",
-    "readings": ["さきに (いぜん)", "sakini (izen)"],
-    "meaning": "before, earlier than, previously"
   },
   {
     "kanji": "詐欺",
@@ -892,11 +797,6 @@
     "meaning": "to rub, to stroke"
   },
   {
-    "kanji": "さぞ (さぞや。さぞかし)",
-    "readings": ["さぞ (さぞや。さぞかし)", "sazo (sazoya。sazokashi)"],
-    "meaning": "I am sure, certainly, no doubt"
-  },
-  {
     "kanji": "定まる",
     "readings": ["さだまる", "sadamaru"],
     "meaning": "to become settled, to be fixed"
@@ -933,16 +833,6 @@
     "meaning": "chatting, idle talk"
   },
   {
-    "kanji": "さっと",
-    "readings": ["さっと", "satto"],
-    "meaning": "suddenly, smoothly"
-  },
-  {
-    "kanji": "さっぱりする",
-    "readings": ["さっぱりする", "sapparisuru"],
-    "meaning": "to refresh"
-  },
-  {
     "kanji": "悟る",
     "readings": ["さとる", "satoru"],
     "meaning": "to attain enlightenment, to understand"
@@ -956,11 +846,6 @@
     "kanji": "座標",
     "readings": ["ざひょう", "zahyou"],
     "meaning": "coordinates"
-  },
-  {
-    "kanji": "さほど",
-    "readings": ["さほど", "sahodo"],
-    "meaning": "not so, not that much"
   },
   {
     "kanji": "サボる",
@@ -983,19 +868,9 @@
     "meaning": "samurai"
   },
   {
-    "kanji": "さも",
-    "readings": ["さも", "samo"],
-    "meaning": "with gusto, with satisfaction"
-  },
-  {
     "kanji": "作用",
     "readings": ["さよう", "sayou"],
     "meaning": "operation, effect, function"
-  },
-  {
-    "kanji": "さらう (こどもを～)",
-    "readings": ["さらう (こどもを～)", "sarau (kodomowo～)"],
-    "meaning": "to kidnap"
   },
   {
     "kanji": "障る",
@@ -1017,11 +892,6 @@
     "kanji": "産休",
     "readings": ["さんきゅう", "sankyuu"],
     "meaning": "maternity leave"
-  },
-  {
-    "kanji": "サンキュー",
-    "readings": ["サンキュー", "サンキュー"],
-    "meaning": "thank you"
   },
   {
     "kanji": "残金",
@@ -1057,11 +927,6 @@
     "kanji": "残高",
     "readings": ["ざんだか", "zandaka"],
     "meaning": "(bank) balance, remainder"
-  },
-  {
-    "kanji": "サンタクロース",
-    "readings": ["サンタクロース", "サンタクロース"],
-    "meaning": "Santa Claus"
   },
   {
     "kanji": "桟橋",
@@ -1119,16 +984,6 @@
     "meaning": "to dare, to insist"
   },
   {
-    "kanji": "シート",
-    "readings": ["シート", "シート"],
-    "meaning": "seat; sheet"
-  },
-  {
-    "kanji": "ジーパン",
-    "readings": ["ジーパン", "ジーパン"],
-    "meaning": "jeans"
-  },
-  {
     "kanji": "仕入れる",
     "readings": ["しいれる", "shiireru"],
     "meaning": "to lay in stock, to replenish stock, to procure"
@@ -1157,11 +1012,6 @@
     "meaning": "to lay, to set, to wage"
   },
   {
-    "kanji": "しかしながら",
-    "readings": ["しかしながら", "shikashinagara"],
-    "meaning": "however, nevertheless"
-  },
-  {
     "kanji": "色彩",
     "readings": ["しきさい", "shikisai"],
     "meaning": "color"
@@ -1170,11 +1020,6 @@
     "kanji": "式場",
     "readings": ["しきじょう", "shikijou"],
     "meaning": "ceremonial hall, place of ceremony (e.g., marriage)"
-  },
-  {
-    "kanji": "しきたり",
-    "readings": ["しきたり", "shikitari"],
-    "meaning": "custom, conventional practice, tradition"
   },
   {
     "kanji": "事業",
@@ -1197,11 +1042,6 @@
     "meaning": "course, route, channel"
   },
   {
-    "kanji": "けがらわしい",
-    "readings": ["けがらわしい", "kegarawashii"],
-    "meaning": "filthy, unfair"
-  },
-  {
     "kanji": "劇団",
     "readings": ["げきだん", "gekidan"],
     "meaning": "troupe, theatrical company"
@@ -1211,7 +1051,6 @@
     "readings": ["げきれい", "gekirei"],
     "meaning": "encouragement"
   },
-  { "kanji": "ゲスト", "readings": ["ゲスト", "ゲスト"], "meaning": "guest" },
   {
     "kanji": "獣",
     "readings": ["けだもの", "kedamono"],
@@ -1273,11 +1112,6 @@
     "meaning": "union, unity"
   },
   {
-    "kanji": "げっそり",
-    "readings": ["げっそり", "gessori"],
-    "meaning": "being disheartened, losing weight"
-  },
-  {
     "kanji": "決断",
     "readings": ["けつだん", "ketsudan"],
     "meaning": "decision, determination"
@@ -1296,11 +1130,6 @@
     "kanji": "蹴飛ばす",
     "readings": ["けとばす", "ketobasu"],
     "meaning": "to kick away, to kick (someone)"
-  },
-  {
-    "kanji": "けなす",
-    "readings": ["けなす", "kenasu"],
-    "meaning": "to speak ill of"
   },
   {
     "kanji": "煙たい",
@@ -1431,11 +1260,6 @@
     "meaning": "to value, to prize, to esteem"
   },
   {
-    "kanji": "どうにか",
-    "readings": ["どうにか", "dounika"],
-    "meaning": "in some way or other, one way or another"
-  },
-  {
     "kanji": "投入",
     "readings": ["とうにゅう", "tounyuu"],
     "meaning": "throw, investment, making (an electrical circuit)"
@@ -1471,11 +1295,6 @@
     "meaning": "alliance, union, league"
   },
   {
-    "kanji": "どうやら",
-    "readings": ["どうやら", "douyara"],
-    "meaning": "it seems like, somehow or other"
-  },
-  {
     "kanji": "動力",
     "readings": ["どうりょく", "douryoku"],
     "meaning": "power, motive power, dynamic force"
@@ -1500,26 +1319,10 @@
     "readings": ["とおまわり", "toomawari"],
     "meaning": "detour, roundabout way"
   },
-  { "kanji": "トーン", "readings": ["トーン", "トーン"], "meaning": "tone" },
-  {
-    "kanji": "とかく",
-    "readings": ["とかく", "tokaku"],
-    "meaning": "anyhow, anyway, in any case"
-  },
-  {
-    "kanji": "とがめる",
-    "readings": ["とがめる", "togameru"],
-    "meaning": "to blame, to rebuke"
-  },
   {
     "kanji": "時折",
     "readings": ["ときおり", "tokiori"],
     "meaning": "sometimes"
-  },
-  {
-    "kanji": "とぎれる",
-    "readings": ["とぎれる", "togireru"],
-    "meaning": "to pause, to be interrupted"
   },
   {
     "kanji": "研ぐ",
@@ -1577,19 +1380,9 @@
     "meaning": "characteristic (of, peculiar (to))"
   },
   {
-    "kanji": "とげ (をさす)",
-    "readings": ["とげ (をさす)", "toge (wosasu)"],
-    "meaning": "thorn"
-  },
-  {
     "kanji": "遂げる",
     "readings": ["とげる", "togeru"],
     "meaning": "to accomplish, to achieve, to carry out"
-  },
-  {
-    "kanji": "～どころか",
-    "readings": ["～どころか", "～dokoroka"],
-    "meaning": "rather, far from"
   },
   {
     "kanji": "年頃",
@@ -1627,19 +1420,9 @@
     "meaning": "privilege, special right"
   },
   {
-    "kanji": "とっさに",
-    "readings": ["とっさに", "tossani"],
-    "meaning": "at once"
-  },
-  {
     "kanji": "突如",
     "readings": ["とつじょ", "totsujo"],
     "meaning": "suddenly, all of a sudden"
-  },
-  {
-    "kanji": "とって",
-    "readings": ["とって", "totte"],
-    "meaning": "handle, grip, knob"
   },
   {
     "kanji": "突破",
@@ -1703,11 +1486,6 @@
     "meaning": "public works"
   },
   {
-    "kanji": "とぼける",
-    "readings": ["とぼける", "tobokeru"],
-    "meaning": "to play dumb, to feign ignorance, to play innocent, to have a blank facial expression; to play the fool; to be in one's dotage"
-  },
-  {
     "kanji": "乏しい",
     "readings": ["とぼしい", "toboshii"],
     "meaning": "meager, scarce, hard up, poor"
@@ -1736,37 +1514,6 @@
     "kanji": "共働き",
     "readings": ["ともばたらき", "tomobataraki"],
     "meaning": "dual income (husband and wife both working)"
-  },
-  { "kanji": "ドライ", "readings": ["ドライ", "ドライ"], "meaning": "dry" },
-  {
-    "kanji": "ドライクリーニング",
-    "readings": ["ドライクリーニング", "ドライクリーニング"],
-    "meaning": "dry cleaning"
-  },
-  {
-    "kanji": "ドライバー",
-    "readings": ["ドライバー", "ドライバー"],
-    "meaning": "driver, screwdriver"
-  },
-  {
-    "kanji": "ドライブイン",
-    "readings": ["ドライブイン", "ドライブイン"],
-    "meaning": "drive in"
-  },
-  {
-    "kanji": "トラブル",
-    "readings": ["トラブル", "トラブル"],
-    "meaning": "trouble (sometimes used as a verb)"
-  },
-  {
-    "kanji": "トランジスター",
-    "readings": ["トランジスター", "トランジスター"],
-    "meaning": "transistor"
-  },
-  {
-    "kanji": "とりあえず",
-    "readings": ["とりあえず", "toriaezu"],
-    "meaning": "at once, first of all, for the time being"
   },
   {
     "kanji": "取扱",
@@ -1853,26 +1600,15 @@
     "readings": ["とりよせる", "toriyoseru"],
     "meaning": "to order, to send away for"
   },
-  { "kanji": "ドリル", "readings": ["ドリル", "ドリル"], "meaning": "drill" },
   {
     "kanji": "副",
     "readings": ["とりわけ", "toriwake"],
     "meaning": "especially, above all"
   },
   {
-    "kanji": "とろける",
-    "readings": ["とろける", "torokeru"],
-    "meaning": "melt; to be enchanted with"
-  },
-  {
     "kanji": "鈍感",
     "readings": ["どんかん", "donkan"],
     "meaning": "thickheadedness, stolidity"
-  },
-  {
-    "kanji": "とんだ",
-    "readings": ["とんだ", "tonda"],
-    "meaning": "terrible, awful, serious, absolutely not"
   },
   {
     "kanji": "度忘れ",
@@ -1910,11 +1646,6 @@
     "meaning": "internal organ; built-in"
   },
   {
-    "kanji": "ナイター",
-    "readings": ["ナイター", "ナイター"],
-    "meaning": "game under lights (e.g., baseball), night game"
-  },
-  {
     "kanji": "内部",
     "readings": ["ないぶ", "naibu"],
     "meaning": "interior, inside, internal"
@@ -1930,11 +1661,6 @@
     "meaning": "inland"
   },
   { "kanji": "苗", "readings": ["なえ", "nae"], "meaning": "rice seedling" },
-  {
-    "kanji": "なおさら",
-    "readings": ["なおさら", "naosara"],
-    "meaning": "all the more, still less"
-  },
   { "kanji": "流し", "readings": ["ながし", "nagashi"], "meaning": "sink" },
   {
     "kanji": "長々",
@@ -2022,21 +1748,6 @@
     "meaning": "casual, unconcerned"
   },
   {
-    "kanji": "なにとぞ",
-    "readings": ["なにとぞ", "nanitozo"],
-    "meaning": "please, kindly, by all means"
-  },
-  {
-    "kanji": "なにより",
-    "readings": ["なにより", "naniyori"],
-    "meaning": "most, best"
-  },
-  {
-    "kanji": "ナプキン",
-    "readings": ["ナプキン", "ナプキン"],
-    "meaning": "napkin"
-  },
-  {
     "kanji": "名札",
     "readings": ["なふだ", "nafuda"],
     "meaning": "name plate, name tag"
@@ -2097,11 +1808,6 @@
     "meaning": "to consist of; to be practical (logical, feasible, viable), to be concluded, to hold true"
   },
   {
-    "kanji": "なるたけ",
-    "readings": ["なるたけ", "narutake"],
-    "meaning": "as much as possible, if possible"
-  },
-  {
     "kanji": "慣れ",
     "readings": ["なれ", "nare"],
     "meaning": "practice, experience"
@@ -2112,29 +1818,9 @@
     "meaning": "familiar, make free with"
   },
   {
-    "kanji": "～なんか",
-    "readings": ["～なんか", "～nanka"],
-    "meaning": "in the least ~"
-  },
-  {
-    "kanji": "ナンセンス",
-    "readings": ["ナンセンス", "ナンセンス"],
-    "meaning": "nonsense"
-  },
-  {
     "kanji": "何だか",
     "readings": ["なんだか", "nandaka"],
     "meaning": "a little, somewhat, somehow"
-  },
-  {
-    "kanji": "なんだかんだ",
-    "readings": ["なんだかんだ", "nandakanda"],
-    "meaning": "something or other"
-  },
-  {
-    "kanji": "なんなり",
-    "readings": ["なんなり", "nannari"],
-    "meaning": "anything, whatever"
   },
   {
     "kanji": "荷",
@@ -2145,11 +1831,6 @@
     "kanji": "似通う",
     "readings": ["にかよう", "nikayou"],
     "meaning": "to resemble closely"
-  },
-  {
-    "kanji": "にきび",
-    "readings": ["にきび", "nikibi"],
-    "meaning": "pimple, acne"
   },
   {
     "kanji": "賑わう",
@@ -2217,17 +1898,6 @@
     "meaning": "in spite of, nevertheless"
   },
   {
-    "kanji": "ニュアンス",
-    "readings": ["ニュアンス", "ニュアンス"],
-    "meaning": "nuance"
-  },
-  { "kanji": "ニュー", "readings": ["ニュー", "ニュー"], "meaning": "new" },
-  {
-    "kanji": "入手",
-    "readings": ["にゅうしゅ", "nyuushu"],
-    "meaning": "obtaining, coming to hand"
-  },
-  {
     "kanji": "入賞",
     "readings": ["にゅうしょう", "nyuushou"],
     "meaning": "winning a prize or place (in a contest"
@@ -2289,19 +1959,9 @@
     "meaning": "value, worth, price"
   },
   {
-    "kanji": "ネガ",
-    "readings": ["ネガ", "ネガ"],
-    "meaning": "(photographic) negative"
-  },
-  {
     "kanji": "寝かせる",
     "readings": ["ねかせる", "nekaseru"],
     "meaning": "to put to bed, to lay down, to ferment"
-  },
-  {
-    "kanji": "ねじまわし",
-    "readings": ["ねじまわし", "nejimawashi"],
-    "meaning": "screwdriver"
   },
   {
     "kanji": "捩れる",
@@ -2312,11 +1972,6 @@
     "kanji": "妬む",
     "readings": ["ねたむ", "netamu"],
     "meaning": "to be jealous, to be envious"
-  },
-  {
-    "kanji": "ねだる",
-    "readings": ["ねだる", "nedaru"],
-    "meaning": "to nag, to demand"
   },
   {
     "kanji": "熱意",
@@ -2404,11 +2059,6 @@
     "meaning": "annual tree ring"
   },
   {
-    "kanji": "ノイローゼ",
-    "readings": ["ノイローゼ", "ノイローゼ"],
-    "meaning": "neurosis (GER: Neurose)"
-  },
-  {
     "kanji": "農耕",
     "readings": ["のうこう", "noukou"],
     "meaning": "farming, agriculture"
@@ -2454,11 +2104,6 @@
     "meaning": "to capture, to occupy, to take over"
   },
   {
-    "kanji": "のどか",
-    "readings": ["のどか", "nodoka"],
-    "meaning": "tranquil, calm, quiet"
-  },
-  {
     "kanji": "罵る",
     "readings": ["ののしる", "nonoshiru"],
     "meaning": "to speak ill of, to abuse"
@@ -2481,19 +2126,13 @@
   { "kanji": "刃", "readings": ["は", "ha"], "meaning": "blade, sword" },
   {
     "kanji": "～派",
-    "readings": ["～は", "～ha"],
+    "readings": ["は", "ha"],
     "meaning": "group, party, section (mil)"
   },
-  { "kanji": "バー", "readings": ["バー", "バー"], "meaning": "bar" },
   {
     "kanji": "把握",
     "readings": ["はあく", "haaku"],
     "meaning": "grasp, catch, understanding"
-  },
-  {
-    "kanji": "パート",
-    "readings": ["パート", "パート"],
-    "meaning": "part-time job"
   },
   {
     "kanji": "廃棄",
@@ -2599,11 +2238,6 @@
     "kanji": "破壊",
     "readings": ["はかい", "hakai"],
     "meaning": "destruction"
-  },
-  {
-    "kanji": "いたわる",
-    "readings": ["いたわる", "itawaru"],
-    "meaning": "to sympathize with, to console, to care for"
   },
   {
     "kanji": "一概に",
@@ -2721,11 +2355,6 @@
     "meaning": "prayer, supplication"
   },
   {
-    "kanji": "いびき",
-    "readings": ["いびき", "ibiki"],
-    "meaning": "snoring"
-  },
-  {
     "kanji": "今更",
     "readings": ["いまさら", "imasara"],
     "meaning": "now, again"
@@ -2749,16 +2378,6 @@
     "kanji": "卑しい",
     "readings": ["いやしい", "iyashii"],
     "meaning": "greedy, vulgar, shabby"
-  },
-  {
-    "kanji": "いやに",
-    "readings": ["いやに", "iyani"],
-    "meaning": "awfully, terribly"
-  },
-  {
-    "kanji": "いやらしい",
-    "readings": ["いやらしい", "iyarashii"],
-    "meaning": "unpleasant, disgusting, indecent"
   },
   {
     "kanji": "意欲",
@@ -2794,36 +2413,6 @@
     "kanji": "隠居",
     "readings": ["いんきょ", "inkyo"],
     "meaning": "retirement; retired person"
-  },
-  {
-    "kanji": "インターチェンジ",
-    "readings": ["インターチェンジ", "インターチェンジ"],
-    "meaning": "interchange"
-  },
-  {
-    "kanji": "インターナショナル",
-    "readings": ["インターナショナル", "インターナショナル"],
-    "meaning": "international"
-  },
-  {
-    "kanji": "インターフォン",
-    "readings": ["インターフォン", "インターフォン"],
-    "meaning": "entry phone, intercom"
-  },
-  {
-    "kanji": "インテリ",
-    "readings": ["インテリ", "インテリ"],
-    "meaning": "(abbr.) egghead, intelligentsia"
-  },
-  {
-    "kanji": "インフォメーション",
-    "readings": ["インフォメーション", "インフォメーション"],
-    "meaning": "information"
-  },
-  {
-    "kanji": "インフレ",
-    "readings": ["インフレ", "インフレ"],
-    "meaning": "(abbr.) inflation"
   },
   {
     "kanji": "受かる",
@@ -2922,16 +2511,6 @@
     "meaning": "lawsuit, complaint"
   },
   {
-    "kanji": "うっとうしい",
-    "readings": ["うっとうしい", "uttoushii"],
-    "meaning": "weary, annoying"
-  },
-  {
-    "kanji": "うつむく",
-    "readings": ["うつむく", "utsumuku"],
-    "meaning": "to look downward, to stoop"
-  },
-  {
     "kanji": "空ろ",
     "readings": ["うつろ", "utsuro"],
     "meaning": "blank, hollow, empty"
@@ -2955,11 +2534,6 @@
     "kanji": "促す",
     "readings": ["うながす", "unagasu"],
     "meaning": "to urge, to suggest, to demand"
-  },
-  {
-    "kanji": "うぬぼれ",
-    "readings": ["うぬぼれ", "unubore"],
-    "meaning": "pretension, conceit, hubris"
   },
   {
     "kanji": "生まれつき",
@@ -3017,11 +2591,6 @@
     "meaning": "management, administration, operation"
   },
   {
-    "kanji": "うんざり",
-    "readings": ["うんざり", "unzari"],
-    "meaning": "tedious, boring, being fed up with"
-  },
-  {
     "kanji": "運送",
     "readings": ["うんそう", "unsou"],
     "meaning": "shipping, freight"
@@ -3052,12 +2621,7 @@
     "readings": ["うんよう", "unyou"],
     "meaning": "making use of, application, practical use"
   },
-  {
-    "kanji": "エアメール",
-    "readings": ["エアメール", "エアメール"],
-    "meaning": "air mail"
-  },
-  { "kanji": "～営", "readings": ["～えい", "～ei"], "meaning": "~ run" },
+  { "kanji": "～営", "readings": ["えい", "ei"], "meaning": "~ run" },
   {
     "kanji": "英字",
     "readings": ["えいじ", "eiji"],
@@ -3091,11 +2655,6 @@
   },
   { "kanji": "襟", "readings": ["えり", "eri"], "meaning": "neck, collar" },
   {
-    "kanji": "エレガント",
-    "readings": ["エレガント", "エレガント"],
-    "meaning": "elegant"
-  },
-  {
     "kanji": "円滑",
     "readings": ["えんかつ", "enkatsu"],
     "meaning": "harmony, smoothness"
@@ -3119,11 +2678,6 @@
     "kanji": "演出",
     "readings": ["えんしゅつ", "enshutsu"],
     "meaning": "production (erg. play, direction)"
-  },
-  {
-    "kanji": "エンジニア",
-    "readings": ["エンジニア", "エンジニア"],
-    "meaning": "engineer"
   },
   {
     "kanji": "演じる",
@@ -3192,11 +2746,6 @@
     "meaning": "subscription, application"
   },
   {
-    "kanji": "おおい (かん)",
-    "readings": ["おおい (かん)", "ooi (kan)"],
-    "meaning": "hey"
-  },
-  {
     "kanji": "大方",
     "readings": ["おおかた", "ookata"],
     "meaning": "almost all, majority"
@@ -3222,19 +2771,9 @@
     "meaning": "heaven, the sky"
   },
   {
-    "kanji": "オートマチック",
-    "readings": ["オートマチック", "オートマチック"],
-    "meaning": "automatic"
-  },
-  {
     "kanji": "大幅",
     "readings": ["おおはば", "oohaba"],
     "meaning": "full width, large scale, drastic"
-  },
-  {
-    "kanji": "おおまかな",
-    "readings": ["おおまかな", "oomakana"],
-    "meaning": "rough, approximate"
   },
   { "kanji": "大水", "readings": ["おおみず", "oomizu"], "meaning": "flood" },
   { "kanji": "公", "readings": ["おおやけ", "ooyake"], "meaning": "public" },
@@ -3267,11 +2806,6 @@
     "kanji": "行い",
     "readings": ["おこない", "okonai"],
     "meaning": "conduct, behavior, action"
-  },
-  {
-    "kanji": "おごる (ゆうしょくを～)",
-    "readings": ["おごる (ゆうしょくを～)", "ogoru (yuushokuwo～)"],
-    "meaning": "to give (someone) a treat"
   },
   {
     "kanji": "収まる",
@@ -3336,11 +2870,6 @@
     "meaning": "to be filled with awe, to feel small"
   },
   {
-    "kanji": "おだてる",
-    "readings": ["おだてる", "odateru"],
-    "meaning": "to flatter"
-  },
-  {
     "kanji": "落ち込む",
     "readings": ["おちこむ", "ochikomu"],
     "meaning": "to get depressed"
@@ -3362,19 +2891,9 @@
     "meaning": "errand"
   },
   {
-    "kanji": "おっかない",
-    "readings": ["おっかない", "okkanai"],
-    "meaning": "frightening, scary"
-  },
-  {
     "kanji": "お手上げ",
     "readings": ["おてあげ", "oteage"],
     "meaning": "given in, given up hope"
-  },
-  {
-    "kanji": "おどおど",
-    "readings": ["おどおど", "odoodo"],
-    "meaning": "coweringly, hesitantly"
   },
   {
     "kanji": "脅す",
@@ -3412,11 +2931,6 @@
     "meaning": "to become frightened"
   },
   {
-    "kanji": "おびただしい",
-    "readings": ["おびただしい", "obitadashii"],
-    "meaning": "abundantly, innumerably"
-  },
-  {
     "kanji": "脅かす",
     "readings": ["おびやかす", "obiyakasu"],
     "meaning": "to threaten, to coerce"
@@ -3437,19 +2951,9 @@
     "meaning": "memory, sense, experience"
   },
   {
-    "kanji": "おまけ",
-    "readings": ["おまけ", "omake"],
-    "meaning": "a discount; something additional"
-  },
-  {
     "kanji": "お宮",
     "readings": ["おみや", "omiya"],
     "meaning": "Shinto shrine"
-  },
-  {
-    "kanji": "おむつ",
-    "readings": ["おむつ", "omutsu"],
-    "meaning": "diaper, nappy"
   },
   {
     "kanji": "思い付き",
@@ -3502,11 +3006,6 @@
     "meaning": "cage, pen, jail cell"
   },
   {
-    "kanji": "オリエンテーション",
-    "readings": ["オリエンテーション", "オリエンテーション"],
-    "meaning": "orientation"
-  },
-  {
     "kanji": "折り返す",
     "readings": ["おりかえす", "orikaesu"],
     "meaning": "to turn up, to fold back"
@@ -3527,37 +3026,17 @@
     "meaning": "foolish, stupid"
   },
   {
-    "kanji": "おろそか",
-    "readings": ["おろそか", "orosoka"],
-    "meaning": "neglect, negligence, carelessness"
-  },
-  {
-    "kanji": "おんぶ",
-    "readings": ["おんぶ", "onbu"],
-    "meaning": "carrying on one's back (erg. Baby)"
-  },
-  {
-    "kanji": "オンライン",
-    "readings": ["オンライン", "オンライン"],
-    "meaning": "on-line"
-  },
-  {
     "kanji": "温和",
     "readings": ["おんわ", "onwa"],
     "meaning": "gentle, mild, moderate"
   },
-  { "kanji": "我", "readings": ["が～", "ga～"], "meaning": "ego" },
-  {
-    "kanji": "カーペット",
-    "readings": ["カーペット", "カーペット"],
-    "meaning": "carpet"
-  },
+  { "kanji": "我", "readings": ["が", "ga"], "meaning": "ego" },
   {
     "kanji": "～界",
-    "readings": ["～かい", "～kai"],
+    "readings": ["かい", "kai"],
     "meaning": "world, circle, kingdom"
   },
-  { "kanji": "～街", "readings": ["～がい", "～gai"], "meaning": "town" },
+  { "kanji": "～街", "readings": ["がい", "gai"], "meaning": "town" },
   {
     "kanji": "改悪",
     "readings": ["かいあく", "kaiaku"],
@@ -3674,7 +3153,6 @@
     "readings": ["かいてい", "kaitei"],
     "meaning": "revision"
   },
-  { "kanji": "ガイド", "readings": ["ガイド", "ガイド"], "meaning": "guide" },
   {
     "kanji": "街道",
     "readings": ["かいどう", "kaidou"],
@@ -3689,11 +3167,6 @@
     "kanji": "街頭",
     "readings": ["がいとう", "gaitou"],
     "meaning": "in the street"
-  },
-  {
-    "kanji": "ガイドブック",
-    "readings": ["ガイドブック", "ガイドブック"],
-    "meaning": "guidebook"
   },
   {
     "kanji": "介入",
@@ -3786,11 +3259,6 @@
     "meaning": "to hoist, to fly (a sail), to float (a flag)"
   },
   {
-    "kanji": "かかと",
-    "readings": ["かかと", "kakato"],
-    "meaning": "shoe heel"
-  },
-  {
     "kanji": "書き取る",
     "readings": ["かきとる", "kakitoru"],
     "meaning": "to write down, to take dictation"
@@ -3801,13 +3269,8 @@
     "meaning": "to stir up, to churn, to disturb"
   },
   {
-    "kanji": "かく (はじを)",
-    "readings": ["かく (はじを)", "kaku (hajiwo)"],
-    "meaning": "to humiliate oneself"
-  },
-  {
     "kanji": "～画",
-    "readings": ["～かく", "～kaku"],
+    "readings": ["かく", "kaku"],
     "meaning": "~ strokes"
   },
   {
@@ -3861,11 +3324,6 @@
     "meaning": "fixed, decision"
   },
   {
-    "kanji": "カクテル",
-    "readings": ["カクテル", "カクテル"],
-    "meaning": "cocktail"
-  },
-  {
     "kanji": "獲得",
     "readings": ["かくとく", "kakutoku"],
     "meaning": "acquisition, possession"
@@ -3895,10 +3353,10 @@
     "readings": ["かけ", "kake"],
     "meaning": "betting, gambling, a gamble"
   },
-  { "kanji": "掛～", "readings": ["かけ～", "kake～"], "meaning": "credit" },
+  { "kanji": "掛～", "readings": ["かけ", "kake"], "meaning": "credit" },
   {
     "kanji": "～掛け",
-    "readings": ["～かけ", "～kake"],
+    "readings": ["かけ", "kake"],
     "meaning": "rack, hanger"
   },
   { "kanji": "崖", "readings": ["がけ", "gake"], "meaning": "cliff" },
@@ -3926,16 +3384,6 @@
     "kanji": "化合",
     "readings": ["かごう", "kagou"],
     "meaning": "chemical combination"
-  },
-  {
-    "kanji": "かさばる",
-    "readings": ["かさばる", "kasabaru"],
-    "meaning": "to be bulky"
-  },
-  {
-    "kanji": "かさむ",
-    "readings": ["かさむ", "kasamu"],
-    "meaning": "to pile up, to increase"
   },
   {
     "kanji": "箇条書",
@@ -3981,7 +3429,7 @@
   },
   {
     "kanji": "片～",
-    "readings": ["かた～", "kata～"],
+    "readings": ["かた", "kata"],
     "meaning": "single ~"
   },
   {
@@ -4016,19 +3464,9 @@
   },
   { "kanji": "且つ", "readings": ["かつ", "katsu"], "meaning": "yet, and" },
   {
-    "kanji": "がっくり",
-    "readings": ["がっくり", "gakkuri"],
-    "meaning": "heartbroken"
-  },
-  {
     "kanji": "合唱",
     "readings": ["がっしょう", "gasshou"],
     "meaning": "chorus, singing in a chorus"
-  },
-  {
-    "kanji": "がっしり",
-    "readings": ["がっしり", "gasshiri"],
-    "meaning": "firmly, solidly, tough"
   },
   {
     "kanji": "合致",
@@ -4036,24 +3474,9 @@
     "meaning": "agreement, concurrence, conforming to"
   },
   {
-    "kanji": "がっちり",
-    "readings": ["がっちり", "gatchiri"],
-    "meaning": "solidly built, tightly"
-  },
-  {
-    "kanji": "かつて",
-    "readings": ["かつて", "katsute"],
-    "meaning": "once, before, formerly"
-  },
-  {
     "kanji": "勝手",
     "readings": ["かって", "katte"],
     "meaning": "kitchen; one's way, selfishness"
-  },
-  {
-    "kanji": "カット",
-    "readings": ["カット", "カット"],
-    "meaning": "cut, cutting"
   },
   {
     "kanji": "活発",
@@ -4064,11 +3487,6 @@
     "kanji": "合併",
     "readings": ["がっぺい", "gappei"],
     "meaning": "combination, amalgamation, merger"
-  },
-  {
-    "kanji": "カテゴリー",
-    "readings": ["カテゴリー", "カテゴリー"],
-    "meaning": "category"
   },
   {
     "kanji": "叶う",
@@ -4084,11 +3502,6 @@
     "kanji": "金槌",
     "readings": ["かなづち", "kanazuchi"],
     "meaning": "(iron) hammer"
-  },
-  {
-    "kanji": "かなわない",
-    "readings": ["かなわない", "kanawanai"],
-    "meaning": "be beyond one's power, be unable"
   },
   {
     "kanji": "加入",
@@ -4109,11 +3522,6 @@
     "kanji": "株式",
     "readings": ["かぶしき", "kabushiki"],
     "meaning": "stock"
-  },
-  {
-    "kanji": "かぶれる",
-    "readings": ["かぶれる", "kabureru"],
-    "meaning": "to react to; to be influenced by"
   },
   { "kanji": "花粉", "readings": ["かふん", "kafun"], "meaning": "pollen" },
   {
@@ -4136,16 +3544,6 @@
     "readings": ["かみきる", "kamikiru"],
     "meaning": "to bite off, to gnaw through"
   },
-  {
-    "kanji": "カムバック",
-    "readings": ["カムバック", "カムバック"],
-    "meaning": "comeback"
-  },
-  {
-    "kanji": "カメラマン",
-    "readings": ["カメラマン", "カメラマン"],
-    "meaning": "cameraman"
-  },
   { "kanji": "粥", "readings": ["かゆ", "kayu"], "meaning": "rice porridge" },
   {
     "kanji": "体付き",
@@ -4158,29 +3556,9 @@
     "meaning": "to entangle, to entwine"
   },
   {
-    "kanji": "かりに",
-    "readings": ["かりに", "karini"],
-    "meaning": "temporarily; if, for argument's sake"
-  },
-  {
-    "kanji": "カルテ",
-    "readings": ["カルテ", "カルテ"],
-    "meaning": "clinical records (GER: Karte)"
-  },
-  {
-    "kanji": "ガレージ",
-    "readings": ["ガレージ", "ガレージ"],
-    "meaning": "garage (at house)"
-  },
-  {
     "kanji": "過労",
     "readings": ["かろう", "karou"],
     "meaning": "overwork, strain"
-  },
-  {
-    "kanji": "かろうじて",
-    "readings": ["かろうじて", "karoujite"],
-    "meaning": "barely, narrowly"
   },
   {
     "kanji": "交す",
@@ -4319,11 +3697,6 @@
     "kanji": "感度",
     "readings": ["かんど", "kando"],
     "meaning": "sensitivity, severity (quake)"
-  },
-  {
-    "kanji": "カンニング",
-    "readings": ["カンニング", "カンニング"],
-    "meaning": "cunning, cheat"
   },
   {
     "kanji": "元年",
@@ -4498,11 +3871,6 @@
     "meaning": "fixed date, settlement date"
   },
   {
-    "kanji": "きしむ",
-    "readings": ["きしむ", "kishimu"],
-    "meaning": "to jar, to creak, to grate"
-  },
-  {
     "kanji": "議事堂",
     "readings": ["ぎじどう", "gijidou"],
     "meaning": "Diet building"
@@ -4573,29 +3941,9 @@
     "meaning": "to come, to approach,"
   },
   {
-    "kanji": "きちっと",
-    "readings": ["きちっと", "kichitto"],
-    "meaning": "exactly, perfectly"
-  },
-  {
     "kanji": "几帳面",
     "readings": ["きちょうめん", "kichoumen"],
     "meaning": "methodical, punctual, steady"
-  },
-  {
-    "kanji": "きっかり",
-    "readings": ["きっかり", "kikkari"],
-    "meaning": "exactly, precisely"
-  },
-  {
-    "kanji": "きっちり",
-    "readings": ["きっちり", "kitchiri"],
-    "meaning": "precisely, tightly"
-  },
-  {
-    "kanji": "きっぱり",
-    "readings": ["きっぱり", "kippari"],
-    "meaning": "clearly, plainly, distinctly"
   },
   {
     "kanji": "規定",
@@ -4658,11 +4006,6 @@
     "meaning": "(end of the season or term)"
   },
   {
-    "kanji": "きまりわるい",
-    "readings": ["きまりわるい", "kimariwarui"],
-    "meaning": "feeling awkward, being ashamed"
-  },
-  {
     "kanji": "記名",
     "readings": ["きめい", "kimei"],
     "meaning": "signature, register"
@@ -4696,16 +4039,6 @@
     "kanji": "客観",
     "readings": ["きゃっかん", "kyakkan"],
     "meaning": "objective"
-  },
-  {
-    "kanji": "キャッチ",
-    "readings": ["キャッチ", "キャッチ"],
-    "meaning": "catch"
-  },
-  {
-    "kanji": "キャリア",
-    "readings": ["キャリア", "キャリア"],
-    "meaning": "career, career government employee"
   },
   {
     "kanji": "救援",
@@ -4775,7 +4108,7 @@
   { "kanji": "強", "readings": ["きょう", "kyou"], "meaning": "strong" },
   {
     "kanji": "～狂",
-    "readings": ["～きょう", "～kyou"],
+    "readings": ["きょう", "kyou"],
     "meaning": "maniac, fan, freak"
   },
   {
@@ -4964,12 +4297,6 @@
     "meaning": "clean, pure, chaste"
   },
   {
-    "kanji": "きらびやか",
-    "readings": ["きらびやか", "kirabiyaka"],
-    "meaning": "gorgeous, gaudy, dazzling"
-  },
-  { "kanji": "～きり", "readings": ["～きり", "～kiri"], "meaning": "only" },
-  {
     "kanji": "義理",
     "readings": ["ぎり", "giri"],
     "meaning": "debt of gratitude, obligation"
@@ -5049,7 +4376,6 @@
     "readings": ["きんろう", "kinrou"],
     "meaning": "labor, exertion, diligent service"
   },
-  { "kanji": "クイズ", "readings": ["クイズ", "クイズ"], "meaning": "quiz" },
   {
     "kanji": "食い違う",
     "readings": ["くいちがう", "kuichigau"],
@@ -5078,26 +4404,6 @@
     "meaning": "an end, a stop, punctuation"
   },
   {
-    "kanji": "くぐる",
-    "readings": ["くぐる", "kuguru"],
-    "meaning": "to pass through; to go around"
-  },
-  {
-    "kanji": "くじ (～をひく)",
-    "readings": ["くじ (～をひく)", "kuji (～wohiku)"],
-    "meaning": "lottery, lot"
-  },
-  {
-    "kanji": "くじびき",
-    "readings": ["くじびき", "kujibiki"],
-    "meaning": "lottery, drawn lot"
-  },
-  {
-    "kanji": "くすぐったい",
-    "readings": ["くすぐったい", "kusuguttai"],
-    "meaning": "ticklish"
-  },
-  {
     "kanji": "愚痴",
     "readings": ["ぐち", "guchi"],
     "meaning": "idle complaint, grumble"
@@ -5123,19 +4429,9 @@
     "meaning": "to overturn, to upset, to overthrow"
   },
   {
-    "kanji": "くっきり",
-    "readings": ["くっきり", "kukkiri"],
-    "meaning": "distinctly, clearly, boldly"
-  },
-  {
     "kanji": "屈折",
     "readings": ["くっせつ", "kussetsu"],
     "meaning": "bending, indentation, refraction"
-  },
-  {
-    "kanji": "ぐっと",
-    "readings": ["ぐっと", "gutto"],
-    "meaning": "firmly, fast, more"
   },
   {
     "kanji": "首飾り",
@@ -5161,16 +4457,6 @@
     "kanji": "蔵",
     "readings": ["くら", "kura"],
     "meaning": "warehouse, cellar"
-  },
-  {
-    "kanji": "グレー",
-    "readings": ["グレー", "グレー"],
-    "meaning": "grey, gray"
-  },
-  {
-    "kanji": "クレーン",
-    "readings": ["クレーン", "クレーン"],
-    "meaning": "crane"
   },
   {
     "kanji": "玄人",
@@ -5368,11 +4654,6 @@
     "meaning": "heaven and earth, the universe"
   },
   {
-    "kanji": "てんで",
-    "readings": ["てんで", "tende"],
-    "meaning": "(not) at all, altogether, entirely"
-  },
-  {
     "kanji": "転任",
     "readings": ["てんにん", "tennin"],
     "meaning": "change of post"
@@ -5399,7 +4680,7 @@
   },
   {
     "kanji": "当～",
-    "readings": ["とう～", "tou～"],
+    "readings": ["とう", "tou"],
     "meaning": "Our ~ (e.g., Hotel, plane, etc.)"
   },
   {
@@ -5528,11 +4809,6 @@
     "meaning": "axis, stem, shaft"
   },
   {
-    "kanji": "しくじる",
-    "readings": ["しくじる", "shikujiru"],
-    "meaning": "to fail, to fall through, to blunder"
-  },
-  {
     "kanji": "仕組",
     "readings": ["しくみ", "shikumi"],
     "meaning": "structure, mechanism"
@@ -5624,11 +4900,6 @@
     "kanji": "雫",
     "readings": ["しずく", "shizuku"],
     "meaning": "drop (of water)"
-  },
-  {
-    "kanji": "システム",
-    "readings": ["システム", "システム"],
-    "meaning": "system"
   },
   {
     "kanji": "沈める",
@@ -5732,16 +5003,6 @@
     "readings": ["あきらめ", "akirame"],
     "meaning": "resignation, reconciliation, consolation"
   },
-  {
-    "kanji": "アクセル",
-    "readings": ["アクセル", "アクセル"],
-    "meaning": "(abbr.) accelerator"
-  },
-  {
-    "kanji": "あくどい",
-    "readings": ["あくどい", "akudoi"],
-    "meaning": "gaudy vicious"
-  },
   { "kanji": "顎", "readings": ["あご", "ago"], "meaning": "chin" },
   {
     "kanji": "憧れ",
@@ -5749,11 +5010,6 @@
     "meaning": "yearning, longing, aspiration"
   },
   { "kanji": "麻", "readings": ["あさ", "asa"], "meaning": "hemp" },
-  {
-    "kanji": "あざ",
-    "readings": ["あざ", "aza"],
-    "meaning": "birthmark, bruise"
-  },
   {
     "kanji": "浅ましい",
     "readings": ["あさましい", "asamashii"],
@@ -5790,11 +5046,6 @@
     "meaning": "to be in a hurry, to be impatient"
   },
   {
-    "kanji": "あせる (こえが～)",
-    "readings": ["あせる (こえが～)", "aseru (koega～)"],
-    "meaning": "to fade, to discolor"
-  },
-  {
     "kanji": "値",
     "readings": ["あたい", "atai"],
     "meaning": "value, price, worth"
@@ -5820,11 +5071,6 @@
     "meaning": "not enough, too quick (short, long, etc.)"
   },
   {
-    "kanji": "あっさり",
-    "readings": ["あっさり", "assari"],
-    "meaning": "easily, readily, quickly"
-  },
-  {
     "kanji": "斡旋",
     "readings": ["あっせん", "assen"],
     "meaning": "kind offices, mediation"
@@ -5840,11 +5086,6 @@
     "meaning": "pressure, coercion, oppression"
   },
   {
-    "kanji": "あつらえる",
-    "readings": ["あつらえる", "atsuraeru"],
-    "meaning": "to give an order, to place an order"
-  },
-  {
     "kanji": "圧力",
     "readings": ["あつりょく", "atsuryoku"],
     "meaning": "stress, pressure"
@@ -5856,7 +5097,7 @@
   },
   {
     "kanji": "～宛",
-    "readings": ["～あて", "～ate"],
+    "readings": ["あて", "ate"],
     "meaning": "for…(e.g., In a letter)"
   },
   {
@@ -5880,16 +5121,6 @@
     "meaning": "oil painting"
   },
   {
-    "kanji": "アプローチ",
-    "readings": ["アプローチ", "アプローチ"],
-    "meaning": "approach (in golf)"
-  },
-  {
-    "kanji": "あべこべ",
-    "readings": ["あべこべ", "abekobe"],
-    "meaning": "contrary, opposite, inverse"
-  },
-  {
     "kanji": "甘える",
     "readings": ["あまえる", "amaeru"],
     "meaning": "to behave like a spoiled child, to fawn on"
@@ -5904,11 +5135,6 @@
     "readings": ["あまくち", "amakuchi"],
     "meaning": "sweet flavor"
   },
-  {
-    "kanji": "アマチュア",
-    "readings": ["アマチュア", "アマチュア"],
-    "meaning": "amateur"
-  },
   { "kanji": "網", "readings": ["あみ", "ami"], "meaning": "net" },
   {
     "kanji": "操る",
@@ -5919,11 +5145,6 @@
     "kanji": "危ぶむ",
     "readings": ["あやぶむ", "ayabumu"],
     "meaning": "to fear, to have misgivings, to be doubtful"
-  },
-  {
-    "kanji": "あやふや",
-    "readings": ["あやふや", "ayafuya"],
-    "meaning": "uncertain, vague, ambiguous"
   },
   {
     "kanji": "過ち",
@@ -5966,7 +5187,6 @@
     "readings": ["あらっぽい", "arappoi"],
     "meaning": "rough, rude"
   },
-  { "kanji": "アラブ", "readings": ["アラブ", "アラブ"], "meaning": "Arab" },
   {
     "kanji": "霰",
     "readings": ["あられ", "arare"],
@@ -5978,40 +5198,14 @@
     "meaning": "state, condition"
   },
   {
-    "kanji": "ありのまま",
-    "readings": ["ありのまま", "arinomama"],
-    "meaning": "the truth, as it is, frankly"
-  },
-  {
-    "kanji": "ありふれる",
-    "readings": ["ありふれる", "arifureru"],
-    "meaning": "common, ordinary, routine"
-  },
-  {
-    "kanji": "アルカリ",
-    "readings": ["アルカリ", "アルカリ"],
-    "meaning": "alkali"
-  },
-  {
-    "kanji": "アルミ",
-    "readings": ["アルミ", "アルミ"],
-    "meaning": "aluminum (Al, aluminum)"
-  },
-  { "kanji": "アワー", "readings": ["アワー", "アワー"], "meaning": "hour" },
-  {
     "kanji": "合わす",
     "readings": ["あわす", "awasu"],
     "meaning": "to join together, to face, to unite"
   },
   {
     "kanji": "～合せ",
-    "readings": ["～あわせ", "～awase"],
+    "readings": ["あわせ", "awase"],
     "meaning": "in all"
-  },
-  {
-    "kanji": "アンコール",
-    "readings": ["アンコール", "アンコール"],
-    "meaning": "encore"
   },
   {
     "kanji": "暗殺",
@@ -6050,11 +5244,6 @@
     "meaning": "excuse, explanation"
   },
   {
-    "kanji": "イェス",
-    "readings": ["イェス", "イェス"],
-    "meaning": "yes; Jesus"
-  },
-  {
     "kanji": "家出",
     "readings": ["いえで", "iede"],
     "meaning": "running away from home"
@@ -6063,16 +5252,6 @@
     "kanji": "生かす",
     "readings": ["いかす", "ikasu"],
     "meaning": "to keep something alive; to make use of"
-  },
-  {
-    "kanji": "いかに",
-    "readings": ["いかに", "ikani"],
-    "meaning": "how, in what way"
-  },
-  {
-    "kanji": "いかにも",
-    "readings": ["いかにも", "ikanimo"],
-    "meaning": "truly (same as 実に (じつに))"
   },
   {
     "kanji": "異議",
@@ -6105,11 +5284,6 @@
     "meaning": "many, numerous"
   },
   {
-    "kanji": "(花を〜) 生ける, 活ける",
-    "readings": ["(はなを～) いける", "(hanawo～) ikeru"],
-    "meaning": "to arrange (flowers)"
-  },
-  {
     "kanji": "異見",
     "readings": ["いけん", "iken"],
     "meaning": "different opinion, objection"
@@ -6125,11 +5299,6 @@
     "meaning": "switching over to"
   },
   {
-    "kanji": "いざ",
-    "readings": ["いざ", "iza"],
-    "meaning": "now, come (now), crucial moment"
-  },
-  {
     "kanji": "移住",
     "readings": ["いじゅう", "ijuu"],
     "meaning": "migration, immigration"
@@ -6138,11 +5307,6 @@
     "kanji": "衣装",
     "readings": ["いしょう", "ishou"],
     "meaning": "clothing, costume, outfit"
-  },
-  {
-    "kanji": "いじる",
-    "readings": ["いじる", "ijiru"],
-    "meaning": "to touch, to tamper with"
   },
   {
     "kanji": "異性",
@@ -6163,11 +5327,6 @@
     "kanji": "委託",
     "readings": ["いたく", "itaku"],
     "meaning": "consign (goods (for sale) to a firm), entrust"
-  },
-  {
-    "kanji": "いたって",
-    "readings": ["いたって", "itatte"],
-    "meaning": "very much, exceedingly, extremely"
   },
   {
     "kanji": "出世",
@@ -6237,22 +5396,22 @@
   },
   {
     "kanji": "～署",
-    "readings": ["～しょ", "～sho"],
+    "readings": ["しょ", "sho"],
     "meaning": "department"
   },
   {
     "kanji": "～症",
-    "readings": ["～しょう", "～shou"],
+    "readings": ["しょう", "shou"],
     "meaning": "disease"
   },
   {
     "kanji": "～証",
-    "readings": ["～しょう", "～shou"],
+    "readings": ["しょう", "shou"],
     "meaning": "proof, certificate"
   },
   {
     "kanji": "～嬢",
-    "readings": ["～じょう", "～jou"],
+    "readings": ["じょう", "jou"],
     "meaning": "young woman"
   },
   {
@@ -6395,7 +5554,6 @@
     "readings": ["しょうれい", "shourei"],
     "meaning": "encouragement, promotion"
   },
-  { "kanji": "ショー", "readings": ["ショー", "ショー"], "meaning": "show" },
   {
     "kanji": "除外",
     "readings": ["じょがい", "jogai"],
@@ -6450,11 +5608,6 @@
     "kanji": "処置",
     "readings": ["しょち", "shochi"],
     "meaning": "treatment"
-  },
-  {
-    "kanji": "しょっちゅう",
-    "readings": ["しょっちゅう", "shotchuu"],
-    "meaning": "always, constantly"
   },
   {
     "kanji": "所定",
@@ -6523,7 +5676,7 @@
   },
   {
     "kanji": "～心",
-    "readings": ["～しん", "～shin"],
+    "readings": ["しん", "shin"],
     "meaning": "mind of ~"
   },
   {
@@ -6731,19 +5884,9 @@
     "meaning": "to set, to lay, to place"
   },
   {
-    "kanji": "すがすがしい",
-    "readings": ["すがすがしい", "sugasugashii"],
-    "meaning": "fresh, refreshing"
-  },
-  {
     "kanji": "救い",
     "readings": ["すくい", "sukui"],
     "meaning": "help, aid, relief"
-  },
-  {
-    "kanji": "すくう (みずを～)",
-    "readings": ["すくう (みずを～)", "sukuu (mizuwo～)"],
-    "meaning": "to scoop"
   },
   {
     "kanji": "健やか",
@@ -6766,70 +5909,11 @@
     "meaning": "(trouser) cuff, (skirt) hem, cut edge of a hairdo"
   },
   {
-    "kanji": "スタジオ",
-    "readings": ["スタジオ", "スタジオ"],
-    "meaning": "studio"
-  },
-  {
-    "kanji": "スチーム",
-    "readings": ["スチーム", "スチーム"],
-    "meaning": "steam"
-  },
-  {
-    "kanji": "ストライキ",
-    "readings": ["ストライキ", "ストライキ"],
-    "meaning": "strike"
-  },
-  {
-    "kanji": "スト",
-    "readings": ["スト", "スト"],
-    "meaning": "(abbr.) strike"
-  },
-  {
-    "kanji": "ストロー",
-    "readings": ["ストロー", "ストロー"],
-    "meaning": "straw"
-  },
-  {
-    "kanji": "ストロボ",
-    "readings": ["ストロボ", "ストロボ"],
-    "meaning": "stroboscope (literally: strobo, strobe lamp, stroboscopic lamp)"
-  },
-  {
-    "kanji": "すばしこい",
-    "readings": ["すばしこい", "subashikoi"],
-    "meaning": "nimble, smart, quick"
-  },
-  {
     "kanji": "素早い",
     "readings": ["すばやい", "subayai"],
     "meaning": "fast, quick"
   },
-  {
-    "kanji": "ずばり",
-    "readings": ["ずばり", "zubari"],
-    "meaning": "decisively, unreservedly, frankly"
-  },
-  {
-    "kanji": "スプリング",
-    "readings": ["スプリング", "スプリング"],
-    "meaning": "spring"
-  },
-  {
-    "kanji": "スペース",
-    "readings": ["スペース", "スペース"],
-    "meaning": "space"
-  },
-  {
-    "kanji": "ずぶぬれ",
-    "readings": ["ずぶぬれ", "zubunure"],
-    "meaning": "soaked, dripping wet"
-  },
-  {
-    "kanji": "スポーツカー",
-    "readings": ["スポーツカー", "スポーツカー"],
-    "meaning": "sports car"
-  },
+
   {
     "kanji": "澄ます",
     "readings": ["すます", "sumasu"],
@@ -6846,44 +5930,9 @@
     "meaning": "to finish; to settle; to do without"
   },
   {
-    "kanji": "すみやか",
-    "readings": ["すみやか", "sumiyaka"],
-    "meaning": "speedy"
-  },
-  {
-    "kanji": "スラックス",
-    "readings": ["スラックス", "スラックス"],
-    "meaning": "slacks"
-  },
-  {
-    "kanji": "ずらっと",
-    "readings": ["ずらっと", "zuratto"],
-    "meaning": "in a line, in a row"
-  },
-  {
-    "kanji": "ずるずる",
-    "readings": ["ずるずる", "zuruzuru"],
-    "meaning": "dragging on, sound of sniffling"
-  },
-  {
-    "kanji": "ずれ",
-    "readings": ["ずれ", "zure"],
-    "meaning": "difference, gap"
-  },
-  {
-    "kanji": "すれちがい",
-    "readings": ["すれちがい", "surechigai"],
-    "meaning": "chance encounter"
-  },
-  {
     "kanji": "擦れる",
     "readings": ["すれる", "sureru"],
     "meaning": "to rub, to chafe"
-  },
-  {
-    "kanji": "すんなり",
-    "readings": ["すんなり", "sunnari"],
-    "meaning": "pass with no objection, slim, slender"
   },
   {
     "kanji": "生育",
@@ -7061,7 +6110,6 @@
     "readings": ["せいれつ", "seiretsu"],
     "meaning": "stand in a row, form a line"
   },
-  { "kanji": "セール", "readings": ["セール", "セール"], "meaning": "sale" },
   {
     "kanji": "急かす",
     "readings": ["せかす", "sekasu"],
@@ -7076,11 +6124,6 @@
     "kanji": "責務",
     "readings": ["せきむ", "sekimu"],
     "meaning": "duty, obligation"
-  },
-  {
-    "kanji": "セクション",
-    "readings": ["セクション", "セクション"],
-    "meaning": "section"
   },
   {
     "kanji": "世辞",
@@ -7106,11 +6149,6 @@
     "kanji": "切開",
     "readings": ["せっかい", "sekkai"],
     "meaning": "opening up, cutting through"
-  },
-  {
-    "kanji": "セックス",
-    "readings": ["セックス", "セックス"],
-    "meaning": "sex"
   },
   {
     "kanji": "切実",
@@ -7167,12 +6205,6 @@
     "readings": ["せめ", "seme"],
     "meaning": "attack, offense"
   },
-  { "kanji": "ゼリー", "readings": ["ゼリー", "ゼリー"], "meaning": "jelly" },
-  {
-    "kanji": "セレモニー",
-    "readings": ["セレモニー", "セレモニー"],
-    "meaning": "ceremony"
-  },
   {
     "kanji": "世論",
     "readings": ["せろん", "seron"],
@@ -7217,11 +6249,6 @@
     "kanji": "戦術",
     "readings": ["せんじゅつ", "senjutsu"],
     "meaning": "tactics"
-  },
-  {
-    "kanji": "センス",
-    "readings": ["センス", "センス"],
-    "meaning": "sense (for music, style, tact, etc.)"
   },
   {
     "kanji": "潜水",
@@ -7415,11 +6442,6 @@
     "meaning": "to add to, to attach, to accompany"
   },
   {
-    "kanji": "ソース",
-    "readings": ["ソース", "ソース"],
-    "meaning": "source"
-  },
-  {
     "kanji": "即座に",
     "readings": ["そくざに", "sokuzani"],
     "meaning": "immediately, right away"
@@ -7450,11 +6472,6 @@
     "meaning": "to harm, to hurt"
   },
   {
-    "kanji": "そこら",
-    "readings": ["そこら", "sokora"],
-    "meaning": "everywhere, somewhere"
-  },
-  {
     "kanji": "素材",
     "readings": ["そざい", "sozai"],
     "meaning": "raw materials, subject matter"
@@ -7478,11 +6495,6 @@
     "kanji": "措置",
     "readings": ["そち", "sochi"],
     "meaning": "measure, step"
-  },
-  {
-    "kanji": "ソックス",
-    "readings": ["ソックス", "ソックス"],
-    "meaning": "socks"
   },
   {
     "kanji": "素っ気無い",
@@ -7535,35 +6547,14 @@
     "meaning": "to dye, to color"
   },
   {
-    "kanji": "そらす",
-    "readings": ["そらす", "sorasu"],
-    "meaning": "to bend, to warp"
-  },
-  {
-    "kanji": "そり (～にのる)",
-    "readings": ["そり (～にのる)", "sori (～ninoru)"],
-    "meaning": "sleigh, sled"
-  },
-  {
     "kanji": "反る",
     "readings": ["そる", "soru"],
     "meaning": "to warp, to be warped, to curve"
   },
   {
-    "kanji": "それゆえ",
-    "readings": ["それゆえ", "soreyue"],
-    "meaning": "therefore, for that reason, so"
-  },
-  { "kanji": "ソロ", "readings": ["ソロ", "ソロ"], "meaning": "solo" },
-  {
     "kanji": "揃い",
     "readings": ["そろい", "soroi"],
     "meaning": "set, suit, uniform"
-  },
-  {
-    "kanji": "ぞんざい",
-    "readings": ["ぞんざい", "zonzai"],
-    "meaning": "rude, careless, slovenly"
   },
   {
     "kanji": "損失",
@@ -7575,7 +6566,6 @@
     "readings": ["そんぞく", "sonzoku"],
     "meaning": "duration, continuance"
   },
-  { "kanji": "ダース", "readings": ["ダース", "ダース"], "meaning": "dozen" },
   {
     "kanji": "対応",
     "readings": ["たいおう", "taiou"],
@@ -7687,11 +6677,6 @@
     "meaning": "contrast, comparison"
   },
   {
-    "kanji": "タイピスト",
-    "readings": ["タイピスト", "タイピスト"],
-    "meaning": "typist"
-  },
-  {
     "kanji": "大部",
     "readings": ["たいぶ", "taibu"],
     "meaning": "most (e.g., most part, greater, fairly, a good deal, much)"
@@ -7713,25 +6698,9 @@
     "meaning": "libretto, scenario"
   },
   {
-    "kanji": "タイマー",
-    "readings": ["タイマー", "タイマー"],
-    "meaning": "timer"
-  },
-  {
     "kanji": "怠慢",
     "readings": ["たいまん", "taiman"],
     "meaning": "negligence, carelessness"
-  },
-  {
-    "kanji": "タイミング",
-    "readings": ["タイミング", "タイミング"],
-    "meaning": "timing"
-  },
-  { "kanji": "タイム", "readings": ["タイム", "タイム"], "meaning": "time" },
-  {
-    "kanji": "タイムリー",
-    "readings": ["タイムリー", "タイムリー"],
-    "meaning": "timely, run-batted-in (baseball), RBI"
   },
   {
     "kanji": "対面",
@@ -7748,7 +6717,6 @@
     "readings": ["たいりょく", "tairyoku"],
     "meaning": "physical strength"
   },
-  { "kanji": "タイル", "readings": ["タイル", "タイル"], "meaning": "tile" },
   {
     "kanji": "対話",
     "readings": ["たいわ", "taiwa"],
@@ -7788,11 +6756,6 @@
     "kanji": "妥協",
     "readings": ["だきょう", "dakyou"],
     "meaning": "compromise, giving in"
-  },
-  {
-    "kanji": "たくましい",
-    "readings": ["たくましい", "takumashii"],
-    "meaning": "burly, strong, sturdy"
   },
   {
     "kanji": "巧み",
@@ -7885,11 +6848,6 @@
     "meaning": "secession, withdrawal"
   },
   {
-    "kanji": "だったら",
-    "readings": ["だったら", "dattara"],
-    "meaning": "if it's the case"
-  },
-  {
     "kanji": "立て替える",
     "readings": ["たてかえる", "tatekaeru"],
     "meaning": "to pay in advance, to pay for another"
@@ -7903,11 +6861,6 @@
     "kanji": "奉る",
     "readings": ["たてまつる", "tatematsuru"],
     "meaning": "to offer, to do respectfully"
-  },
-  {
-    "kanji": "だと",
-    "readings": ["だと", "dato"],
-    "meaning": "if it's the case"
   },
   {
     "kanji": "他動詞",
@@ -7928,11 +6881,6 @@
     "kanji": "束ねる",
     "readings": ["たばねる", "tabaneru"],
     "meaning": "to tie up in a bundle, to control"
-  },
-  {
-    "kanji": "だぶだぶ",
-    "readings": ["だぶだぶ", "dabudabu"],
-    "meaning": "loose, baggy"
   },
   {
     "kanji": "他方",
@@ -7966,19 +6914,9 @@
     "meaning": "to keep, to preserve, to sustain"
   },
   {
-    "kanji": "たやすい",
-    "readings": ["たやすい", "tayasui"],
-    "meaning": "easy, simple, light"
-  },
-  {
     "kanji": "多様",
     "readings": ["たよう", "tayou"],
     "meaning": "diversity, variety"
-  },
-  {
-    "kanji": "だるい",
-    "readings": ["だるい", "darui"],
-    "meaning": "sluggish, feel heavy (tired), languid"
   },
   {
     "kanji": "弛み",
@@ -7995,15 +6933,10 @@
     "readings": ["たれる", "tareru"],
     "meaning": "to hang, to droop; to drip"
   },
-  {
-    "kanji": "タレント",
-    "readings": ["タレント", "タレント"],
-    "meaning": "talent, star, personality"
-  },
-  { "kanji": "タワー", "readings": ["タワー", "タワー"], "meaning": "tower" },
+ 
   {
     "kanji": "単一",
-    "readings": ["たんいつ", "tan'itsu"],
+    "readings": ["たんいつ", "tanitsu"],
     "meaning": "single, simple, sole"
   },
   {
@@ -8082,11 +7015,6 @@
     "meaning": "protein"
   },
   {
-    "kanji": "ダンプ",
-    "readings": ["ダンプ", "ダンプ"],
-    "meaning": "dump truck"
-  },
-  {
     "kanji": "断面",
     "readings": ["だんめん", "danmen"],
     "meaning": "cross section"
@@ -8100,16 +7028,6 @@
     "kanji": "治安",
     "readings": ["ちあん", "chian"],
     "meaning": "public order, security"
-  },
-  {
-    "kanji": "チームワーク",
-    "readings": ["チームワーク", "チームワーク"],
-    "meaning": "teamwork"
-  },
-  {
-    "kanji": "チェンジ",
-    "readings": ["チェンジ", "チェンジ"],
-    "meaning": "change"
   },
   {
     "kanji": "違える",
@@ -8207,16 +7125,6 @@
     "meaning": "tea ceremony"
   },
   {
-    "kanji": "ちやほや",
-    "readings": ["ちやほや", "chiyahoya"],
-    "meaning": "pamper, make a fuss of, spoil"
-  },
-  {
-    "kanji": "チャンネル",
-    "readings": ["チャンネル", "チャンネル"],
-    "meaning": "a channel"
-  },
-  {
     "kanji": "宙返り",
     "readings": ["ちゅうがえり", "chuugaeri"],
     "meaning": "somersault, looping-the-loop"
@@ -8273,7 +7181,7 @@
   },
   {
     "kanji": "～著",
-    "readings": ["～ちょ", "～cho"],
+    "readings": ["ちょ", "cho"],
     "meaning": "written by ~"
   },
   {
@@ -8348,11 +7256,6 @@
     "meaning": "harmony"
   },
   {
-    "kanji": "ちょくちょく",
-    "readings": ["ちょくちょく", "chokuchoku"],
-    "meaning": "often, frequently, now and then, occasionally"
-  },
-  {
     "kanji": "直面",
     "readings": ["ちょくめん", "chokumen"],
     "meaning": "confrontation"
@@ -8376,11 +7279,6 @@
     "kanji": "著名",
     "readings": ["ちょめい", "chomei"],
     "meaning": "well-known, noted, celebrated"
-  },
-  {
-    "kanji": "ちらっと",
-    "readings": ["ちらっと", "chiratto"],
-    "meaning": "at a glance, by accident"
   },
   { "kanji": "塵", "readings": ["ちり", "chiri"], "meaning": "dust, dirt" },
   {
@@ -8495,11 +7393,6 @@
     "meaning": "to exhaust, to run out; to devote, to serve"
   },
   {
-    "kanji": "つくづく",
-    "readings": ["つくづく", "tsukuzuku"],
-    "meaning": "completely, really"
-  },
-  {
     "kanji": "作り",
     "readings": ["つくり", "tsukuri"],
     "meaning": "make up, structure, physique"
@@ -8523,11 +7416,6 @@
     "kanji": "告げる",
     "readings": ["つげる", "tsugeru"],
     "meaning": "to inform"
-  },
-  {
-    "kanji": "つじつま (はなしの～)",
-    "readings": ["つじつま (はなしの～)", "tsujitsuma (hanashino～)"],
-    "meaning": "coherence, consistency"
   },
   { "kanji": "筒", "readings": ["つつ", "tsutsu"], "meaning": "pipe, tube" },
   {
@@ -8570,11 +7458,6 @@
     "readings": ["つなみ", "tsunami"],
     "meaning": "tsunami, tidal wave"
   },
-  {
-    "kanji": "つねる",
-    "readings": ["つねる", "tsuneru"],
-    "meaning": "to pinch"
-  },
   { "kanji": "角", "readings": ["つの", "tsuno"], "meaning": "horn" },
   {
     "kanji": "募る",
@@ -8590,16 +7473,6 @@
     "kanji": "呟く",
     "readings": ["つぶやく", "tsubuyaku"],
     "meaning": "to mutter, to murmur"
-  },
-  {
-    "kanji": "つぶら",
-    "readings": ["つぶら", "tsubura"],
-    "meaning": "round, rotund"
-  },
-  {
-    "kanji": "つぶる (めを～)",
-    "readings": ["つぶる (めを～)", "tsuburu (mewo～)"],
-    "meaning": "to close the eyes"
   },
   {
     "kanji": "壷",
@@ -8665,11 +7538,6 @@
     "kanji": "提示",
     "readings": ["ていじ", "teiji"],
     "meaning": "presentation, exhibit, suggest, citation"
-  },
-  {
-    "kanji": "ティシュペーパー",
-    "readings": ["ティシュペーパー", "ティシュペーパー"],
-    "meaning": "tissue"
   },
   {
     "kanji": "定食",
@@ -8773,29 +7641,14 @@
     "meaning": "trouble, labor, handling"
   },
   {
-    "kanji": "デコレーション",
-    "readings": ["デコレーション", "デコレーション"],
-    "meaning": "decoration"
-  },
-  {
     "kanji": "手近",
     "readings": ["てぢか", "tejika"],
     "meaning": "near, handy, familiar"
   },
   {
-    "kanji": "てっきり",
-    "readings": ["てっきり", "tekkiri"],
-    "meaning": "surely, certainly, beyond doubt"
-  },
-  {
     "kanji": "鉄鋼",
     "readings": ["てっこう", "tekkou"],
     "meaning": "iron and steel"
-  },
-  {
-    "kanji": "デッサン",
-    "readings": ["デッサン", "デッサン"],
-    "meaning": "rough sketch (FRE: dessin)"
   },
   {
     "kanji": "徹する",
@@ -8853,19 +7706,9 @@
     "meaning": "(money) on hand or at home, one's purse; usual skill"
   },
   {
-    "kanji": "デモンストレーション",
-    "readings": ["デモンストレーション", "デモンストレーション"],
-    "meaning": "demonstration"
-  },
-  {
     "kanji": "照り返す",
     "readings": ["てりかえす", "terikaesu"],
     "meaning": "to reflect, to throw back light"
-  },
-  {
-    "kanji": "テレックス",
-    "readings": ["テレックス", "テレックス"],
-    "meaning": "telex, teletypewriter exchange"
   },
   {
     "kanji": "手分け",
@@ -8894,11 +7737,6 @@
     "meaning": "consecutive holidays"
   },
   {
-    "kanji": "レンジ",
-    "readings": ["レンジ", "レンジ"],
-    "meaning": "range, stove"
-  },
-  {
     "kanji": "連日",
     "readings": ["れんじつ", "renjitsu"],
     "meaning": "every day"
@@ -8909,19 +7747,9 @@
     "meaning": "solidarity"
   },
   {
-    "kanji": "レンタカー",
-    "readings": ["レンタカー", "レンタカー"],
-    "meaning": "rented car"
-  },
-  {
     "kanji": "連中",
     "readings": ["れんちゅう", "renchuu"],
     "meaning": "colleagues, company, a lot"
-  },
-  {
-    "kanji": "レントゲン",
-    "readings": ["レントゲン", "レントゲン"],
-    "meaning": "X-ray (lit: Roentgen)"
   },
   {
     "kanji": "連邦",
@@ -8954,25 +7782,9 @@
     "meaning": "labor, effort, trouble"
   },
   {
-    "kanji": "ロープウエイ",
-    "readings": ["ロープウエイ", "ロープウエイ"],
-    "meaning": "ropeway, aerial tram"
-  },
-  { "kanji": "ロープ", "readings": ["ロープ", "ロープ"], "meaning": "rope" },
-  {
-    "kanji": "ろくな",
-    "readings": ["ろくな", "rokuna"],
-    "meaning": "satisfactory, decent"
-  },
-  {
     "kanji": "露骨",
     "readings": ["ろこつ", "rokotsu"],
     "meaning": "blunt, outspoken; conspicuous; broad, suggestive"
-  },
-  {
-    "kanji": "ロマンチック",
-    "readings": ["ロマンチック", "ロマンチック"],
-    "meaning": "romantic"
   },
   {
     "kanji": "論議",
@@ -8991,11 +7803,6 @@
     "meaning": "art, technique"
   },
   {
-    "kanji": "わざわざ",
-    "readings": ["わざわざ", "wazawaza"],
-    "meaning": "take the trouble (to do), doing something especially rather than incidentally"
-  },
-  {
     "kanji": "煩わしい",
     "readings": ["わずらわしい", "wazurawashii"],
     "meaning": "burdensome, troublesome, complicated"
@@ -9005,7 +7812,6 @@
     "readings": ["わたりどり", "wataridori"],
     "meaning": "migratory bird, bird of passage"
   },
-  { "kanji": "ワット", "readings": ["ワット", "ワット"], "meaning": "watt" },
   { "kanji": "詫び", "readings": ["わび", "wabi"], "meaning": "apology" },
   {
     "kanji": "和文",
@@ -9015,7 +7821,7 @@
   { "kanji": "藁", "readings": ["わら", "wara"], "meaning": "straw" },
   {
     "kanji": "～割",
-    "readings": ["～わり", "～wari"],
+    "readings": ["わり", "wari"],
     "meaning": "~ percent"
   },
   {
@@ -9042,16 +7848,6 @@
     "kanji": "捗る",
     "readings": ["はかどる", "hakadoru"],
     "meaning": "to make progress, to move right ahead (with the work), to advance"
-  },
-  {
-    "kanji": "はかない",
-    "readings": ["はかない", "hakanai"],
-    "meaning": "short-lived, momentary, ephemeral"
-  },
-  {
-    "kanji": "ばかばかしい",
-    "readings": ["ばかばかしい", "bakabakashii"],
-    "meaning": "stupid"
   },
   {
     "kanji": "破棄",
@@ -9130,11 +7926,6 @@
     "meaning": "to play (piano, guitar)"
   },
   {
-    "kanji": "パジャマ",
-    "readings": ["パジャマ", "パジャマ"],
-    "meaning": "pajamas"
-  },
-  {
     "kanji": "恥じらう",
     "readings": ["はじらう", "hajirau"],
     "meaning": "to feel shy, to be bashful, to blush"
@@ -9176,11 +7967,6 @@
     "meaning": "honey"
   },
   {
-    "kanji": "パチンコ",
-    "readings": ["パチンコ", "パチンコ"],
-    "meaning": "pachinko (Japanese pinball)"
-  },
-  {
     "kanji": "罰",
     "readings": ["ばつ", "batsu"],
     "meaning": "punishment, penalty"
@@ -9205,7 +7991,6 @@
     "readings": ["はつげん", "hatsugen"],
     "meaning": "utterance, speech, proposal"
   },
-  { "kanji": "バッジ", "readings": ["バッジ", "バッジ"], "meaning": "badge" },
   {
     "kanji": "発生",
     "readings": ["はっせい", "hassei"],
@@ -9255,12 +8040,6 @@
     "kanji": "実業家",
     "readings": ["じつぎょうか", "jitsugyouka"],
     "meaning": "industrialist, businessman"
-  },
-  { "kanji": "シック", "readings": ["シック", "シック"], "meaning": "chic" },
-  {
-    "kanji": "じっくり",
-    "readings": ["じっくり", "jikkuri"],
-    "meaning": "deliberately, carefully"
   },
   {
     "kanji": "躾",
@@ -9328,16 +8107,6 @@
     "meaning": "to shrivel, to fade"
   },
   {
-    "kanji": "シナリオ",
-    "readings": ["シナリオ", "シナリオ"],
-    "meaning": "scenario"
-  },
-  {
-    "kanji": "しなやか",
-    "readings": ["しなやか", "shinayaka"],
-    "meaning": "supple, flexible, elastic"
-  },
-  {
     "kanji": "屎尿",
     "readings": ["しにょう", "shinyou"],
     "meaning": "human waste"
@@ -9367,11 +8136,6 @@
     "kanji": "私物",
     "readings": ["しぶつ", "shibutsu"],
     "meaning": "private property, personal effects"
-  },
-  {
-    "kanji": "しぶとい",
-    "readings": ["しぶとい", "shibutoi"],
-    "meaning": "tenacious, stubborn"
   },
   {
     "kanji": "司法",
@@ -9409,7 +8173,6 @@
     "readings": ["しゃこう", "shakou"],
     "meaning": "social life"
   },
-  { "kanji": "ジャズ", "readings": ["ジャズ", "ジャズ"], "meaning": "jazz" },
   {
     "kanji": "謝絶",
     "readings": ["しゃぜつ", "shazetsu"],
@@ -9446,26 +8209,6 @@
     "meaning": "to joke, to play on words; stylish"
   },
   {
-    "kanji": "ジャンパー",
-    "readings": ["ジャンパー", "ジャンパー"],
-    "meaning": "jacket, jumper"
-  },
-  {
-    "kanji": "ジャンプ",
-    "readings": ["ジャンプ", "ジャンプ"],
-    "meaning": "jump"
-  },
-  {
-    "kanji": "ジャンボ",
-    "readings": ["ジャンボ", "ジャンボ"],
-    "meaning": "jumbo"
-  },
-  {
-    "kanji": "ジャンル",
-    "readings": ["ジャンル", "ジャンル"],
-    "meaning": "genre"
-  },
-  {
     "kanji": "主",
     "readings": ["しゅ", "shu"],
     "meaning": "owner, master, god"
@@ -9476,7 +8219,7 @@
     "readings": ["しゆう", "shiyuu"],
     "meaning": "private ownership"
   },
-  { "kanji": "～宗", "readings": ["～しゅう", "～shuu"], "meaning": "sect" },
+  { "kanji": "～宗", "readings": ["しゅう", "shuu"], "meaning": "sect" },
   {
     "kanji": "収益",
     "readings": ["しゅうえき", "shuueki"],
@@ -9752,7 +8495,6 @@
     "readings": ["ひんしゅ", "hinshu"],
     "meaning": "breed, type, variety"
   },
-  { "kanji": "ヒント", "readings": ["ヒント", "ヒント"], "meaning": "hint" },
   {
     "kanji": "頻繁",
     "readings": ["ひんぱん", "hinpan"],
@@ -9764,25 +8506,9 @@
     "meaning": "poverty, destitute, poor"
   },
   {
-    "kanji": "ファイト",
-    "readings": ["ファイト", "ファイト"],
-    "meaning": "fight"
-  },
-  {
-    "kanji": "ファイル",
-    "readings": ["ファイル", "ファイル"],
-    "meaning": "file; portfolio"
-  },
-  { "kanji": "ファン", "readings": ["ファン", "ファン"], "meaning": "fan" },
-  {
     "kanji": "不意",
     "readings": ["ふい", "fui"],
     "meaning": "sudden, abrupt, unexpected"
-  },
-  {
-    "kanji": "フィルタ",
-    "readings": ["フィルタ", "フィルタ"],
-    "meaning": "filter"
   },
   { "kanji": "封", "readings": ["ふう", "fuu"], "meaning": "seal" },
   {
@@ -9805,17 +8531,10 @@
     "readings": ["ふうぞく", "fuuzoku"],
     "meaning": "manners, customs; sex industry"
   },
-  { "kanji": "ブーツ", "readings": ["ブーツ", "ブーツ"], "meaning": "boots" },
   {
     "kanji": "風土",
     "readings": ["ふうど", "fuudo"],
     "meaning": "natural features, climate"
-  },
-  { "kanji": "ブーム", "readings": ["ブーム", "ブーム"], "meaning": "boom" },
-  {
-    "kanji": "フォーム",
-    "readings": ["フォーム", "フォーム"],
-    "meaning": "foam; form"
   },
   {
     "kanji": "部下",
@@ -9826,11 +8545,6 @@
     "kanji": "不可欠",
     "readings": ["ふかけつ", "fukaketsu"],
     "meaning": "indispensable, essential"
-  },
-  {
-    "kanji": "ぶかぶか",
-    "readings": ["ぶかぶか", "bukabuka"],
-    "meaning": "too big, baggy"
   },
   {
     "kanji": "不吉",
@@ -9893,21 +8607,11 @@
     "meaning": "edict, ordinance, proclamation"
   },
   {
-    "kanji": "ブザー",
-    "readings": ["ブザー", "ブザー"],
-    "meaning": "buzzer"
-  },
-  {
     "kanji": "負債",
     "readings": ["ふさい", "fusai"],
     "meaning": "debt, liabilities"
   },
   { "kanji": "不在", "readings": ["ふざい", "fuzai"], "meaning": "absence" },
-  {
-    "kanji": "ふさわしい",
-    "readings": ["ふさわしい", "fusawashii"],
-    "meaning": "appropriate"
-  },
   {
     "kanji": "不順",
     "readings": ["ふじゅん", "fujun"],
@@ -10059,16 +8763,6 @@
     "meaning": "support, maintenance"
   },
   {
-    "kanji": "ふらふら",
-    "readings": ["ふらふら", "furafura"],
-    "meaning": "unsteady on one's feet, totter, dizzy"
-  },
-  {
-    "kanji": "ぶらぶら",
-    "readings": ["ぶらぶら", "burabura"],
-    "meaning": "dangle heavily, sway to and fro, stroll idly"
-  },
-  {
     "kanji": "振り返る",
     "readings": ["ふりかえる", "furikaeru"],
     "meaning": "to turn head, to turn around, to look back"
@@ -10093,7 +8787,6 @@
     "readings": ["ぶりょく", "buryoku"],
     "meaning": "armed might, military power, the sword, force"
   },
-  { "kanji": "ブル", "readings": ["ブル", "ブル"], "meaning": "bull" },
   {
     "kanji": "震わせる",
     "readings": ["ふるわせる", "furuwaseru"],
@@ -10108,11 +8801,6 @@
     "kanji": "付録",
     "readings": ["ふろく", "furoku"],
     "meaning": "appendix, supplement"
-  },
-  {
-    "kanji": "フロント",
-    "readings": ["フロント", "フロント"],
-    "meaning": "front"
   },
   {
     "kanji": "憤慨",
@@ -10165,11 +8853,6 @@
     "meaning": "dispute, trouble, strife"
   },
   {
-    "kanji": "ふんだん",
-    "readings": ["ふんだん", "fundan"],
-    "meaning": "plentiful, abundant, lavish"
-  },
-  {
     "kanji": "分担",
     "readings": ["ぶんたん", "buntan"],
     "meaning": "apportionment, sharing"
@@ -10204,7 +8887,6 @@
     "readings": ["ぶんれつ", "bunretsu"],
     "meaning": "split, division, break up"
   },
-  { "kanji": "ペア", "readings": ["ペア", "ペア"], "meaning": "pair, pear" },
   {
     "kanji": "兵器",
     "readings": ["へいき", "heiki"],
@@ -10237,29 +8919,9 @@
     "meaning": "arrangement, parallel, abreast"
   },
   {
-    "kanji": "ベース",
-    "readings": ["ベース", "ベース"],
-    "meaning": "base, bass"
-  },
-  {
     "kanji": "辟易",
     "readings": ["へきえき", "hekieki"],
     "meaning": "wince, shrink back, succumbing to, being frightened"
-  },
-  {
-    "kanji": "ぺこぺこ",
-    "readings": ["ぺこぺこ", "pekopeko"],
-    "meaning": "fawn, be very hungry"
-  },
-  {
-    "kanji": "ベスト",
-    "readings": ["ベスト", "ベスト"],
-    "meaning": "best; vest"
-  },
-  {
-    "kanji": "ベストセラー",
-    "readings": ["ベストセラー", "ベストセラー"],
-    "meaning": "best-seller"
   },
   {
     "kanji": "隔たる",
@@ -10267,11 +8929,6 @@
     "meaning": "to be distant"
   },
   { "kanji": "縁", "readings": ["へり", "heri"], "meaning": "edge" },
-  {
-    "kanji": "へりくだる",
-    "readings": ["へりくだる", "herikudaru"],
-    "meaning": "to deprecate oneself and praise the listener"
-  },
   {
     "kanji": "弁解",
     "readings": ["べんかい", "benkai"],
@@ -10337,16 +8994,6 @@
     "kanji": "保育",
     "readings": ["ほいく", "hoiku"],
     "meaning": "nursing, nurturing, rearing"
-  },
-  {
-    "kanji": "ボイコット",
-    "readings": ["ボイコット", "ボイコット"],
-    "meaning": "boycott"
-  },
-  {
-    "kanji": "ポイント",
-    "readings": ["ポイント", "ポイント"],
-    "meaning": "point"
   },
   {
     "kanji": "法案",
@@ -10508,13 +9155,6 @@
     "readings": ["ほうわ", "houwa"],
     "meaning": "saturation"
   },
-  { "kanji": "ホース", "readings": ["ホース", "ホース"], "meaning": "hose" },
-  { "kanji": "ポーズ", "readings": ["ポーズ", "ポーズ"], "meaning": "pause" },
-  {
-    "kanji": "ホール",
-    "readings": ["ホール", "ホール"],
-    "meaning": "hall; hole"
-  },
   {
     "kanji": "保温",
     "readings": ["ほおん", "hoon"],
@@ -10583,13 +9223,8 @@
   },
   {
     "kanji": "干し～",
-    "readings": ["ほし～", "hoshi～"],
+    "readings": ["ほし", "hoshi"],
     "meaning": "dried ~"
-  },
-  {
-    "kanji": "ポジション",
-    "readings": ["ポジション", "ポジション"],
-    "meaning": "position"
   },
   {
     "kanji": "干し物",
@@ -10641,17 +9276,6 @@
     "readings": ["ほっそく", "hossoku"],
     "meaning": "starting, inauguration"
   },
-  { "kanji": "ポット", "readings": ["ポット", "ポット"], "meaning": "pot" },
-  {
-    "kanji": "ほっぺた",
-    "readings": ["ほっぺた", "hoppeta"],
-    "meaning": "cheek"
-  },
-  {
-    "kanji": "ぼつぼつ",
-    "readings": ["ぼつぼつ", "botsubotsu"],
-    "meaning": "gradually, here and there, spots"
-  },
   {
     "kanji": "没落",
     "readings": ["ぼつらく", "botsuraku"],
@@ -10668,21 +9292,6 @@
     "meaning": "to give, to conduct, to perform"
   },
   {
-    "kanji": "ほとり",
-    "readings": ["ほとり", "hotori"],
-    "meaning": "vicinity of lake; river"
-  },
-  {
-    "kanji": "ぼやく",
-    "readings": ["ぼやく", "boyaku"],
-    "meaning": "to grumble, to complain"
-  },
-  {
-    "kanji": "ぼやける",
-    "readings": ["ぼやける", "boyakeru"],
-    "meaning": "to become dim, to become blurred"
-  },
-  {
     "kanji": "保養",
     "readings": ["ほよう", "hoyou"],
     "meaning": "health preservation, recuperation, recreation"
@@ -10691,11 +9300,6 @@
     "kanji": "捕虜",
     "readings": ["ほりょ", "horyo"],
     "meaning": "prisoner of war"
-  },
-  {
-    "kanji": "ボルト",
-    "readings": ["ボルト", "ボルト"],
-    "meaning": "volt; bolt"
   },
   {
     "kanji": "滅びる",
@@ -10752,7 +9356,6 @@
     "readings": ["ほんば", "honba"],
     "meaning": "home, best place, genuine"
   },
-  { "kanji": "ポンプ", "readings": ["ポンプ", "ポンプ"], "meaning": "pump" },
   {
     "kanji": "本文",
     "readings": ["ほんぶん", "honbun"],
@@ -10762,17 +9365,6 @@
     "kanji": "本名",
     "readings": ["ほんみょう", "honmyou"],
     "meaning": "real name"
-  },
-  { "kanji": "マーク", "readings": ["マーク", "マーク"], "meaning": "mark" },
-  {
-    "kanji": "マイ～",
-    "readings": ["マイ～", "マイ～"],
-    "meaning": "my ~, one's own ~"
-  },
-  {
-    "kanji": "マイクロフォン",
-    "readings": ["マイクロフォン", "マイクロフォン"],
-    "meaning": "microphone"
   },
   {
     "kanji": "埋蔵",
@@ -10830,11 +9422,6 @@
     "meaning": "sincerity, devotion"
   },
   {
-    "kanji": "まごつく",
-    "readings": ["まごつく", "magotsuku"],
-    "meaning": "to be confused, to be flustered"
-  },
-  {
     "kanji": "誠",
     "readings": ["まこと", "makoto"],
     "meaning": "truth, faith, fidelity"
@@ -10845,18 +9432,13 @@
     "meaning": "indeed, really (very polite), absolutely"
   },
   {
-    "kanji": "まさしく",
-    "readings": ["まさしく", "masashiku"],
-    "meaning": "surely, no doubt, evidently"
-  },
-  {
     "kanji": "勝る",
     "readings": ["まさる", "masaru"],
     "meaning": "to excel, to surpass, to out-rival"
   },
   {
     "kanji": "～増し",
-    "readings": ["～まし", "～mashi"],
+    "readings": ["まし", "mashi"],
     "meaning": "~increase"
   },
   {
@@ -10870,11 +9452,6 @@
     "meaning": "right under, directly below"
   },
   {
-    "kanji": "まして",
-    "readings": ["まして", "mashite"],
-    "meaning": "still more, still less (with neg. verb), to say nothing of"
-  },
-  {
     "kanji": "交わる",
     "readings": ["まじわる", "majiwaru"],
     "meaning": "to cross, to intersect, to mingle with,"
@@ -10883,11 +9460,6 @@
     "kanji": "麻酔",
     "readings": ["ますい", "masui"],
     "meaning": "anesthesia"
-  },
-  {
-    "kanji": "またがる (うまを～)",
-    "readings": ["またがる (うまを～)", "matagaru (umawo～)"],
-    "meaning": "to straddle"
   },
   {
     "kanji": "待ち合わせ",
@@ -10905,11 +9477,6 @@
     "meaning": "to look anxiously for, to wait eagerly for"
   },
   {
-    "kanji": "まちまち",
-    "readings": ["まちまち", "machimachi"],
-    "meaning": "various, different"
-  },
-  {
     "kanji": "末期",
     "readings": ["まっき", "makki"],
     "meaning": "deathbed, hour of death"
@@ -10918,11 +9485,6 @@
     "kanji": "真っ二つ",
     "readings": ["まっぷたつ", "mapputatsu"],
     "meaning": "in two equal parts"
-  },
-  {
-    "kanji": "まと",
-    "readings": ["まと", "mato"],
-    "meaning": "mark, target"
   },
   {
     "kanji": "纏まり",
@@ -10954,22 +9516,12 @@
     "readings": ["まひ", "mahi"],
     "meaning": "paralysis, palsy, numbness"
   },
-  {
-    "kanji": "～まみれ",
-    "readings": ["～まみれ", "～mamire"],
-    "meaning": "covered with (by, in) ~"
-  },
   { "kanji": "眉", "readings": ["まゆ", "mayu"], "meaning": "eyebrow" },
   { "kanji": "鞠", "readings": ["まり", "mari"], "meaning": "ball" },
   {
     "kanji": "丸ごと",
     "readings": ["まるごと", "marugoto"],
     "meaning": "in its entirety, whole, wholly"
-  },
-  {
-    "kanji": "まるっきり",
-    "readings": ["まるっきり", "marukkiri"],
-    "meaning": "completely, perfectly, just as if"
   },
   {
     "kanji": "丸々",
@@ -11008,7 +9560,7 @@
   },
   {
     "kanji": "～味",
-    "readings": ["～み", "～mi"],
+    "readings": ["み", "mi"],
     "meaning": "~ cast (sense of taste)"
   },
   {
@@ -11067,17 +9619,6 @@
     "readings": ["みずけ", "mizuke"],
     "meaning": "moisture, dampness"
   },
-  {
-    "kanji": "ミスプリント",
-    "readings": ["ミスプリント", "ミスプリント"],
-    "meaning": "misprint"
-  },
-  {
-    "kanji": "みすぼらしい",
-    "readings": ["みすぼらしい", "misuborashii"],
-    "meaning": "shabby, seedy"
-  },
-  { "kanji": "ミセス", "readings": ["ミセス", "ミセス"], "meaning": "Mrs." },
   {
     "kanji": "見せびらかす",
     "readings": ["みせびらかす", "misebirakasu"],
@@ -11206,11 +9747,6 @@
   },
   { "kanji": "脈", "readings": ["みゃく", "myaku"], "meaning": "pulse" },
   {
-    "kanji": "ミュージック",
-    "readings": ["ミュージック", "ミュージック"],
-    "meaning": "music"
-  },
-  {
     "kanji": "未練",
     "readings": ["みれん", "miren"],
     "meaning": "lingering affection, attachment, regret(s)"
@@ -11240,7 +9776,6 @@
     "readings": ["むいみ", "muimi"],
     "meaning": "nonsense, no meaning"
   },
-  { "kanji": "ムード", "readings": ["ムード", "ムード"], "meaning": "mood" },
   {
     "kanji": "無口",
     "readings": ["むくち", "mukuchi"],
@@ -11257,11 +9792,6 @@
     "kanji": "無邪気",
     "readings": ["むじゃき", "mujaki"],
     "meaning": "innocence, simple-mindedness"
-  },
-  {
-    "kanji": "むしる",
-    "readings": ["むしる", "mushiru"],
-    "meaning": "to pluck, to pick, to tear"
   },
   {
     "kanji": "結び",
@@ -11389,11 +9919,6 @@
     "readings": ["めいろう", "meirou"],
     "meaning": "bright, clear, cheerful"
   },
-  {
-    "kanji": "メーカー",
-    "readings": ["メーカー", "メーカー"],
-    "meaning": "manufacturer"
-  },
   { "kanji": "目方", "readings": ["めかた", "mekata"], "meaning": "weight" },
   {
     "kanji": "恵み",
@@ -11436,11 +9961,6 @@
     "meaning": "downfall, collapse, destruction"
   },
   {
-    "kanji": "メディア",
-    "readings": ["メディア", "メディア"],
-    "meaning": "media"
-  },
-  {
     "kanji": "目途",
     "readings": ["めど", "medo"],
     "meaning": "goal, outlook"
@@ -11449,11 +9969,6 @@
     "kanji": "目盛",
     "readings": ["めもり", "memori"],
     "meaning": "scale, gradations"
-  },
-  {
-    "kanji": "メロディー",
-    "readings": ["メロディー", "メロディー"],
-    "meaning": "melody"
   },
   {
     "kanji": "面会",
@@ -11482,7 +9997,7 @@
   },
   {
     "kanji": "～網",
-    "readings": ["～もう", "～mou"],
+    "readings": ["もう", "mou"],
     "meaning": "~ network"
   },
   {
@@ -11526,16 +10041,6 @@
     "meaning": "violent, vehement, rage"
   },
   {
-    "kanji": "モーテル",
-    "readings": ["モーテル", "モーテル"],
-    "meaning": "motel"
-  },
-  {
-    "kanji": "もがく",
-    "readings": ["もがく", "mogaku"],
-    "meaning": "to struggle, to wriggle, to be impatient"
-  },
-  {
     "kanji": "目録",
     "readings": ["もくろく", "mokuroku"],
     "meaning": "catalogue, catalog, list"
@@ -11556,21 +10061,6 @@
     "meaning": "groping (for)"
   },
   {
-    "kanji": "もしかして",
-    "readings": ["もしかして", "moshikashite"],
-    "meaning": "perhaps, possibly"
-  },
-  {
-    "kanji": "もしくは",
-    "readings": ["もしくは", "moshikuha"],
-    "meaning": "or, otherwise"
-  },
-  {
-    "kanji": "もたらす",
-    "readings": ["もたらす", "motarasu"],
-    "meaning": "to bring, to take, to bring about"
-  },
-  {
     "kanji": "持ち切り",
     "readings": ["もちきり", "mochikiri"],
     "meaning": "hot topic, talk of the town"
@@ -11586,21 +10076,6 @@
     "meaning": "wholly, solely, entirely"
   },
   {
-    "kanji": "もてなす",
-    "readings": ["もてなす", "motenasu"],
-    "meaning": "to entertain, to make welcome"
-  },
-  {
-    "kanji": "もてる",
-    "readings": ["もてる", "moteru"],
-    "meaning": "to be well liked, to be popular"
-  },
-  {
-    "kanji": "モニター",
-    "readings": ["モニター", "モニター"],
-    "meaning": "(computer) monitor"
-  },
-  {
     "kanji": "物好き",
     "readings": ["ものずき", "monozuki"],
     "meaning": "(idle) curiosity"
@@ -11611,11 +10086,6 @@
     "meaning": "unsatisfied, unsatisfactory"
   },
   {
-    "kanji": "もはや",
-    "readings": ["もはや", "mohaya"],
-    "meaning": "already, now"
-  },
-  {
     "kanji": "模範",
     "readings": ["もはん", "mohan"],
     "meaning": "model, example"
@@ -11624,11 +10094,6 @@
     "kanji": "模倣",
     "readings": ["もほう", "mohou"],
     "meaning": "imitation, copying"
-  },
-  {
-    "kanji": "もめる",
-    "readings": ["もめる", "momeru"],
-    "meaning": "to disagree, to dispute"
   },
   { "kanji": "股", "readings": ["もも", "momo"], "meaning": "thigh, femur" },
   { "kanji": "腿", "readings": ["もも", "momo"], "meaning": "thigh, femur" },
@@ -11662,11 +10127,6 @@
     "readings": ["もろい", "moroi"],
     "meaning": "brittle, fragile, tender-hearted"
   },
-  {
-    "kanji": "もろに",
-    "readings": ["もろに", "moroni"],
-    "meaning": "completely, altogether, bodily"
-  },
   { "kanji": "矢", "readings": ["や", "ya"], "meaning": "arrow" },
   {
     "kanji": "野外",
@@ -11675,7 +10135,7 @@
   },
   {
     "kanji": "～薬",
-    "readings": ["～やく", "～yaku"],
+    "readings": ["やく", "yaku"],
     "meaning": "medicine"
   },
   { "kanji": "夜具", "readings": ["やぐ", "yagu"], "meaning": "bedding" },
@@ -11688,11 +10148,6 @@
     "kanji": "役場",
     "readings": ["やくば", "yakuba"],
     "meaning": "town hall"
-  },
-  {
-    "kanji": "やけに",
-    "readings": ["やけに", "yakeni"],
-    "meaning": "sure, very"
   },
   {
     "kanji": "屋敷",
@@ -11736,27 +10191,11 @@
     "meaning": "to fall ill, to be ill"
   },
   {
-    "kanji": "ややこしい",
-    "readings": ["ややこしい", "yayakoshii"],
-    "meaning": "puzzling, tangled, complicated, complex"
-  },
-  {
-    "kanji": "やりとおす",
-    "readings": ["やりとおす", "yaritoosu"],
-    "meaning": "to carry through, to achieve, to complete"
-  },
-  {
-    "kanji": "やりとげる",
-    "readings": ["やりとげる", "yaritogeru"],
-    "meaning": "to accomplish"
-  },
-  {
     "kanji": "和らげる",
     "readings": ["やわらげる", "yawarageru"],
     "meaning": "to soften, to moderate, to relieve"
   },
-  { "kanji": "ヤング", "readings": ["ヤング", "ヤング"], "meaning": "young" },
-  { "kanji": "～油", "readings": ["～ゆ", "～yu"], "meaning": "~ oil" },
+  { "kanji": "～油", "readings": ["ゆ", "yu"], "meaning": "~ oil" },
   {
     "kanji": "優位",
     "readings": ["ゆうい", "yuui"],
@@ -11871,21 +10310,6 @@
     "kanji": "濯ぐ",
     "readings": ["ゆすぐ", "yusugu"],
     "meaning": "to rinse, to wash out"
-  },
-  {
-    "kanji": "ゆとり",
-    "readings": ["ゆとり", "yutori"],
-    "meaning": "reserve, affluence, time (to spare)"
-  },
-  {
-    "kanji": "ユニーク",
-    "readings": ["ユニーク", "ユニーク"],
-    "meaning": "unique"
-  },
-  {
-    "kanji": "ユニフォーム",
-    "readings": ["ユニフォーム", "ユニフォーム"],
-    "meaning": "uniform"
   },
   {
     "kanji": "指差す",
@@ -12040,11 +10464,6 @@
     "readings": ["よごれ", "yogore"],
     "meaning": "dirt, filth"
   },
-  {
-    "kanji": "よし (かん)",
-    "readings": ["よし (かん)", "yoshi (kan)"],
-    "meaning": "all right!"
-  },
   { "kanji": "良し", "readings": ["よし", "yoshi"], "meaning": "all right!" },
   {
     "kanji": "善し悪し",
@@ -12060,11 +10479,6 @@
     "kanji": "余地",
     "readings": ["よち", "yochi"],
     "meaning": "place, room, margin"
-  },
-  {
-    "kanji": "よって (よりどころ)",
-    "readings": ["よって (よりどころ)", "yotte (yoridokoro)"],
-    "meaning": "therefore, consequently"
   },
   {
     "kanji": "与党",
@@ -12098,7 +10512,7 @@
   },
   {
     "kanji": "～寄り",
-    "readings": ["～より", "～yori"],
+    "readings": ["より", "yori"],
     "meaning": "near to ~ (e.g., North by East)"
   },
   {
@@ -12121,7 +10535,6 @@
     "readings": ["らいじょう", "raijou"],
     "meaning": "attendance"
   },
-  { "kanji": "ライス", "readings": ["ライス", "ライス"], "meaning": "rice" },
   {
     "kanji": "酪農",
     "readings": ["らくのう", "rakunou"],
@@ -12138,19 +10551,9 @@
     "meaning": "optimism"
   },
   {
-    "kanji": "ランプ",
-    "readings": ["ランプ", "ランプ"],
-    "meaning": "lamp; ramp"
-  },
-  {
     "kanji": "濫用",
     "readings": ["らんよう", "ranyou"],
     "meaning": "abuse, misuse, using to excess"
-  },
-  {
-    "kanji": "リード",
-    "readings": ["リード", "リード"],
-    "meaning": "lead; reed"
   },
   {
     "kanji": "理屈",
@@ -12304,7 +10707,6 @@
     "readings": ["るいじ", "ruiji"],
     "meaning": "analogous"
   },
-  { "kanji": "ルーズ", "readings": ["ルーズ", "ルーズ"], "meaning": "loose" },
   {
     "kanji": "冷酷",
     "readings": ["れいこく", "reikoku"],
@@ -12321,44 +10723,9 @@
     "meaning": "coolness, indifference"
   },
   {
-    "kanji": "レース",
-    "readings": ["レース", "レース"],
-    "meaning": "race; lace"
-  },
-  {
-    "kanji": "レギュラー",
-    "readings": ["レギュラー", "レギュラー"],
-    "meaning": "regular"
-  },
-  {
-    "kanji": "レッスン",
-    "readings": ["レッスン", "レッスン"],
-    "meaning": "lesson"
-  },
-  {
-    "kanji": "レディー",
-    "readings": ["レディー", "レディー"],
-    "meaning": "lady"
-  },
-  {
-    "kanji": "レバー",
-    "readings": ["レバー", "レバー"],
-    "meaning": "lever; liver"
-  },
-  {
     "kanji": "恋愛",
     "readings": ["れんあい", "ren'ai"],
     "meaning": "love, romance"
-  },
-  {
-    "kanji": "バッテリー",
-    "readings": ["バッテリー", "バッテリー"],
-    "meaning": "battery"
-  },
-  {
-    "kanji": "バット",
-    "readings": ["バット", "バット"],
-    "meaning": "bat, vat"
   },
   {
     "kanji": "発病",
@@ -12379,16 +10746,6 @@
     "kanji": "果てる",
     "readings": ["はてる", "hateru"],
     "meaning": "to end, to be finished, to be exhausted"
-  },
-  {
-    "kanji": "ばてる",
-    "readings": ["ばてる", "bateru"],
-    "meaning": "to be exhausted, to be worn out"
-  },
-  {
-    "kanji": "パトカー",
-    "readings": ["パトカー", "パトカー"],
-    "meaning": "patrol car"
   },
   {
     "kanji": "甚だ",
@@ -12446,16 +10803,6 @@
     "meaning": "open field, empty lot, plain"
   },
   {
-    "kanji": "はらはら",
-    "readings": ["はらはら", "harahara"],
-    "meaning": "feel nervous"
-  },
-  {
-    "kanji": "ばらまく",
-    "readings": ["ばらまく", "baramaku"],
-    "meaning": "to disseminate, to scatter"
-  },
-  {
     "kanji": "張り紙",
     "readings": ["はりがみ", "harigami"],
     "meaning": "notice, poster"
@@ -12486,11 +10833,6 @@
     "meaning": "art print"
   },
   {
-    "kanji": "ハンガー",
-    "readings": ["ハンガー", "ハンガー"],
-    "meaning": "(coat) hanger"
-  },
-  {
     "kanji": "反感",
     "readings": ["はんかん", "hankan"],
     "meaning": "antipathy, revolt, animosity"
@@ -12499,11 +10841,6 @@
     "kanji": "反響",
     "readings": ["はんきょう", "hankyou"],
     "meaning": "echo, reverberation, repercussion"
-  },
-  {
-    "kanji": "パンク",
-    "readings": ["パンク", "パンク"],
-    "meaning": "puncture, bursting; punk"
   },
   {
     "kanji": "反撃",
@@ -12582,16 +10919,6 @@
   },
   { "kanji": "美", "readings": ["び", "bi"], "meaning": "beauty" },
   {
-    "kanji": "ひいては",
-    "readings": ["ひいては", "hiiteha"],
-    "meaning": "not only…but also, in addition to, consequently"
-  },
-  {
-    "kanji": "ビールス",
-    "readings": ["ビールス", "ビールス"],
-    "meaning": "virus"
-  },
-  {
     "kanji": "控室",
     "readings": ["ひかえしつ", "hikaeshitsu"],
     "meaning": "waiting room"
@@ -12657,11 +10984,6 @@
     "meaning": "tragedy, disaster; misery, wretched, pitiful"
   },
   {
-    "kanji": "ビジネス",
-    "readings": ["ビジネス", "ビジネス"],
-    "meaning": "business"
-  },
-  {
     "kanji": "比重",
     "readings": ["ひじゅう", "hijuu"],
     "meaning": "specific gravity"
@@ -12693,11 +11015,6 @@
     "meaning": "to soak, to dip, to drench"
   },
   {
-    "kanji": "ひたすら",
-    "readings": ["ひたすら", "hitasura"],
-    "meaning": "nothing but, earnestly, intently"
-  },
-  {
     "kanji": "左利き",
     "readings": ["ひだりきき", "hidarikiki"],
     "meaning": "left-handedness, sake drinker, left-hander"
@@ -12711,11 +11028,6 @@
     "kanji": "必修",
     "readings": ["ひっしゅう", "hisshuu"],
     "meaning": "required (subject)"
-  },
-  {
-    "kanji": "びっしょり",
-    "readings": ["びっしょり", "bisshori"],
-    "meaning": "wet through, drenched"
   },
   {
     "kanji": "必然",
@@ -12804,11 +11116,6 @@
   },
   { "kanji": "火花", "readings": ["ひばな", "hibana"], "meaning": "spark" },
   {
-    "kanji": "ひび (かべの～)",
-    "readings": ["ひび (かべの～)", "hibi (kabeno～)"],
-    "meaning": "crack, fissure, flaw"
-  },
-  {
     "kanji": "悲鳴",
     "readings": ["ひめい", "himei"],
     "meaning": "shriek, scream"
@@ -12834,24 +11141,9 @@
     "meaning": "depiction, description, portrayal"
   },
   {
-    "kanji": "ひょっと",
-    "readings": ["ひょっと", "hyotto"],
-    "meaning": "possibly, accidentally"
-  },
-  {
-    "kanji": "びら",
-    "readings": ["びら", "bira"],
-    "meaning": "handout, leaflet"
-  },
-  {
     "kanji": "平たい",
     "readings": ["ひらたい", "hiratai"],
     "meaning": "flat, even, level"
-  },
-  {
-    "kanji": "びり",
-    "readings": ["びり", "biri"],
-    "meaning": "last on the list, at the bottom"
   },
   {
     "kanji": "比率",
