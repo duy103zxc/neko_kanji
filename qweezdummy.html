@@ -40,7 +40,8 @@
       max-width: 80%;
       margin: 50px auto;
       padding: 20px;
-      background-color: #ffffff;
+      background: linear-gradient(45deg, #ffffff, #f0f0f0);
+      /* Gradient for shiny effect */
       /* White background */
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       text-align: center;
@@ -84,7 +85,11 @@
       margin-top: 20px;
       text-align: left;
       border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: inset rgba(50, 50, 93, 0.25) -4px -4px 4px -5px, inset rgba(0, 0, 0, 0.3) 4px 5px 5px -4px;
     }
+
 
     #copy-button {
       background-color: #1877f2;
@@ -871,19 +876,21 @@
 
         document.getElementById("main-menu").innerHTML += `
         <div id="unanswered-container">
-          <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-          <p>Unanswered Questions:</p>
-          <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
-            <thead>
-              <tr style="background-color: #1877f2; color: white;">
-                <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
-                <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
-                <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
-              </tr>
-            </thead>
-            <tbody>${unansweredList.join("")}</tbody>
-          </table>
+        <div id="lb-unanswered-container">
+            <p>Unanswered Questions:</p>
         </div>
+        <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
+          <thead>
+            <tr style="background-color: #1877f2; color: white;">
+              <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>${unansweredList.join("")}</tbody>
+        </table>
+      </div>
+      <button class="button-19 id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
     `;
       }
 
@@ -911,7 +918,6 @@
       textarea.select();
       document.execCommand("copy");
       document.body.removeChild(textarea);
-      alert("Copied to clipboard!");
     }
 
     // Toggle Time Attack Options
