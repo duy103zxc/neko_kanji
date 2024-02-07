@@ -33,7 +33,6 @@
       font-size: 24px;
       color: #1877f2;
       /* Facebook blue */
-      font-family: Futura;
       background-color: #666666;
       -webkit-background-clip: text;
       -moz-background-clip: text;
@@ -128,7 +127,7 @@
       margin: 15% auto;
       padding: 20px;
       border: 1px solid #888;
-      width: 80%;
+      width: 50%;
       text-align: left;
       border-radius: 8px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -173,11 +172,6 @@
 
 
     /* Responsive Design */
-    @media (max-width: 600px) {
-      #quiz-results {
-        width: 90%;
-      }
-    }
 
     @media (max-width: 400px) {
 
@@ -212,6 +206,10 @@
       justify-content: center;
       /* Center items horizontally */
       /* Use flexbox to arrange items */
+    }
+
+    #answer-input {
+      text-align: center;
     }
 
     .checkbox-wrapper-4 * {
@@ -310,20 +308,6 @@
       user-select: none;
     }
 
-    @media screen and (max-width: 640px) {
-      .checkbox-wrapper-4 .cbx {
-        display: inline-block;
-        text-align: center;
-      }
-
-      .label-hint {
-        display: inline-block;
-        text-align: center;
-        /* Center items horizontally */
-        /* Use flexbox to arrange items */
-      }
-    }
-
     @-moz-keyframes wave-4 {
       50% {
         transform: scale(0.9);
@@ -412,12 +396,122 @@
       background: none;
     }
 
+    .fsbtn {
+      display: flex;
+      justify-content: center;
+    }
+
     .main-menu img {
       /* Set image width and height to 100% of parent container */
       width: 30%;
       height: 30%;
       /* Ensure the aspect ratio is maintained */
       object-fit: contain;
+    }
+
+    .loadop {
+      display: flex;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin: 8px;
+      border: 8px solid #00aeef;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #00aeef transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .checkbox-wrapper-4 .cbx {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .label-hint {
+        display: inline-block;
+        text-align: center;
+        /* Center items horizontally */
+        /* Use flexbox to arrange items */
+      }
+
+      .main-menu img {
+        /* Set image width and height to 100% of parent container */
+        width: 50%;
+        height: 50%;
+        /* Ensure the aspect ratio is maintained */
+        object-fit: contain;
+      }
+
+      #quiz-results {
+        width: 90%;
+      }
+
+      .modal-content {
+        width: 80%;
+      }
+    }
+
+    /* CSS to hide scrollbar */
+    body:-webkit-full-screen {
+      overflow: hidden;
+    }
+
+    body:-moz-full-screen {
+      overflow: hidden;
+    }
+
+    body:-ms-fullscreen {
+      overflow: hidden;
+    }
+
+    body:fullscreen {
+      overflow: hidden;
     }
   </style>
 </head>
@@ -494,6 +588,21 @@
     </div>
   </div>
 
+  <div id="loading-animation" style="display: none;">
+    <div class="loadop">
+      <div id="loading-animations">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <div id="myModal" class="modal">
 
     <!-- Modal content -->
@@ -519,7 +628,9 @@
         <br>
         Discord: <a href="https://discordapp.com/users/424526699611291650" target="_blank">osha420</a>
       </p>
-      <button class="button-19" id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+      <div class="fsbtn">
+        <button class="button-19" id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+      </div>
     </div>
   </div>
   <div class="quiz-container" id="quiz-container" style="display: none">
@@ -582,6 +693,7 @@
 
     // Start Quiz
     function startQuiz() {
+      document.getElementById("loading-animation").style.display = "block";
       selectedLevel = document.getElementById("jlpt-level").value;
       includeHints = document.getElementById("hint-checkbox").checked;
       isTimeAttackMode = document.getElementById("time-attack-checkbox").checked;
@@ -611,6 +723,7 @@
           loadQuestion();
           quizStartTime = new Date().getTime();
         }
+        document.getElementById("loading-animation").style.display = "none";
       });
     }
 
@@ -784,6 +897,11 @@
       document.getElementById("main-menu").style.display = "block";
       document.getElementById("main-menu").innerHTML = `
       <h1>${encouragementText}</h1>
+      <div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png"
+        alt="Neko image" />
+      </div>
       <p>Quiz Results</p>
       <table id="quiz-results">
         <tr>
