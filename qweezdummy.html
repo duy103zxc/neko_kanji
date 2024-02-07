@@ -411,12 +411,25 @@
       border-width: 4px 0 0;
       background: none;
     }
+
+    .main-menu img {
+      /* Set image width and height to 100% of parent container */
+      width: 30%;
+      height: 30%;
+      /* Ensure the aspect ratio is maintained */
+      object-fit: contain;
+    }
   </style>
 </head>
 
 <body>
   <div id="main-menu" class="main-menu">
     <h1>Welcome to the Kanji Reading Quiz</h1>
+    <div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png"
+        alt="Neko image" />
+    </div>
     <label for="question-count">Number of Questions:</label>
     <div class="numberlabel">
       <input type="number" id="question-count" min="1" value="10" />
@@ -506,6 +519,7 @@
         <br>
         Discord: <a href="https://discordapp.com/users/424526699611291650" target="_blank">osha420</a>
       </p>
+      <button class="button-19" id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
     </div>
   </div>
   <div class="quiz-container" id="quiz-container" style="display: none">
@@ -875,7 +889,7 @@
         <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
           <thead>
             <tr style="background-color: #00BFFF; color: white;">
-              <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
+              <th style="border: 1px solid #dddddd; padding: 8px; width: 30%;">Kanji</th>
               <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
               <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
             </tr>
@@ -943,6 +957,20 @@
         modal.style.display = "none";
       }
     };
+
+    //Fullscreen Function
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error('Fullscreen request failed:', err);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
 
   </script>
 </body>
