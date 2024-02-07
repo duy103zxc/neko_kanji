@@ -43,7 +43,7 @@ This JavaScript code implements a Kanji Reading Quiz application. Users can sele
     - Click the "Start Quiz" button to initiate the quiz.
 
 3. **Answer Questions:**
-    - Type your answer in the input field and click "Submit."
+    - Type your answer in the input field and hit Enter
     - Receive feedback on correctness and hints if enabled.
 
 4. **Quiz End:**
