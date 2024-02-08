@@ -3,68 +3,74 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="description"
-    content="Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanji Reading Quiz</title>
+  <meta name="description"
+    content="Welcome to the Neko Kanji Quiz, where you can test your knowledge of Japanese characters and their readings. This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji." />
+  <meta name="keywords" content="Kanji, Japanese, Quiz, Reading, Language, Learning" />
+  <meta name="author" content="Osha" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goshintai_" />
+  <meta name="twitter:title" content="Kanji Quiz" />
+  <meta name="twitter:description" content="Try your kanji knowledge" />
+  <meta name="twitter:image"
+    content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png" />
+  <title>Neko Kanji Quiz</title>
   <style>
+    /* Reset and Global Styles */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Tahoma', 'Verdana', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #eceff1;
+      /* Light blue-gray background */
       text-align: center;
-      /* Center align everything */
     }
 
+    /* Common Styles for Containers */
     .quiz-container,
     #main-menu,
-    #quiz-container button,
-    #unanswered-container {
-      border-radius: 10px;
-      /* Add rounded corners */
+    #quiz-container button {
+      border-radius: 8px;
     }
 
     h1 {
       font-size: 24px;
+      color: #1877f2;
+      /* Facebook blue */
+      background-color: #666666;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      text-shadow: rgba(245, 245, 245, 0.5) 3px 5px 1px;
     }
 
-    .quiz-container {
-      max-width: 80%;
-      /* Adjust as needed */
-      margin: 50px auto;
-      /* Center the quiz container horizontally */
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      /* Adjust text alignment within the quiz container */
-    }
-
+    .quiz-container,
     #main-menu {
       max-width: 80%;
-      /* Adjust as needed */
       margin: 50px auto;
-      /* Center the quiz container horizontally */
       padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(45deg, #ffffff, #f0f0f0);
+      /* Gradient for shiny effect */
+      /* White background */
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       text-align: center;
-      /* Adjust text alignment within the quiz container */
     }
 
-    button {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Add this rule to center the select and button within the main-menu div */
     #main-menu select,
     #main-menu button {
       margin-top: 10px;
+    }
+
+
+
+    .label-hint,
+    .help,
+    .input-group,
+    .timeattack,
+    .numberlabel {
+      margin: 5px;
     }
 
     #answer-input {
@@ -74,30 +80,115 @@
     }
 
     #unanswered-container {
-      background-color: #fff;
-      /* Set background color as needed */
+      background-color: #ffffff;
+      /* White background */
       border: 1px solid #ccc;
-      /* Add border if desired */
       padding: 10px;
       margin-top: 20px;
-      /* Adjust margin as needed */
       text-align: left;
-      /* Align text to the left */
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: inset rgba(50, 50, 93, 0.25) -4px -4px 4px -5px, inset rgba(0, 0, 0, 0.3) 4px 5px 5px -4px;
     }
 
-    #copy-button {
-      background-color: #4caf50;
-      /* Set button background color */
+
+    /* Quiz Results Table */
+    #quiz-results {
+      width: 50%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    #quiz-results th,
+    #quiz-results td {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    #quiz-results th {
+      background-color: #1877f2;
+      /* Facebook blue */
       color: white;
-      /* Set button text color */
-      border: none;
-      padding: 8px 12px;
-      /* Adjust padding as needed */
-      cursor: pointer;
-      float: right;
-      /* Float the button to the right */
     }
 
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: fit-content;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      /* White background */
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      text-align: left;
+      border-radius: 8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Add this to your existing CSS styles */
+    #progress-bar-container {
+      display: block;
+      width: 100%;
+      background-color: #e0e0e0;
+      /* Light gray background for the progress bar container */
+      height: 5px;
+      /* Set the height of the progress bar container */
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+
+    #progress-bar {
+      height: 100%;
+      background-color: #1877f2;
+      /* Green color for the progress bar */
+      width: 0;
+      /* Initial width, will be dynamically updated */
+      border-radius: 10px;
+    }
+
+
+
+    /* Responsive Design */
+
+    @media (max-width: 400px) {
+
+      #quiz-results th,
+      #quiz-results td {
+        padding: 6px;
+      }
+    }
+
+
+    /* This is necessary to remove blogger templates */
     .post-header,
     .post-header a,
     .post-header button,
@@ -116,116 +207,376 @@
       padding: 0;
     }
 
-    #quiz-results {
-      width: 50%;
-      margin: 20px auto;
-      border-collapse: collapse;
+
+    .label-hint {
+      display: flex;
+      justify-content: center;
+      /* Center items horizontally */
+      /* Use flexbox to arrange items */
     }
 
-    #quiz-results th,
-    #quiz-results td {
-      border: 1px solid #dddddd;
-      /* Add borders to cells for separation */
-      padding: 8px;
-      /* Add padding to cells for spacing */
-      text-align: left;
-      /* Align text to the left within cells */
+    #answer-input {
+      text-align: center;
     }
 
-    #quiz-results th {
-      background-color: #4caf50;
-      /* Set header background color */
-      color: white;
-      /* Set header text color */
+    .checkbox-wrapper-4 * {
+      box-sizing: border-box;
+      flex: 1;
+      /* Distribute the available space equally among the checkbox wrappers */
+      display: flex;
+      /* Use flexbox for nested items */
+      align-items: center;
+      /* Align items vertically in the center */
+      margin-right: 10px;
+      /* Adjust the margin between checkbox wrappers */
     }
 
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      /* Hidden by default */
+    .checkbox-wrapper-4 .cbx {
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .checkbox-wrapper-4 .cbx:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    .checkbox-wrapper-4 .cbx:hover {
+      background: rgba(0, 119, 255, 0.06);
+    }
+
+    .checkbox-wrapper-4 .cbx span {
+      float: left;
+      vertical-align: middle;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-4 .cbx span:first-child {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      transform: scale(1);
+      border: 1px solid #cccfdb;
+      transition: all 0.2s ease;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .checkbox-wrapper-4 .cbx span:first-child svg {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 16px;
+      stroke-dashoffset: 16px;
+      transition: all 0.3s ease;
+      transition-delay: 0.1s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-4 .cbx span:last-child {
+      padding-left: 8px;
+      line-height: 18px;
+    }
+
+    .checkbox-wrapper-4 .cbx:hover span:first-child {
+      border-color: #07f;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
+      background: #07f;
+      border-color: #07f;
+      animation: wave-4 0.4s ease;
+    }
+
+    .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
+      stroke-dashoffset: 0;
+    }
+
+    .checkbox-wrapper-4 .inline-svg {
+      position: absolute;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @-moz-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @-webkit-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @-o-keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes wave-4 {
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    .button-19 {
+      appearance: button;
+      background-color: #1877f2;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 20px;
+      margin: 0;
+      outline: none;
+      overflow: visible;
+      padding: 13px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 13px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .button-19:after {
+      background-clip: padding-box;
+      background-color: #00aeef;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      bottom: -4px;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .button-19:main,
+    .button-19:focus {
+      user-select: auto;
+    }
+
+    .button-19:hover:not(:disabled) {
+      filter: brightness(1.1);
+      -webkit-filter: brightness(1.1);
+    }
+
+    .button-19:disabled {
+      cursor: auto;
+    }
+
+    .button-19:active {
+      border-width: 4px 0 0;
+      background: none;
+    }
+
+    .fsbtn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-menu img {
+      /* Set image width and height to 100% of parent container */
+      width: 30%;
+      height: 30%;
+      /* Ensure the aspect ratio is maintained */
+      object-fit: contain;
+    }
+
+    .loadop {
+      display: flex;
       position: fixed;
-      /* Stay in place */
       z-index: 1;
-      /* Sit on top */
       left: 0;
       top: 0;
       width: 100%;
-      /* Full width */
       height: 100%;
-      /* Full height */
       overflow: auto;
-      /* Enable scroll if needed */
       background-color: rgb(0, 0, 0);
-      /* Fallback color */
       background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Modal Content/Box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      /* 15% from the top and centered */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      /* Could be more or less, depending on screen size */
-      text-align: left;
-      /* Align content to the left */
-      border-radius: 10px;
+
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
     }
 
-    /* The Close Button */
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin: 8px;
+      border: 8px solid #00aeef;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #00aeef transparent transparent transparent;
     }
 
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
     }
 
-    @media (max-width: 600px) {
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .checkbox-wrapper-4 .cbx {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .label-hint {
+        display: inline-block;
+        text-align: center;
+        /* Center items horizontally */
+        /* Use flexbox to arrange items */
+      }
+
+      .main-menu img {
+        /* Set image width and height to 100% of parent container */
+        width: 50%;
+        height: 50%;
+        /* Ensure the aspect ratio is maintained */
+        object-fit: contain;
+      }
+
       #quiz-results {
         width: 90%;
-        /* Adjust the width for smaller screens */
+      }
+
+      .modal-content {
+        width: 80%;
       }
     }
 
-    @media (max-width: 400px) {
+    /* CSS to hide scrollbar */
+    body:-webkit-full-screen {
+      overflow: hidden;
+    }
 
-      #quiz-results th,
-      #quiz-results td {
-        padding: 6px;
-        /* Adjust padding for smaller screens */
-      }
+    body:-moz-full-screen {
+      overflow: hidden;
+    }
+
+    body:-ms-fullscreen {
+      overflow: hidden;
+    }
+
+    body:fullscreen {
+      overflow: hidden;
     }
   </style>
 </head>
 
 <body>
   <div id="main-menu" class="main-menu">
-    <h1>Welcome to the Kanji Reading Quiz</h1>
-    <label for="question-count">Number of Questions:</label>
-    <input type="number" id="question-count" min="1" value="10" />
-    <select id="jlpt-level">
-      <option value="N5">N5</option>
-      <option value="N4">N4</option>
-      <option value="N1">N1</option>
-      <!-- Add other JLPT levels as needed -->
-    </select>
+    <h1>Welcome to the Neko Kanji Quiz</h1>
     <div>
-      <input type="checkbox" id="hint-checkbox" />
-      <label for="hint-checkbox">Include Hints</label>
-      <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
-      <label for="time-attack-checkbox">Time Attack Mode</label>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png"
+        alt="Neko image" />
     </div>
-    <div>
+    <label for="question-count">Number of Questions:</label>
+    <div class="numberlabel">
+      <input type="number" id="question-count" min="1" value="10" />
+      <select id="jlpt-level">
+        <option value="N5">N5</option>
+        <option value="N4">N4</option>
+        <option value="N3">N3</option>
+        <option value="N1">N1</option>
+        <!-- Add other JLPT levels as needed -->
+      </select>
+    </div>
+    <div class="label-hint">
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="hint-checkbox" type="checkbox" />
+        <label class="cbx" for="hint-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Include Hints</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+      <div class="checkbox-wrapper-4">
+        <input class="inp-cbx" id="time-attack-checkbox" type="checkbox" onchange="toggleTimeAttackOptions()" />
+        <label class="cbx" for="time-attack-checkbox">
+          <span>
+            <svg width="12px" height="10px">
+              <use xlink:href="#check-4"></use>
+            </svg>
+          </span>
+          <span>Time Attack Mode</span>
+        </label>
+        <svg class="inline-svg">
+          <symbol id="check-4" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="timeattack">
       <div id="time-attack-options" style="display: none;">
         <label for="time-limit">Time Limit:</label>
         <select id="time-limit">
@@ -236,9 +587,24 @@
         </select>
       </div>
     </div>
-    <a href="#" onclick="openModal()">Help</a>
+    <div class="help">
+      <a href="#" onclick="openModal()" style="color: #1877f2; cursor: pointer;">Help</a>
+    </div>
     <div class="input-group">
-      <button onclick="startQuiz()">Start Quiz</button>
+      <button class="button-19" onclick="startQuiz()">Start Quiz</button>
+    </div>
+  </div>
+
+  <div id="loading-animation" style="display: none;">
+    <div class="loadop">
+      <div id="loading-animations">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -247,7 +613,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <p>Welcome to the Kanji Reading Quiz, where you can test your knowledge of Japanese characters and their readings.
+      <p>Welcome to the Neko Kanji Quiz, where you can test your knowledge of kanji characters and their readings.
         This quiz offers a challenging yet enjoyable experience to enhance your understanding of Kanji.</p>
       <h3>How to Play:</h3>
       <ul>
@@ -258,6 +624,7 @@
         <li>Write the Kanji reading in either hiragana or romaji.</li>
         <li>Press Enter to submit your answer.</li>
         <li>You have three chances per question to get it right.</li>
+        <li>If you want to end the quiz prematurely, you can type "end" in the input field.</li>
         <li>Have fun!</li>
       </ul>
       <p>
@@ -267,29 +634,36 @@
         <br>
         Discord: <a href="https://discordapp.com/users/424526699611291650" target="_blank">osha420</a>
       </p>
+      <div class="fsbtn">
+        <button class="button-19" id="fullscreen-button" onclick="toggleFullscreen()">Fullscreen</button>
+      </div>
     </div>
-
   </div>
-
-
   <div class="quiz-container" id="quiz-container" style="display: none">
-    <h1 id="quiz-heading">Kanji Reading Quiz</h1>
+    <h1 id="quiz-heading">Neko Kanji Quiz</h1>
+    <div id="countdown-timer" style="font-size: 14px; margin-bottom: 10px;"></div>
     <div id="question-container">
       <!-- Questions will be dynamically inserted here -->
     </div>
+    <p id="hint"></p>
+    <p id="feedback"></p>
     <input type="text" id="answer-input" placeholder="Enter Reading"
       onkeydown="if (event.key === 'Enter') checkAnswer()" />
-    <p id="feedback"></p>
-    <p id="hint"></p>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
   </div>
   <script>
+    // Quiz Data
     const quizData = {
       N5: [],
       N4: [],
+      N3: [],
       N1: [],
       // Add other JLPT levels as needed
     };
 
+    // Quiz Variables
     let currentQuestion = 0;
     let score = 0;
     let incorrectAttempts = 0;
@@ -303,32 +677,42 @@
     let isTimeAttackMode = false;
     let timeLimit = 0;
     let timerId;
+    let countdownElement = document.getElementById("countdown-timer");
+    
 
+    // Quiz Initialization
+    window.onload = function () {
+      document.getElementById("quiz-container").style.display = "none";
+    };
 
+    // Fetch Quiz Data
     function fetchQuizData(level) {
       const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}kan.json`;
-
-      return fetch(jsonUrl)
+      // Fetch JSON data from the provided URL
+      return fetch(jsonUrl) 
         .then((response) => response.json())
         .then((data) => {
-          shuffleArray(data); // Shuffle the array
+          shuffleArray(data);
           return data;
         })
-        .catch((error) =>
-          console.error(`Error fetching ${level} JSON:`, error)
-        );
+        .catch((error) => console.error(`Error fetching ${level} JSON:`, error));
     }
+
+    // Start Quiz
     function startQuiz() {
+      document.getElementById("loading-animation").style.display = "block";
       selectedLevel = document.getElementById("jlpt-level").value;
       includeHints = document.getElementById("hint-checkbox").checked;
       isTimeAttackMode = document.getElementById("time-attack-checkbox").checked;
 
       if (isTimeAttackMode) {
+        document.getElementById("progress-bar-container").style.display = "none";
         timeLimit = parseInt(document.getElementById("time-limit").value);
         document.getElementById("time-attack-options").style.display = "block";
-        quizStartTime = new Date().getTime(); // Record the quiz start time
+        quizStartTime = new Date().getTime();
         startTimer();
       } else {
+        document.getElementById("progress-bar-container").style.display = "block";
         totalQuestions = parseInt(document.getElementById("question-count").value);
       }
 
@@ -338,24 +722,45 @@
         document.getElementById("quiz-container").style.display = "block";
         document.getElementById("quiz-heading").textContent =
           selectedLevel + " Kanji Reading Quiz";
+
         if (isTimeAttackMode) {
           totalQuestions = quizData[selectedLevel].length;
-          loadQuestion(); // Load the first question immediately in time attack mode
+          loadQuestion();
         } else {
-          loadQuestion(); // Load the first question when starting a regular quiz
-          quizStartTime = new Date().getTime(); // Record the quiz start time
+          loadQuestion();
+          quizStartTime = new Date().getTime();
         }
+        document.getElementById("loading-animation").style.display = "none";
       });
     }
 
+    // Proggress Bar
+    function updateProgressBar() {
+      const progressBar = document.getElementById("progress-bar");
+      const progressPercentage = ((currentQuestion + 1) / totalQuestions) * 100;
+      progressBar.style.width = `${progressPercentage}%`;
+      console.log(progressPercentage)
+    }
 
+    function resetProgressBar() {
+      const progressBar = document.getElementById("progress-bar");
+      progressBar.style.width = "0%";
+    }
+
+
+
+    // Timer Functions
     function startTimer() {
       timerId = setInterval(() => {
         const currentTime = new Date().getTime();
         const elapsedSeconds = Math.floor((currentTime - quizStartTime) / 1000);
-
+        const remainingSeconds = Math.max(0, timeLimit - elapsedSeconds);
+        const timeRemaining = (timeLimit - elapsedSeconds) * 1000;
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = remainingSeconds % 60;
+        countdownElement.innerText = `Time Remaining: ${minutes}m ${seconds}s`;
         if (elapsedSeconds >= timeLimit) {
-          endQuiz(); // End the quiz when the time limit is reached
+          endQuiz();
         }
       }, 1000);
     }
@@ -364,7 +769,7 @@
       clearTimeout(timerId);
     }
 
-
+    // Shuffle Array
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -372,22 +777,17 @@
       }
     }
 
-    // Shuffle the arrays in quizData
-    for (const level in quizData) {
-      if (quizData.hasOwnProperty(level)) {
-        shuffleArray(quizData[level]);
-      }
-    }
-
+    // Load Question
     function loadQuestion() {
       const questionContainer = document.getElementById("question-container");
       questionContainer.innerHTML = `<p style="font-size: 24px;">${quizData[selectedLevel][currentQuestion].kanji}</p>`;
+      const answerInput = document.getElementById("answer-input");
+      answerInput.focus();
     }
 
+    // Check Answer
     function checkAnswer() {
-      const userAnswer = document
-        .getElementById("answer-input")
-        .value.toLowerCase();
+      const userAnswer = document.getElementById("answer-input").value.toLowerCase();
 
       if (isTransitioning) {
         return;
@@ -395,26 +795,28 @@
 
       if (currentQuestion < totalQuestions) {
         const currentQuestionData = quizData[selectedLevel][currentQuestion];
-        const correctReadings = quizData[selectedLevel][
-          currentQuestion
-        ].readings.map((reading) => reading.toLowerCase());
+        const correctReadings = quizData[selectedLevel][currentQuestion].readings.map((reading) => reading.toLowerCase());
         const questionMeaning = currentQuestionData.meaning;
 
+        if (userAnswer === "end") { // Check if user wants to end the quiz
+          endQuiz();
+          return;
+        }
         if (correctReadings.includes(userAnswer)) {
           score++;
           incorrectAttempts = 0;
           document.getElementById("feedback").innerHTML = `
-          <span style="color: green;">Correct!</span>
-          <br />
-          Meaning: ${questionMeaning}`;
+        <span style="color: green;">Correct!</span>
+        <br />
+        Meaning: ${questionMeaning}`;
           document.getElementById("hint").innerHTML = ``;
           disableInput();
 
-          // Move to the next question automatically
           setTimeout(() => {
             enableInput();
             nextQuestion();
-          }, 1000); // Wait for 1 second before moving to the next question
+          }, 1000);
+          updateProgressBar()
         } else {
           incorrectAttempts++;
           incorrectCount++;
@@ -422,24 +824,23 @@
           if (incorrectAttempts === 3) {
             incorrectAttempts = 0;
             unansweredQuestions.push(currentQuestion);
-            // Reveal the correct answers and move to the next question
+
             document.getElementById("feedback").innerHTML = `
-            Incorrect. Correct answers: 
-            <span style="color: green;">${correctReadings.join(", ")}</span>
-            <br />
-            Meaning: ${questionMeaning}
-          `;
+          <span style="color: red;">Incorrect!</span> Correct answers: 
+          <span style="color: green;">${correctReadings.join(", ")}</span>
+          <br />
+          Meaning: ${questionMeaning}
+        `;
             document.getElementById("hint").innerHTML = ` `;
             disableInput();
+
             setTimeout(() => {
               enableInput();
               nextQuestion();
-            }, 1000); // Wait for 1 second before moving to the next question
+            }, 1000);
+            updateProgressBar()
           } else {
-            document.getElementById(
-              "feedback"
-            ).innerText = `Incorrect. Attempt ${incorrectAttempts}/3`;
-            document.getElementById("hint").innerHTML = `Hint : ${questionMeaning}`;
+            document.getElementById("feedback").innerHTML = `<span style="color: red;">Incorrect!</span> Attempt ${incorrectAttempts}/3`;
             document.getElementById("hint").innerHTML = includeHints
               ? `Hint : ${questionMeaning}`
               : '';
@@ -448,8 +849,10 @@
       } else {
         endQuiz();
       }
+
     }
 
+    // Input Functions
     function disableInput() {
       isTransitioning = true;
       document.getElementById("answer-input").disabled = true;
@@ -459,16 +862,16 @@
       isTransitioning = false;
       const answerInput = document.getElementById("answer-input");
       answerInput.disabled = false;
-      answerInput.focus(); // Focus on the input field
+      answerInput.focus();
     }
 
-
-
+    // Next Question
     function nextQuestion() {
       document.getElementById("feedback").innerText = "";
       document.getElementById("answer-input").value = "";
 
       currentQuestion++;
+
       if (currentQuestion < totalQuestions) {
         loadQuestion();
       } else {
@@ -476,145 +879,176 @@
       }
     }
 
-    function resetQuiz() {
-      currentQuestion = 0;
-      score = 0;
-      incorrectAttempts = 0;
-      document.getElementById("feedback").innerText = "";
-      document.getElementById("answer-input").value = "";
-      document.getElementById("quiz-container").style.display = "none";
-      document.getElementById("main-menu").style.display = "block";
-    }
-
+    // End Quiz
     function endQuiz() {
       const quizEndTime = new Date().getTime();
-      const timeSpentInSeconds = Math.floor(
-        (quizEndTime - quizStartTime) / 1000
-      );
+      const timeSpentInSeconds = Math.floor((quizEndTime - quizStartTime) / 1000);
       const accuracy = (score / totalQuestions) * 100;
-
-      let encouragementText = "頑張って"; // Default text
-      clearInterval(timerId);
+      let encouragementText = "頑張って";
+      clearInterval(timerId)
+      resetProgressBar()
 
       if (accuracy === 100) {
         encouragementText = "You nailed every question. Great job!";
       } else if (accuracy >= 75) {
-        encouragementText =
-          "Great job! You have a solid understanding of the material.";
+        encouragementText = "Great job! You have a solid understanding of the material.";
       } else if (accuracy >= 50) {
-        encouragementText =
-          "Good effort! Keep practicing to improve your knowledge.";
+        encouragementText = "Good effort! Keep practicing to improve your knowledge.";
       } else {
         encouragementText = "Keep trying! Practice makes perfect.";
       }
 
-      // Modify the main menu
       document.getElementById("main-menu").style.display = "block";
       document.getElementById("main-menu").innerHTML = `
-            <h1>${encouragementText}</h1>
-            <p>Quiz Results</p>
-            <table id="quiz-results">
-              <tr>
-                <td>Your Score</td>
-                <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
-              </tr>
-              <tr>
-                <td>Incorrect Attempts</td>
-                <td>${incorrectCount}</td>
-              </tr>
-              <tr>
-                <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
-                <td>${timeSpentInSeconds} seconds</td>
-              </tr>
-            </table>
-            <label for="question-count">Number of Questions:</label>
-            <input type="number" id="question-count" min="1" value="10" />
-            <select id="jlpt-level">
-              <option value="N5">N5</option>
-              <option value="N4">N4</option>
-              <option value="N1">N1</option>
-              <!-- Add other JLPT levels as needed -->
-            </select>
-            <div>
-              <input type="checkbox" id="hint-checkbox" />
-              <label for="hint-checkbox">Include Hints</label>
-              <input type="checkbox" id="time-attack-checkbox" onchange="toggleTimeAttackOptions()" />
-              <label for="time-attack-checkbox">Time Attack Mode</label>
-            </div>
-            <div>
-              <div id="time-attack-options" style="display: none;">
-                <label for="time-limit">Time Limit:</label>
-                <select id="time-limit">
-                  <option value="30">30 seconds</option>
-                  <option value="60">1 minute</option>
-                  <option value="120">2 minutes</option>
-                  <option value="300">5 minutes</option>
-                </select>
-              </div>
-            </div>
-            <a href="#" onclick="openModal()">Help</a>
-            <div class="input-group">
-              <button onclick="startQuiz()">Start Quiz</button>
-            </div>
+      <h1>${encouragementText}</h1>
+      <div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png"
+        alt="Neko image" />
+      </div>
+      <p>Quiz Results</p>
+      <table id="quiz-results">
+        <tr>
+          <td>Level Taken</td>
+          <td>${selectedLevel}</td>
+        </tr>
+        <tr>
+          <td>Your Score</td>
+          <td>${score} ${isTimeAttackMode ? " " : "out of"} ${isTimeAttackMode ? " " : totalQuestions}</td>
+        </tr>
+        <tr>
+          <td>Incorrect Attempts</td>
+          <td>${incorrectCount}</td>
+        </tr>
+        <tr>
+          <td>${isTimeAttackMode ? "Time Limit" : "Time Spent"} </td>
+          <td>${timeSpentInSeconds} seconds</td>
+        </tr>
+      </table>
+      <label for="question-count">Number of Questions:</label>
+      <div class="numberlabel">
+        <input type="number" id="question-count" min="1" value="10" />
+        <select id="jlpt-level">
+          <option value="N5">N5</option>
+          <option value="N4">N4</option>
+          <option value="N3">N3</option>
+          <option value="N1">N1</option>
+          <!-- Add other JLPT levels as needed -->
+        </select>
+      </div>
+      <div class="label-hint">
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="hint-checkbox" type="checkbox" />
+          <label class="cbx" for="hint-checkbox">
+            <span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use>
+              </svg>
+            </span>
+            <span>Include Hints</span>
+          </label>
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+        <div class="checkbox-wrapper-4">
+          <input class="inp-cbx" id="time-attack-checkbox" type="checkbox" onchange="toggleTimeAttackOptions()" />
+          <label class="cbx" for="time-attack-checkbox">
+            <span>
+              <svg width="12px" height="10px">
+                <use xlink:href="#check-4"></use>
+              </svg>
+            </span>
+            <span>Time Attack Mode</span>
+          </label>
+          <svg class="inline-svg">
+            <symbol id="check-4" viewbox="0 0 12 10">
+              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+      <div class="timeattack">
+        <div id="time-attack-options" style="display: none;">
+          <label for="time-limit">Time Limit:</label>
+          <select id="time-limit">
+            <option value="30">30 seconds</option>
+            <option value="60">1 minute</option>
+            <option value="120">2 minutes</option>
+            <option value="300">5 minutes</option>
+          </select>
+        </div>
+      </div>
+      <div class="help">
+        <a href="#" onclick="openModal()" style="color: #1877f2; cursor: pointer;">Help</a>
+      </div>
+      <div class="input-group">
+        <button class="button-19" onclick="startQuiz()">Start Quiz</button>
+      </div>
+  `;
 
-        `;
-
-      // Reveal unanswered questions, if any
       if (unansweredQuestions.length > 0) {
         const unansweredList = unansweredQuestions.map((index, rowIndex) => {
           const question = quizData[selectedLevel][index];
-          const rowColor = rowIndex % 2 === 0 ? "#f2f2f2" : "#ffffff"; // Alternating row colors
+          const rowColor = rowIndex % 2 === 0 ? "#f2f2f2" : "#ffffff";
 
           return `
-            <tr style="background-color: ${rowColor};">
-                <td>${question.kanji}</td>
-                <td>${question.readings.join(", ")}</td>
-                <td>${question.meaning}</td>
-            </tr>
-        `;
+        <tr style="background-color: ${rowColor};">
+          <td>${question.kanji}</td>
+          <td>${question.readings.join(", ")}</td>
+          <td>${question.meaning}</td>
+        </tr>
+      `;
         });
 
         document.getElementById("main-menu").innerHTML += `
         <div id="unanswered-container">
-            <button id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+        <div id="lb-unanswered-container">
             <p>Unanswered Questions:</p>
-            <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto;">
-                <thead>
-                    <tr style="background-color: #4caf50; color: white;">
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Kanji</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
-                        <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
-                    </tr>
-                </thead>
-                <tbody>${unansweredList.join("")}</tbody>
-            </table>
         </div>
-      `;
+        <table id="unanswered-table" style="width: 100%; border-collapse: collapse; margin: 0 auto; border-radius: 8px">
+          <thead>
+            <tr style="background-color: #00BFFF; color: white;">
+              <th style="border: 1px solid #dddddd; padding: 8px; width: 30%;">Kanji</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Readings</th>
+              <th style="border: 1px solid #dddddd; padding: 8px;">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>${unansweredList.join("")}</tbody>
+        </table>
+      </div>
+      <button class="button-19 id="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
+    `;
       }
-
-      unansweredQuestions = [];
-      incorrectCount = 0;
       resetQuiz();
-      shuffleArray(quizData[selectedLevel]); // Initiate shuffleArray
     }
 
-    // Load the first question on page load
-    window.onload = function () {
+    // Reset Quiz
+    function resetQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      incorrectAttempts = 0;
+      incorrectCount = 0;
+      unansweredQuestions = [];
+      document.getElementById("feedback").innerText = "";
+      document.getElementById("answer-input").value = "";
       document.getElementById("quiz-container").style.display = "none";
-    };
-  </script>
-  <script>
+      document.getElementById("main-menu").style.display = "block";
+      shuffleArray(quizData[selectedLevel]);
+    }
+
+    // Copy to Clipboard
     function copyToClipboard() {
       const unansweredTable = document.getElementById("unanswered-table");
       const rows = unansweredTable.querySelectorAll("tbody tr");
 
-      // Create an array to store the rows as text
       const rowsText = Array.from(rows).map((row) => {
         const cells = Array.from(row.cells).map((cell) => cell.innerText);
-        return cells.join("\t"); // Separate cells with tabs
+        return cells.join("\t");
       });
 
-      // Combine rows with line breaks
       const textContent = rowsText.join("\n");
 
       const textarea = document.createElement("textarea");
@@ -623,9 +1057,9 @@
       textarea.select();
       document.execCommand("copy");
       document.body.removeChild(textarea);
-      alert("Copied to clipboard!");
     }
 
+    // Toggle Time Attack Options
     function toggleTimeAttackOptions() {
       const timeAttackOptions = document.getElementById("time-attack-options");
       const questionCountInput = document.getElementById("question-count");
@@ -639,24 +1073,41 @@
       }
     }
 
+    // Modal Functions
     var modal = document.getElementById("myModal");
+    var men = document.getElementById("main-menu");
 
-    // When the user clicks on the button, open the modal
     function openModal() {
       modal.style.display = "block";
+      men.style.filter = "blur(2px)";
     }
 
-    // When the user clicks on <span> (x), close the modal
     function closeModal() {
       modal.style.display = "none";
+      men.style.filter = "blur(0px)";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
+        men.style.filter = "blur(0px)";
       }
     };
+
+    //Fullscreen Function
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error('Fullscreen request failed:', err);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
   </script>
 </body>
 
