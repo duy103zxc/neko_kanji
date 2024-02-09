@@ -755,6 +755,21 @@
         .catch((error) => console.error(`Error fetching ${level} JSON:`, error)); // Log any errors that occur
     }
 
+    // Save user preferences to session storage
+    function saveUserPreferences() {
+      const totalQuestionsInput = document.getElementById("question-count");
+      const selectedLevel = document.getElementById("jlpt-level").value;
+      sessionStorage.setItem('numQuestions', totalQuestionsInput.value);
+      sessionStorage.setItem('selectedLevel', selectedLevel);
+    }
+
+    // Retrieve user preferences from session storage
+    function getUserPreferences() {
+      const numQuestions = sessionStorage.getItem('numQuestions');
+      const selectedLevel = sessionStorage.getItem('selectedLevel');
+      return { numQuestions, selectedLevel };
+    }
+
 
     // Start Quiz Function
     function startQuiz() {
@@ -766,7 +781,7 @@
       includeHints = document.getElementById("hint-checkbox").checked;
       // Check if time attack mode is enabled
       isTimeAttackMode = document.getElementById("time-attack-checkbox").checked;
-
+      saveUserPreferences()
       // Initialize quiz based on selected mode
       if (isTimeAttackMode) {
         // Hide progress bar container in time attack mode
@@ -1025,9 +1040,9 @@
       // Add the current quiz session data to the array
       quizSessions.push({
         date: date,
+        level: selectedLevel,
         mode: mode,
-        score: score,
-        timeSpentOrLimit: timeSpentOrLimit
+        score: `${score}/${totalQuestions}`
       });
 
       // Store the updated array back to local storage
@@ -1073,6 +1088,7 @@
         timeSpentOrLimit = `${timeLimit} seconds`;
       }
       saveQuizSessionData(date, mode, score, timeSpentOrLimit);
+      getUserPreferences()
 
 
       // Determine encouragement text based on accuracy
@@ -1114,7 +1130,7 @@
       </table>
       <label for="question-count">Number of Questions:</label>
       <div class="numberlabel">
-        <input type="number" id="question-count" min="1" value="10" />
+        <input type="number" id="question-count" min="1"/>
         <select id="jlpt-level">
           <option value="N5">N5</option>
           <option value="N4">N4</option>
@@ -1184,6 +1200,25 @@
       </div>
   `;
 
+      // Function to update inputs from saved values
+      function updateInputsFromSavedValues() {
+        const savedPreferences = getUserPreferences();
+        const totalQuestionsInput = document.getElementById("question-count");
+        const selectedLevelInput = document.getElementById("jlpt-level");
+
+        // Set the value of the total questions input
+        totalQuestionsInput.value = savedPreferences.numQuestions;
+
+        // Loop through options to find and set the selected level
+        for (let i = 0; i < selectedLevelInput.options.length; i++) {
+          if (selectedLevelInput.options[i].value === savedPreferences.selectedLevel) {
+            selectedLevelInput.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+
       // Display unanswered questions if any
       if (unansweredQuestions.length > 0) {
         const unansweredList = unansweredQuestions.map((index, rowIndex) => {
@@ -1224,6 +1259,7 @@
       // Reset quiz parameters
       resetQuiz();
       LoadScoreHistory();
+      updateInputsFromSavedValues()
     }
 
 
@@ -1298,6 +1334,7 @@
         timeAttackOptions.style.display = "none";
         questionCountInput.disabled = false;
       }
+      console.log('hellow')
     }
 
 
@@ -1367,22 +1404,17 @@
 
       // Get the score history from local storage
       const quizSessionsString = localStorage.getItem("quizSessions");
-      console.log("Quiz sessions string:", quizSessionsString);
-
       const quizSessions = JSON.parse(quizSessionsString) || [];
-      console.log("Parsed quiz sessions:", quizSessions);
 
       if (quizSessions.length === 0) {
         // If there are no quiz sessions, display message
         modalContent.innerHTML = `
-      <span class="close" onclick="closeModal2()">&times;</span>
-      <div class="resetstorage">
-        <button class="button-19" id="reset-storage-button" onclick="resetStoredData()">Reset Data</button>
-      </div>
-      <p style="text-align: center;">There is no score history available.</p>`;
+            <span class="close" onclick="closeModal2()">&times;</span>
+            <div class="resetstorage">
+                <button class="button-19" id="reset-storage-button" onclick="resetStoredData()">Reset Data</button>
+            </div>
+            <p style="text-align: center;">There is no score history available.</p>`;
       } else {
-        // If there are quiz sessions, display score history table
-        // Create close button
         const closeButton = document.createElement("span");
         closeButton.classList.add("close");
         closeButton.innerHTML = "&times;";
@@ -1390,7 +1422,6 @@
           closeModal2();
         };
         modalContent.appendChild(closeButton);
-
         // Create reset button
         const resetButtonContainer = document.createElement("div");
         resetButtonContainer.classList.add("resetstorage");
@@ -1419,6 +1450,12 @@
         headerDate.style.padding = "8px";
         headerDate.style.backgroundColor = "#00BFFF"; // Background color
         headerDate.style.color = "#ffffff"; // Text color
+        const headerLevel = headerRow.insertCell();
+        headerLevel.textContent = "Level";
+        headerLevel.style.border = "1px solid #dddddd";
+        headerLevel.style.padding = "8px";
+        headerLevel.style.backgroundColor = "#00BFFF"; // Background color
+        headerLevel.style.color = "#ffffff"; // Text color
         const headerMode = headerRow.insertCell();
         headerMode.textContent = "Mode";
         headerMode.style.border = "1px solid #dddddd";
@@ -1431,12 +1468,6 @@
         headerScore.style.padding = "8px";
         headerScore.style.backgroundColor = "#00BFFF"; // Background color
         headerScore.style.color = "#ffffff"; // Text color
-        const headerTime = headerRow.insertCell();
-        headerTime.textContent = "Time Spent/Limit";
-        headerTime.style.border = "1px solid #dddddd";
-        headerTime.style.padding = "8px";
-        headerTime.style.backgroundColor = "#00BFFF"; // Background color
-        headerTime.style.color = "#ffffff"; // Text color
 
         quizSessions.forEach(entry => {
           const row = table.insertRow();
@@ -1444,6 +1475,10 @@
           cellDate.textContent = entry.date;
           cellDate.style.border = "1px solid #dddddd";
           cellDate.style.padding = "8px";
+          const cellLevel = row.insertCell();
+          cellLevel.textContent = entry.level;
+          cellLevel.style.border = "1px solid #dddddd";
+          cellLevel.style.padding = "8px";
           const cellMode = row.insertCell();
           cellMode.textContent = entry.mode;
           cellMode.style.border = "1px solid #dddddd";
@@ -1452,10 +1487,6 @@
           cellScore.textContent = entry.score;
           cellScore.style.border = "1px solid #dddddd";
           cellScore.style.padding = "8px";
-          const cellTime = row.insertCell();
-          cellTime.textContent = entry.timeSpentOrLimit;
-          cellTime.style.border = "1px solid #dddddd";
-          cellTime.style.padding = "8px";
         });
 
         modalContent.appendChild(table);
