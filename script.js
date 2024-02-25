@@ -3,6 +3,7 @@ const quizData = {
     N5: [],
     N4: [],
     N3: [],
+    N2: [],
     N1: [],
     // Add other JLPT levels as needed
 };
@@ -424,6 +425,7 @@ function endQuiz() {
           <option value="N5">N5</option>
           <option value="N4">N4</option>
           <option value="N3">N3</option>
+          <option value="N2">N2</option>
           <option value="N1">N1</option>
           <!-- Add other JLPT levels as needed -->
         </select>
@@ -670,7 +672,6 @@ window.onclick = function (event) {
 };
 
 
-
 // Function to toggle fullscreen mode
 function toggleFullscreen() {
     if (!document.fullscreenElement) {
@@ -781,7 +782,6 @@ function LoadScoreHistory() {
         modalContent.appendChild(table);
     }
 }
-
 
 
 function resetStoredData() {

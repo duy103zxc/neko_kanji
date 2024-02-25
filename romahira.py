@@ -43,13 +43,15 @@ def write_json_to_file(data_list, output_file_path):
     with open(output_file_path, 'w', encoding='utf-8') as jsonfile:
         jsonfile.write("[\n")
         for data in data_list:
+            readings_string = ', '.join([f'"{reading}"' for reading in data["readings"]])
+            
             # Write each data entry in JSON format to the file
-            jsonfile.write(f'{{ kanji: "{data["kanji"]}", readings: {data["readings"]}, meaning: "{data["meaning"]}" }},\n')
+            jsonfile.write(f'{{ "kanji": "{data["kanji"]}", "readings": [{readings_string}], "meaning": "{data["meaning"]}" }},\n')
         jsonfile.write("]\n")
 
 # Example usage:
-csv_file_path = r'C:\Users\ACER\Downloads\blogpost\n3.csv'
-output_file_path = 'N3kan.json'
+csv_file_path = r'C:\Users\ACER\Downloads\blogpost\blogpost\n2.csv'
+output_file_path = 'N2kan.json'
 
 # Convert CSV data to JSON and write it to a file
 converted_data = convert_csv_to_json(csv_file_path)
