@@ -5,7 +5,6 @@ const quizData = {
     N3: [],
     N2: [],
     N1: [],
-    // Add other JLPT levels as needed
 };
 
 // Quiz Variables
@@ -34,7 +33,7 @@ window.onload = function () {
 
 // Fetch Quiz Data
 function fetchQuizData(level) {
-    const jsonUrl = `https://raw.githubusercontent.com/yorunohikari/blogpost/main/${level}kan.json`;
+    const jsonUrl = `${level}kan.json`;
     // Fetch JSON data from the provided URL
     return fetch(jsonUrl)
         .then((response) => response.json()) // Parse JSON response
@@ -63,7 +62,6 @@ function getUserPreferences() {
 
 // Start Quiz Function
 function startQuiz() {
-    // Display loading animation while fetching quiz data
     document.getElementById("loading-animation").style.display = "block";
     // Get selected JLPT level from dropdown
     selectedLevel = document.getElementById("jlpt-level").value;
@@ -237,7 +235,7 @@ function checkAnswer() {
             incorrectAttempts = 0;
             // Display feedback indicating correctness and the question's meaning
             document.getElementById("feedback").innerHTML = `
-        <span style="color: green;">Correct!</span>
+        <span style="color: #90EE90;">Correct!</span>
         <br />
         Meaning: ${questionMeaning}`;
             document.getElementById("hint").innerHTML = ``; // Clear any hint displayed
@@ -261,7 +259,7 @@ function checkAnswer() {
                 // Display feedback indicating incorrectness, correct answers, and the question's meaning
                 document.getElementById("feedback").innerHTML = `
             <span style="color: red;">Incorrect!</span> Correct answers: 
-            <span style="color: green;">${correctReadings.join(", ")}</span>
+            <span style="color: #90EE90;">${correctReadings.join(", ")}</span>
             <br />
             Meaning: ${questionMeaning}`;
                 document.getElementById("hint").innerHTML = ` `; // Clear any hint displayed
@@ -397,7 +395,7 @@ function endQuiz() {
     document.getElementById("main-menu").innerHTML = `
       <h1>${encouragementText}</h1>
       <div>
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0jUqq7HmUZGERn2xVb2mHC1Mj9ldwwt1V3YwMktthenB3arJaFT8jZKosRrxPqXDc-MEjveMZlieKldTfWlR_-O8HEH5U5PtFIoqg9oGX9zI0Nc8w4HAeszoBVkR73VHJOJryf7IqlysXIqSkmdCHaiFDoWjrACaxhETJ6jf_MaHalnwmA8tZoJiv-A/s2048/Neko%20without%20background.png" alt="Neko image" />
+        <img src="/assets/neko-pic.png" alt="Neko image" />
       </div>
       <p>Quiz Results</p>
       <table id="quiz-results">
@@ -548,6 +546,7 @@ function endQuiz() {
     }
 
     // Reset quiz parameters
+    resetProgressBar();
     resetQuiz();
     LoadScoreHistory();
     updateInputsFromSavedValues()
@@ -661,7 +660,6 @@ function closeModal2() {
 }
 
 // Event listener to close the modal when clicking outside of it and remove blur effect
-// Event listener to close the modals when clicking outside of them and remove blur effect
 window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();
