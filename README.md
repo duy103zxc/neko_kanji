@@ -3,6 +3,9 @@
 
 Welcome to the Neko Kanji Quiz application! This is a web-based quiz designed to help users practice reading kanji characters for the Japanese Language Proficiency Test (JLPT) levels N5 to N1.
 
+## Demo
+[Neko Kanji](https://yorunohikari.github.io/projects/neko-kanji/)
+
 ## Features
 
 - **Quiz Levels**: Choose from JLPT levels N5 to N1 to customize your quiz experience.
@@ -60,6 +63,3 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 ## License
 
 See the [LICENSE](/LISENCE.txt) file for details.
-
-## Demo
-[Neko Kanji](https://yorunohikari.github.io/projects/neko-kanji/)
