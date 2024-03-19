@@ -59,4 +59,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## License
 
-The JLPT Kanji Reading Quiz application is licensed under the MIT License. See the [LICENSE](/path/to/LICENSE) file for details.
+The JLPT Kanji Reading Quiz application is licensed under the MIT License. See the [LICENSE](/LISENCE.txt) file for details.
