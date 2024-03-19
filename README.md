@@ -59,4 +59,7 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## License
 
-The JLPT Kanji Reading Quiz application is licensed under the MIT License. See the [LICENSE](/LISENCE.txt) file for details.
+See the [LICENSE](/LISENCE.txt) file for details.
+
+## Demo
+[Neko Kanji](https://yorunohikari.github.io/projects/neko-kanji/)
