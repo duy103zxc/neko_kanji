@@ -23,11 +23,16 @@ To use the Neko Kanji Quiz application, simply follow these steps:
 
 ## Screenshots
 
-![Screenshot 1](https://github.com/yorunohikari/Neko-Kanji-Quiz/blob/main/Screenshot_31.png)
-*Caption: Main menu of the Neko Kanji Quiz application.*
+<div align="center">
+  <img src="https://github.com/yorunohikari/Neko-Kanji-Quiz/blob/main/Screenshot_31.png" alt="Screenshot 1">
+  <p><em>Caption: Main menu of the Neko Kanji Quiz application.</em></p>
+</div>
 
-![Screenshot 2](https://github.com/yorunohikari/Neko-Kanji-Quiz/blob/main/Screenshot_32.png)
-*Caption: Quiz interface with a kanji character displayed.*
+<div align="center">
+  <img src="https://github.com/yorunohikari/Neko-Kanji-Quiz/blob/main/Screenshot_32.png" alt="Screenshot 2">
+  <p><em>Caption: Quiz interface with a kanji character displayed.</em></p>
+</div>
+
 
 ## Development
 
